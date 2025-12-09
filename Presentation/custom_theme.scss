@@ -24,16 +24,16 @@ $body-line-height: 1.5;
 
 $headingMargin: 0;
 $headingLineHeight: 1.2;
-$headingLetterSpacing: -0.02em; /* -2% tracking as per guidelines */
+$headingLetterSpacing: 0em; /* -2% tracking as per guidelines */
 $headingTextTransform: none; /* SPROuT uses title case, not uppercase */
-$headingTextShadow: none;
-$headingFontWeight: 600; /* Semibold as per guidelines */
+$headingTextShadow: 3px 4px 5px rgba(204, 204, 204, 0.8);
+$headingFontWeight: 700; /* Semibold as per guidelines */
 
-$heading1Size: 2.5em; /* 36-44px equivalent */
-$heading1TextShadow: none;
-$heading2Size: 1.9em; /* 28-32px equivalent */
+$heading1Size: 2.2em; /* 36-44px equivalent */
+$heading1TextShadow: 3px 4px 5px rgba(204, 204, 204, 0.8);
+$heading2Size: 1.8em; /* 28-32px equivalent */
 $heading3Size: 1.4em; /* 22-24px equivalent */
-$heading4Size: 1em;
+$heading4Size: 1.1em;
 
 
 /*-- scss:rules --*/
@@ -409,13 +409,13 @@ ul ul {
 .reveal .blockquote,
 blockquote {
   padding: 16px 24px; /* Following brand guidelines */
-  border-radius: 16px; /* 2xl rounded corners */
+  border-radius: 25px; /* 2xl rounded corners */
   background-color: darken($white, 20%);
-  border-left: 6px solid $blockquoteBorderColor;
+  border-left: 3px solid $blockquoteBorderColor;
   border-top: 2px solid $blockquoteBorderColor;
   border-bottom: 2px solid $blockquoteBorderColor;
   border-right: 2px solid $blockquoteBorderColor;
-  box-shadow: 0 2px 8px rgba(21, 85, 96, 0.1); /* Soft shadow with dark Green */
+  box-shadow: none; /* Soft shadow with dark Green */
   transition: background-color 0.2s ease, border-color 0.2s ease;
   margin: 1rem 0;
   color: black;

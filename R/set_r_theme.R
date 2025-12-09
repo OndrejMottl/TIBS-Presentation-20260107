@@ -11,34 +11,34 @@ if (!require("sysfonts")) stop("sysfonts package is required for custom fonts")
 if (!require("showtext")) stop("showtext package is required for custom fonts")
 
 # Load Google Fonts using sysfonts with error handling
-# Try to load Lato (may be named differently in Google Fonts)
+# Try to load Inconsolata (may be named differently in Google Fonts)
 tryCatch({
-  sysfonts::font_add_google("Lato", "loqe_body")
+  sysfonts::font_add_google("Inconsolata", "internal_body")
 }, error = function(e) {
   # Try alternative names for Plus Jakarta Sans
   tryCatch({
-    sysfonts::font_add_google("Helvetica Neue", "loqe_body")
+    sysfonts::font_add_google("Courier New", "internal_body")
   }, error = function(e2) {
     # Fallback to a similar font
-    message("Lato not found, using Arial as fallback")
-    sysfonts::font_add_google("Arial", "loqe_body")
+    message("Inconsolata not found, using monospace as fallback")
+    sysfonts::font_add_google("monospace", "internal_body")
   })
 })
 
-# Load League Gothic
+# Load Poppins
 tryCatch({
-  sysfonts::font_add_google("League Gothic", "loqe_heading")
+  sysfonts::font_add_google("Poppins", "internal_heading")
 }, error = function(e) {
-  message("League Gothic not found, using Roboto Condensed as fallback")
-  sysfonts::font_add_google("Impact", "loqe_heading")
+  message("Poppins not found, using Roboto Condensed as fallback")
+  sysfonts::font_add_google("Arial", "internal_heading")
 })
 
 # Load JetBrains Mono
 tryCatch({
-  sysfonts::font_add_google("JetBrains Mono", "loqe_mono")
+  sysfonts::font_add_google("JetBrains Mono", "internal_mono")
 }, error = function(e) {
   message("JetBrains Mono not found, using Fira Code as fallback")
-  sysfonts::font_add_google("Fira Code", "loqe_mono")
+  sysfonts::font_add_google("Fira Code", "internal_mono")
 })
 
 # Enable showtext for rendering custom fonts
@@ -46,14 +46,15 @@ showtext::showtext_auto()
 
 # SPROuT Brand Colors (from brand guidelines)
 sprout_cols <- c(
-  white = "#F2F4F2",
-  gray = "#808080",
-  black = "#1F2937",
-  prussian_blue = "#08283d",
-  moonstone = "#40a1bd",
-  asparagus = "#64a84c",
-  tea_green = "#c9e4ae",
-  wisteria = "#d0a5df"
+  white = "#ffffff",
+  black = "#000000",
+  grey = "#cccccc",
+  blue = "#415280",
+  purple = "#8a5697",
+  pink = "#d55288",
+  coral = "#eb5f56",
+  orange = "#ff9714",
+  green = "#6c6934"
 )
 
 # SPROuT Color Scales for ggplot2
@@ -61,21 +62,21 @@ scale_colour_SPROuT <- function(...) ggplot2::scale_colour_manual(values = sprou
 scale_fill_SPROuT <- function(...) ggplot2::scale_fill_manual(values = sprout_cols, ...)
 
 # Primary color sequence (for ordered data)
-SPROuT_primary_sequence <- c("#08283d", "#40a1bd", "#64a84c")
+SPROuT_primary_sequence <- c("#cccccc", "#415280", "#8a5697")
 
 # Diverging color palette (for diverging data)
-SPROuT_diverging <- c("#08283d", "#F2F4F2", "#d0a5df")
+SPROuT_diverging <- c("#cccccc", "#ffffff", "#6c6934")
 
 # Text and background colors
-SPROuT_text_color <- "#1F2937"
-SPROuT_background_color <- "#F2F4F2"
-SPROuT_accent_color <- "#d0a5df"
+SPROuT_text_color <- "#000000"
+SPROuT_background_color <- "#ffffff"
+SPROuT_accent_color <- "#8a5697"
 
 # Define typography (based on SPROuT brand guidelines)
 # Using registered font names from sysfonts
-SPROuT_base_font <- "loqe_body"
-SPROuT_heading_font <- "loqe_heading"
-SPROuT_mono_font <- "loqe_mono"
+SPROuT_base_font <- "internal_body"
+SPROuT_heading_font <- "internal_heading"
+SPROuT_mono_font <- "internal_mono"
 
 # Define text sizes (following brand hierarchy from fonts.json)
 # Convert px to pt: 1px ˜ 0.75pt (at 96 DPI)
@@ -109,18 +110,18 @@ theme_SPROuT <- function(base_size = text_size_base,
                    base_rect_size = base_rect_size) +
   ggplot2::theme(
     # Text elements
-    text = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937"),
-    plot.title = ggplot2::element_text(family = SPROuT_heading_font, colour = "#64a84c", face = "bold", size = ggplot2::rel(1.4)),
-    plot.subtitle = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937", size = ggplot2::rel(1.1)),
-    axis.title = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937", size = ggplot2::rel(1)),
-    axis.text = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937", size = ggplot2::rel(0.9)),
-    legend.title = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937", size = ggplot2::rel(1)),
-    legend.text = ggplot2::element_text(family = SPROuT_base_font, colour = "#1F2937", size = ggplot2::rel(0.9)),
-    strip.text = ggplot2::element_text(family = SPROuT_heading_font, colour = "#64a84c", face = "bold"),
+    text = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000"),
+    plot.title = ggplot2::element_text(family = SPROuT_heading_font, colour = "#000000", face = "bold", size = ggplot2::rel(1.4)),
+    plot.subtitle = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000", size = ggplot2::rel(1.1)),
+    axis.title = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000", size = ggplot2::rel(1)),
+    axis.text = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000", size = ggplot2::rel(0.9)),
+    legend.title = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000", size = ggplot2::rel(1)),
+    legend.text = ggplot2::element_text(family = SPROuT_base_font, colour = "#000000", size = ggplot2::rel(0.9)),
+    strip.text = ggplot2::element_text(family = SPROuT_heading_font, colour = "#000000", face = "bold"),
     
     # Background elements
-    plot.background = ggplot2::element_rect(fill = "#F2F4F2", colour = NA),
-    panel.background = ggplot2::element_rect(fill = "#F2F4F2", colour = NA),
+    plot.background = ggplot2::element_rect(fill = "#ffffff", colour = NA),
+    panel.background = ggplot2::element_rect(fill = "#ffffff", colour = NA),
     legend.background = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank()
   )

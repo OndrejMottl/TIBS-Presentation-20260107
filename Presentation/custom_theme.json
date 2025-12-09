@@ -7,7 +7,7 @@
   "headings": {
     "headingMargin": "0",
     "headingTextTransform": "none",
-    "headingTextShadow": "none"
+    "headingTextShadow": "3px 4px 5px rgba(204, 204, 204, 0.8)"
   },
   "layout": {
     "contentMaxWidth": "900px"
@@ -23,8 +23,8 @@
   },
   "blockquote": {
     "blockquotePadding": "16px 24px",
-    "blockquoteBorderRadius": "16px",
-    "blockquoteBorderWidth": "6px",
+    "blockquoteBorderRadius": "25px",
+    "blockquoteBorderWidth": "3px",
     "blockquoteMargin": "1rem 0"
   },
   "table": {
@@ -35,7 +35,7 @@
   "shadows": {
     "lightTextShadow": "1px 1px 2px rgba(255, 255, 255, 0.8)",
     "darkTextShadow": "1px 1px 2px rgba(0, 0, 0, 0.8)",
-    "blockquoteShadow": "0 2px 8px rgba(21, 85, 96, 0.1)"
+    "blockquoteShadow": "none"
   },
   "transitions": {
     "defaultTransition": "0.2s ease"

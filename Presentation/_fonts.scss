@@ -1,8 +1,8 @@
 // This file is auto-generated from fonts.json. Do not edit directly.
 
-$mainFont: "Lato", "" !default;
+$mainFont: "Inconsolata", "" !default;
 
-$headingFont: "League Gothic", "" !default;
+$headingFont: "Poppins", "" !default;
 
 $monospaceFont: "JetBrains Mono", "" !default;
 
@@ -10,22 +10,22 @@ $monospaceFont: "JetBrains Mono", "" !default;
 
 // Font sizes from fonts.json
 $mainFontSize: 30px !default;
-$heading1Size: 2.5em !default;
-$heading2Size: 1.9em !default;
+$heading1Size: 2.2em !default;
+$heading2Size: 1.8em !default;
 $heading3Size: 1.4em !default;
-$heading4Size: 1em !default;
+$heading4Size: 1.1em !default;
 $body-line-height: 1.5 !default;
 $headingLineHeight: 1.2 !default;
 
 
 // Font weights from fonts.json
-$headingFontWeight: 600 !default;
+$headingFontWeight: 700 !default;
 $bodyFontWeight: 400 !default;
 $boldFontWeight: 700 !default;
 
 
 // Font spacing from fonts.json
-$headingLetterSpacing: -0.02em !default;
+$headingLetterSpacing: 0em !default;
 $bodyLetterSpacing: 0em !default;
 
 
@@ -65,9 +65,9 @@ $largeMargin: 20px !default;
 
 
 /* Debug font loading - this will help us see if fonts are loaded */
-@supports (font-family: "League Gothic") {
+@supports (font-family: "Poppins") {
   .debug-font-heading::before {
-    content: "League Gothic font is supported";
+    content: "Poppins font is supported";
     display: block;
     font-size: 12px;
     color: green;
