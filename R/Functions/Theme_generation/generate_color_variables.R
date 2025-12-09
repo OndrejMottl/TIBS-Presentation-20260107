@@ -17,7 +17,7 @@ generate_color_variables <- function(colors_data) {
     }
 
     primary_vars <- c(
-      "// SPROuT Brand Colors",
+      "// Brand Colors",
       purrr::imap(primary_colors, ~ paste0("$", .y, ": ", .x, ";"))
     )
 

@@ -6,7 +6,7 @@ generate_custom_theme_font_overrides <- function(fonts, custom_theme) {
     paste0("$headingMargin: ", custom_theme$headings$headingMargin, ";"),
     paste0("$headingLineHeight: ", fonts$sizes$headingLineHeight, ";"),
     paste0("$headingLetterSpacing: ", fonts$spacing$headingLetterSpacing, "; /* -2% tracking as per guidelines */"),
-    paste0("$headingTextTransform: ", custom_theme$headings$headingTextTransform, "; /* SPROuT uses title case, not uppercase */"),
+    paste0("$headingTextTransform: ", custom_theme$headings$headingTextTransform, "; /* use title case, not uppercase */"),
     paste0("$headingTextShadow: ", custom_theme$headings$headingTextShadow, ";"),
     paste0("$headingFontWeight: ", fonts$weights$headingFontWeight, "; /* Semibold as per guidelines */"),
     "",

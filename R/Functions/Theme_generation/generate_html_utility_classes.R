@@ -1,6 +1,6 @@
 generate_html_utility_classes <- function() {
   c(
-    "// Utility classes for SPROuT brand colors",
+    "// Utility classes for brand colors",
     ".text-dark-green { color: $utilityDarkGreen !important; }",
     ".text-teal { color: $utilityTeal !important; }",
     ".text-pistachio { color: $utilityPistachio !important; }",
