@@ -52,3 +52,9 @@ rsconnect/
 # Quarto
 /.quarto/
 **/*.quarto_ipynb
+
+# Visual Studio Code workspace files
+*.code-workspace
+
+# Sensitive data
+.secrets/*
