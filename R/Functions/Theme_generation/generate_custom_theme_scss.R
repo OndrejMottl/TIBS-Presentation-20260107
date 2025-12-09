@@ -49,7 +49,7 @@ generate_custom_theme_scss <- function(
       "// Do not define font variables here. Edit fonts.json and regenerate _fonts.scss if needed.",
       '@import "_fonts";',
       "",
-      generate_custom_theme_font_overrides(fonts),
+      generate_custom_theme_font_overrides(fonts, custom_theme),
       "",
       "",
       "/*-- scss:rules --*/",
