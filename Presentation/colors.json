@@ -1,9 +1,35 @@
 {
-  "black": "#000000ff",
-  "white": "#ffffffff",
-  "grey": "#808080ff",
-  "byzantium": "#8f286fff",
-  "harvest-gold": "#eca400ff",
-  "persian-green": "#1b998bff",
-  "cerulean": "#006992ff"
+  "primary": {
+    "white": "#F2F4F2",
+    "gray": "#808080",
+    "black": "#1F2937",
+    "prussian_blue": "#08283d",
+    "moonstone": "#40a1bd",
+    "asparagus": "#64a84c",
+    "tea_green": "#c9e4ae",
+    "wisteria": "#d0a5df"
+  },
+  "semantic": {
+    "textColor": "black",
+    "bodyColor": "black",
+    "backgroundColor": "white",
+    "headingColor": "asparagus",
+    "linkColor": "moonstone",
+    "accentColor": "wisteria",
+    "subtitleBackground": "moonstone",
+    "codeColor": "black",
+    "codeBackgroundColor": "tea_green",
+    "codeBlockBackground": "moonstone",
+    "lightCodeBackground": "moonstone",
+    "codeBorderColor": "moonstone",
+    "tableHeaderBackground": "prussian_blue",
+    "tableHeaderColor": "white",
+    "tableBorderColor": "moonstone",
+    "tableStripeBackground": "moonstone",
+    "tableStripeAlternate": "tea_green",
+    "blockquoteBackground": "white",
+    "blockquoteBorderColor": "prussian_blue",
+    "blockquoteTextColor": "black",
+    "shadowBackground": "prussian_blue"
+  }
 }

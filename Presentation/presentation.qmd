@@ -8,6 +8,8 @@ format:
     output-ext: "html"
     output-dir: "../docs"
     logo: "Materials/About/personal_sticker.png"
+    include-in-header: "fonts-include.html"
+    highlight-style: github-light
     code-line-numbers: false
     code-overflow: scroll
     code-link: false
@@ -63,83 +65,6 @@ include_local_figure <- function(data_source) {
     error = TRUE
   )
 }
-```
-
-
-```{r}
-#| label: dynamic-theme
-#| include: false
-library(jsonlite)
-
-# Colors
-
-colors <-
-  jsonlite::fromJSON(
-    here::here("Presentation/colors.json")
-  )
-
-colors_definition <-
-  purrr::imap(
-    .x = colors,
-    .f = ~ {
-      paste0(
-        "$", .y, ": ", unname(.x), ";", "\n",
-        ".reveal .bg-", .y, " { background-color: ", unname(.x), "; }\n",
-        ".text-color-", .y, " { color: ", unname(.x), "; }\n",
-        ".text-background-", .y, " {\n",
-        "background-color: ", unname(.x), ";\n",
-        "padding: $smallMargin;\n",
-        "border-radius: 5px;\n",
-        " }", "\n"
-      )
-    }
-  ) %>%
-  paste(collapse = "\n")
-
-
-writeLines(
-  text = c(
-    "// This file is auto-generated from colors.json. Do not edit directly.",
-    colors_definition
-  ),
-  con = here::here("Presentation/_colors.scss")
-)
-
-# Fonts
-
-fonts <-
-  jsonlite::fromJSON(
-    here::here("Presentation/fonts.json")
-  )
-
-fonts_definition <-
-  c(
-    paste0(
-      "@import url(https://fonts.googleapis.com/css?family=",
-      stringr::str_replace_all(fonts$body, " ", "+"),
-      ");\n"
-    ),
-    paste0(
-      "@import url(https://fonts.googleapis.com/css?family=",
-      stringr::str_replace_all(fonts$heading, " ", "+"),
-      ");\n"
-    ),
-    paste0('$mainFont: "', fonts$body, '", sans-serif !default;\n'),
-    paste0('$headingFont: "', fonts$heading, '", sans-serif !default;\n'),
-    paste0(
-      ".text-font-body { font-family: $mainFont; }\n",
-      ".text-font-heading { font-family: $headingFont; }\n"
-    )
-  )
-
-writeLines(
-  text = c(
-    "// This file is auto-generated from fonts.json. Do not edit directly.",
-    fonts_definition
-  ),
-  con = here::here("Presentation/_fonts.scss")
-)
-
 ```
 
 # Estimating Vegetation Change from Fossil Pollen to Planetary Boundaries: A Global, Long-Term Synthesis Using Big Data
