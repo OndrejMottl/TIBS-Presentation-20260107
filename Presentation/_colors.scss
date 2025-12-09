@@ -1,0 +1,513 @@
+// This file is auto-generated from colors.json. Do not edit directly.
+
+// ==============================================================================
+// PRIMARY COLORS - Core brand palette
+// ==============================================================================
+$white: #ffffff;
+$black: #000000;
+$grey: #cccccc;
+$blue: #415280;
+$purple: #8a5697;
+$pink: #d55288;
+$coral: #eb5f56;
+$orange: #ff9714;
+$green: #6c6934;
+
+// ==============================================================================
+// SEMANTIC COLORS - Functional color assignments
+// ==============================================================================
+$textColor: $black;
+$bodyColor: $black;
+$backgroundColor: $white;
+$headingColor: $black;
+$linkColor: $green;
+$accentColor: $purple;
+$subtitleBackground: $blue;
+$codeColor: $black;
+$codeBackgroundColor: $grey;
+$codeBlockBackground: $blue;
+$lightCodeBackground: $grey;
+$codeBorderColor: $blue;
+$tableHeaderBackground: $blue;
+$tableHeaderColor: $white;
+$tableBorderColor: $blue;
+$tableStripeBackground: $grey;
+$tableStripeAlternate: $white;
+$blockquoteBackground: $white;
+$blockquoteBorderColor: $grey;
+$blockquoteTextColor: $black;
+$shadowBackground: $grey;
+
+// ==============================================================================
+// CONTRAST COLORS - For text contrast calculations
+// ==============================================================================
+$contrastColorLight: $black;
+$contrastColorDark: $white;
+
+
+
+// ==============================================================================
+// UTILITY CLASSES - CSS classes for primary colors
+// ==============================================================================
+// Primary color: white
+.reveal .bg-white { background-color: #ffffff; }
+.text-color-white { color: #ffffff !important; }
+.text-background-white {
+  background-color: #ffffff;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-white {
+  background-color: #ffffff;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: black
+.reveal .bg-black { background-color: #000000; }
+.text-color-black { color: #000000 !important; }
+.text-background-black {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-black {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: grey
+.reveal .bg-grey { background-color: #cccccc; }
+.text-color-grey { color: #cccccc !important; }
+.text-background-grey {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-grey {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: blue
+.reveal .bg-blue { background-color: #415280; }
+.text-color-blue { color: #415280 !important; }
+.text-background-blue {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-blue {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: purple
+.reveal .bg-purple { background-color: #8a5697; }
+.text-color-purple { color: #8a5697 !important; }
+.text-background-purple {
+  background-color: #8a5697;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-purple {
+  background-color: #8a5697;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: pink
+.reveal .bg-pink { background-color: #d55288; }
+.text-color-pink { color: #d55288 !important; }
+.text-background-pink {
+  background-color: #d55288;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-pink {
+  background-color: #d55288;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: coral
+.reveal .bg-coral { background-color: #eb5f56; }
+.text-color-coral { color: #eb5f56 !important; }
+.text-background-coral {
+  background-color: #eb5f56;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-coral {
+  background-color: #eb5f56;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: orange
+.reveal .bg-orange { background-color: #ff9714; }
+.text-color-orange { color: #ff9714 !important; }
+.text-background-orange {
+  background-color: #ff9714;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-orange {
+  background-color: #ff9714;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Primary color: green
+.reveal .bg-green { background-color: #6c6934; }
+.text-color-green { color: #6c6934 !important; }
+.text-background-green {
+  background-color: #6c6934;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-green {
+  background-color: #6c6934;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+
+// Semantic utility classes
+.text-color-body { color: $bodyColor !important; }
+.text-color-background { color: $backgroundColor !important; }
+.text-color-heading { color: $headingColor !important; }
+.text-color-link { color: $linkColor !important; }
+.text-color-accent { color: $accentColor !important; }
+
+
+// ==============================================================================
+// SPECIALIZED COLOR CLASSES - CSS classes for semantic colors
+// ==============================================================================
+// Semantic color: textColor
+.reveal .bg-textColor { background-color: #000000; }
+.text-color-textColor { color: #000000 !important; }
+.text-background-textColor {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-textColor {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: bodyColor
+.reveal .bg-bodyColor { background-color: #000000; }
+.text-color-bodyColor { color: #000000 !important; }
+.text-background-bodyColor {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-bodyColor {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: backgroundColor
+.reveal .bg-backgroundColor { background-color: #ffffff; }
+.text-color-backgroundColor { color: #ffffff !important; }
+.text-background-backgroundColor {
+  background-color: #ffffff;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-backgroundColor {
+  background-color: #ffffff;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: headingColor
+.reveal .bg-headingColor { background-color: #000000; }
+.text-color-headingColor { color: #000000 !important; }
+.text-background-headingColor {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-headingColor {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: linkColor
+.reveal .bg-linkColor { background-color: #6c6934; }
+.text-color-linkColor { color: #6c6934 !important; }
+.text-background-linkColor {
+  background-color: #6c6934;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-linkColor {
+  background-color: #6c6934;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: accentColor
+.reveal .bg-accentColor { background-color: #8a5697; }
+.text-color-accentColor { color: #8a5697 !important; }
+.text-background-accentColor {
+  background-color: #8a5697;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-accentColor {
+  background-color: #8a5697;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: subtitleBackground
+.reveal .bg-subtitleBackground { background-color: #415280; }
+.text-color-subtitleBackground { color: #415280 !important; }
+.text-background-subtitleBackground {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-subtitleBackground {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: codeColor
+.reveal .bg-codeColor { background-color: #000000; }
+.text-color-codeColor { color: #000000 !important; }
+.text-background-codeColor {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-codeColor {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: codeBackgroundColor
+.reveal .bg-codeBackgroundColor { background-color: #cccccc; }
+.text-color-codeBackgroundColor { color: #cccccc !important; }
+.text-background-codeBackgroundColor {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-codeBackgroundColor {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: codeBlockBackground
+.reveal .bg-codeBlockBackground { background-color: #415280; }
+.text-color-codeBlockBackground { color: #415280 !important; }
+.text-background-codeBlockBackground {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-codeBlockBackground {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: lightCodeBackground
+.reveal .bg-lightCodeBackground { background-color: #cccccc; }
+.text-color-lightCodeBackground { color: #cccccc !important; }
+.text-background-lightCodeBackground {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-lightCodeBackground {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: codeBorderColor
+.reveal .bg-codeBorderColor { background-color: #415280; }
+.text-color-codeBorderColor { color: #415280 !important; }
+.text-background-codeBorderColor {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-codeBorderColor {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: tableHeaderBackground
+.reveal .bg-tableHeaderBackground { background-color: #415280; }
+.text-color-tableHeaderBackground { color: #415280 !important; }
+.text-background-tableHeaderBackground {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-tableHeaderBackground {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: tableHeaderColor
+.reveal .bg-tableHeaderColor { background-color: #ffffff; }
+.text-color-tableHeaderColor { color: #ffffff !important; }
+.text-background-tableHeaderColor {
+  background-color: #ffffff;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-tableHeaderColor {
+  background-color: #ffffff;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: tableBorderColor
+.reveal .bg-tableBorderColor { background-color: #415280; }
+.text-color-tableBorderColor { color: #415280 !important; }
+.text-background-tableBorderColor {
+  background-color: #415280;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-tableBorderColor {
+  background-color: #415280;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: tableStripeBackground
+.reveal .bg-tableStripeBackground { background-color: #cccccc; }
+.text-color-tableStripeBackground { color: #cccccc !important; }
+.text-background-tableStripeBackground {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-tableStripeBackground {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: tableStripeAlternate
+.reveal .bg-tableStripeAlternate { background-color: #ffffff; }
+.text-color-tableStripeAlternate { color: #ffffff !important; }
+.text-background-tableStripeAlternate {
+  background-color: #ffffff;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-tableStripeAlternate {
+  background-color: #ffffff;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: blockquoteBackground
+.reveal .bg-blockquoteBackground { background-color: #ffffff; }
+.text-color-blockquoteBackground { color: #ffffff !important; }
+.text-background-blockquoteBackground {
+  background-color: #ffffff;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-blockquoteBackground {
+  background-color: #ffffff;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: blockquoteBorderColor
+.reveal .bg-blockquoteBorderColor { background-color: #cccccc; }
+.text-color-blockquoteBorderColor { color: #cccccc !important; }
+.text-background-blockquoteBorderColor {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-blockquoteBorderColor {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: blockquoteTextColor
+.reveal .bg-blockquoteTextColor { background-color: #000000; }
+.text-color-blockquoteTextColor { color: #000000 !important; }
+.text-background-blockquoteTextColor {
+  background-color: #000000;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-blockquoteTextColor {
+  background-color: #000000;
+  color: $contrastColorDark;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+// Semantic color: shadowBackground
+.reveal .bg-shadowBackground { background-color: #cccccc; }
+.text-color-shadowBackground { color: #cccccc !important; }
+.text-background-shadowBackground {
+  background-color: #cccccc;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+.text-highlight-shadowBackground {
+  background-color: #cccccc;
+  color: $contrastColorLight;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+

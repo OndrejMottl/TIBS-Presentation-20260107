@@ -1,0 +1,33 @@
+generate_custom_theme_slide_layout <- function(custom_theme) {
+  c(
+    "/* Slide content layout */",
+    ".reveal .slides {",
+    "  margin: auto;",
+    paste0("  padding: ", custom_theme$slides$slidePadding, ";"),
+    "}",
+    "",
+    ".slide-margin-top-15 {",
+    "  margin: 0;",
+    "  position: absolute;",
+    paste0("  top: ", custom_theme$positioning$slideMarginTop15, ";"),
+    "  -ms-transform: translateY(-15%);",
+    "  transform: translateY(-15%);",
+    "}",
+    "",
+    ".slide-margin-top-25 {",
+    "  margin: 0;",
+    "  position: absolute;",
+    paste0("  top: ", custom_theme$positioning$slideMarginTop25, ";"),
+    "  -ms-transform: translateY(-25%);",
+    "  transform: translateY(-25%);",
+    "}",
+    "",
+    ".center-vertical {",
+    "  margin: 0;",
+    "  position: absolute;",
+    paste0("  top: ", custom_theme$positioning$centerVertical, ";"),
+    "  -ms-transform: translateY(-50%);",
+    "  transform: translateY(-50%);",
+    "}"
+  )
+}

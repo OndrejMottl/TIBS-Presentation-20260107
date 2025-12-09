@@ -1,0 +1,36 @@
+{
+  "primary": {
+    "white": "#ffffff",
+    "black": "#000000",
+    "grey": "#cccccc",
+    "blue": "#415280",
+    "purple": "#8a5697",
+    "pink": "#d55288",
+    "coral": "#eb5f56",
+    "orange": "#ff9714",
+    "green": "#6c6934"
+  },
+  "semantic": {
+    "textColor": "black",
+    "bodyColor": "black",
+    "backgroundColor": "white",
+    "headingColor": "black",
+    "linkColor": "green",
+    "accentColor": "purple",
+    "subtitleBackground": "blue",
+    "codeColor": "black",
+    "codeBackgroundColor": "grey",
+    "codeBlockBackground": "blue",
+    "lightCodeBackground": "grey",
+    "codeBorderColor": "blue",
+    "tableHeaderBackground": "blue",
+    "tableHeaderColor": "white",
+    "tableBorderColor": "blue",
+    "tableStripeBackground": "grey",
+    "tableStripeAlternate": "white",
+    "blockquoteBackground": "white",
+    "blockquoteBorderColor": "grey",
+    "blockquoteTextColor": "black",
+    "shadowBackground": "grey"
+  }
+}

@@ -1,0 +1,100 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    theme: [default, custom_theme.scss]
+    preview-links: auto
+    output-file: "index"
+    output-ext: "html"
+    output-dir: "../docs"
+    logo: "Materials/About/personal_sticker.png"
+    include-in-header: "fonts-include.html"
+    highlight-style: github-light
+    code-line-numbers: false
+    code-overflow: scroll
+    code-link: false
+    embed-resources: true
+    center-title-slide: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.align = "center",
+  out.width = "100%",
+  dpi = 300,
+  fig.align = "center"
+)
+
+if (!require("here")) install.packages("here")
+library(here)
+here::i_am("Presentation/presentation.qmd")
+
+if (!require("renv")) install.packages("renv")
+library(renv)
+renv::restore(
+  lockfile = here::here("renv.lock"),
+  prompt = FALSE
+)
+
+if (!require("countdown")) install.packages("countdown")
+library(countdown)
+
+
+if (!require("jsonlite")) install.packages("jsonlite")
+library(jsonlite)
+
+if (!require("tidyverse")) install.packages("tidyverse")
+library(tidyverse)
+
+if (!require("qrcode")) install.packages("qrcode")
+library(qrcode)
+
+if (!require("cropcircles")) install.packages("cropcircles")
+library(cropcircles)
+
+include_local_figure <- function(data_source) {
+  knitr::include_graphics(
+    path = here::here(
+      "Presentation",
+      "Materials",
+      data_source
+    ),
+    error = TRUE
+  )
+}
+```
+
+
+# Estimating Vegetation Change from Fossil Pollen to Planetary Boundaries :A Global, Long-Term Synthesis Using Big Data
+
+## Subheading
+
+Estimating [Vegetation]{.text-highlight-purple} Change from [Fossil Pollen]{.text-highlight-pink} to Planetary Boundaries: A Global, Long-Term Synthesis Using [Big Data]{.text-highlight-orange}
+
+## Next
+
+- example list
+  - sublist
+
+## Another heading
+
+### Third heading
+
+```{r}
+#| eval: false
+#| echo: true
+# some example code
+mtcars <-
+  vegan::estimate_richness(arg = TRUE)
+```
+
+## Table
+
+| Left-Aligned | Center-Aligned | Right-Aligned |
+| :----------- |:--------------:| -------------:|
+| This         | is             | an            |
+| aligned      | text           | example       |
+| example      | table          | right         |

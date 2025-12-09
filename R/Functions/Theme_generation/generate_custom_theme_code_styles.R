@@ -1,0 +1,43 @@
+generate_custom_theme_code_styles <- function(custom_theme, colors_data) {
+  # Use semantic colors from colors.json instead of custom_theme.json
+
+  c(
+    "/* Code styling (default and reveal) */",
+    "pre,",
+    ".reveal pre,",
+    "code,",
+    ".reveal code {",
+    "  background-color: $codeBackgroundColor !important;",
+    "  color: $codeColor;",
+    paste0("  border-radius: ", custom_theme$code$codeBorderRadius, "; /* More rounded as per brand guidelines */"),
+    paste0("  line-height: ", custom_theme$code$codeLineHeight, ";"),
+    "  font-family: $monospaceFont;",
+    "  border: none; /* Remove border for cleaner look */",
+    "}",
+    "",
+    "pre,",
+    ".reveal pre {",
+    "  padding: $smallMargin;",
+    "}",
+    "",
+    "code,",
+    ".reveal code {",
+    "  background-color: $codeBackgroundColor !important;",
+    "  color: $codeColor !important;",
+    "  font-style: italic;",
+    paste0("  padding: ", custom_theme$code$inlineCodePadding, ";"),
+    "}",
+    "",
+    "pre code,",
+    ".reveal pre code {",
+    "  background-color: transparent !important;",
+    "  color: $bodyColor !important; /* Black text for code blocks */",
+    "  font-style: normal !important; /* Override italic from inline code */",
+    "  padding: $smallMargin;",
+    "  position: relative;",
+    "  /* Ensure line highlighting works */",
+    "  z-index: 0;",
+    "  /* Prevent conflicts with overlays */",
+    "}"
+  )
+}

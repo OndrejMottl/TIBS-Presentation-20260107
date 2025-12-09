@@ -1,0 +1,33 @@
+generate_custom_theme_table_styles <- function(custom_theme) {
+  c(
+    "/* Table styling */",
+    ".reveal table,",
+    "table {",
+    "  border-collapse: collapse;",
+    "  margin-bottom: $blockMargin;",
+    "  width: 100%;",
+    "}",
+    "",
+    ".reveal table th,",
+    ".reveal table td,",
+    "table th,",
+    "table td {",
+    paste0("  border: 1px solid rgba($tableBorderColor, ", custom_theme$table$tableBorderOpacity, ");"),
+    paste0("  padding: ", custom_theme$table$tableCellPadding, ";"),
+    "  text-align: left;",
+    "}",
+    "",
+    ".reveal table th,",
+    "table th {",
+    "  background-color: $tableHeaderBackground !important;",
+    "  color: $tableHeaderColor !important;",
+    "  font-weight: 600;",
+    "  font-family: $headingFont;",
+    "}",
+    "",
+    ".reveal table tr:nth-child(odd),",
+    "table tr:nth-child(odd) {",
+    paste0("  background-color: rgba($tableStripeAlternate, ", custom_theme$table$tableStripeOpacity, ") !important;"),
+    "}"
+  )
+}
