@@ -67,4 +67,34 @@ include_local_figure <- function(data_source) {
 }
 ```
 
-# Estimating Vegetation Change from Fossil Pollen to Planetary Boundaries: A Global, Long-Term Synthesis Using Big Data
+
+# Estimating Vegetation Change from Fossil Pollen to Planetary Boundaries :A Global, Long-Term Synthesis Using Big Data
+
+## Subheading
+
+Estimating [Vegetation]{.text-highlight-purple} Change from [Fossil Pollen]{.text-highlight-pink} to Planetary Boundaries: A Global, Long-Term Synthesis Using [Big Data]{.text-highlight-orange}
+
+## Next
+
+- example list
+  - sublist
+
+## Another heading
+
+### Third heading
+
+```{r}
+#| eval: false
+#| echo: true
+# some example code
+mtcars <-
+  vegan::estimate_richness(arg = TRUE)
+```
+
+## Table
+
+| Left-Aligned | Center-Aligned | Right-Aligned |
+| :----------- |:--------------:| -------------:|
+| This         | is             | an            |
+| aligned      | text           | example       |
+| example      | table          | right         |
