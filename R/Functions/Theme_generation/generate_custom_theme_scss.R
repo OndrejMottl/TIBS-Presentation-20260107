@@ -32,7 +32,7 @@ generate_custom_theme_scss <- function(
   custom_theme_scss_content <-
     c(
       "// This file is auto-generated from colors.json, fonts.json, and custom_theme.json. Do not edit directly.",
-      "// SPROuT Custom Theme for Reveal.js Presentations",
+      "// Custom Theme for Reveal.js Presentations",
       "",
       "/*-- scss:defaults --*/",
       "",

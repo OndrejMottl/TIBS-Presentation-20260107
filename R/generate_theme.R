@@ -78,7 +78,7 @@ message("All functions loaded successfully\n\n")
 #----------------------------------------------------------#
 # 3. Main execution -----
 #----------------------------------------------------------#
-message("SPROuT Theme Generation\n")
+message("Theme Generation\n")
 message("Starting theme generation process...\n\n")
 
 tryCatch(

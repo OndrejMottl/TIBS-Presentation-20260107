@@ -1,6 +1,6 @@
 generate_html_heading_styles <- function() {
   c(
-    "// Heading styles with SPROuT brand colors",
+    "// Heading styles with brand colors",
     "h1, .h1 {",
     "  color: $headingColor;",
     "  font-family: $headings-font-family;",
