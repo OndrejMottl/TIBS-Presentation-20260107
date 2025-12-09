@@ -1,7 +1,7 @@
 #----------------------------------------------------------#
 #
 #
-#                    SPROuT: SAVE
+#             TIBS - Presentation- 20260107
 #
 #                  Render presentation
 #
@@ -20,7 +20,7 @@
 library(here)
 
 source(
-  here::here("R/00_Config_file.R")
+  here::here("R/___setup_project___.R")
 )
 
 # Render -----
@@ -31,7 +31,7 @@ quarto::quarto_render(
 # Move the rendered file to the `docs` directory. -----
 
 fs::file_copy(
-  path = here::here("Presentation/presentation.html"),
+  path = here::here("Presentation/index.html"),
   new_path = here::here("docs/index.html"),
   overwrite = TRUE
 )

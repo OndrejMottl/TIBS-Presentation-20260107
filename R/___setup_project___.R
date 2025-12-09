@@ -70,7 +70,7 @@ package_list <-
     "terra",
     "tidyverse",
     "usethis",
-    "utils",
+    "utils"
   )
 
 # Attach all packages
