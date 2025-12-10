@@ -538,4 +538,47 @@ include_local_figure("Printscreens/GEB_certifiate.png")
 
 ::::
 
+## RRatepol
+
+```{r}
+#| label: rratepol_example_0
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_0.png")
+```
+
+
+## RRatepol
+
+```{r}
+#| label: rratepol_example_2
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_2.png")
+```
+
+
+## RRatepol
+
+```{r}
+#| label: rratepol_example_3
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_3.png")
+```
+
+## RRatepol
+
+```{r}
+#| label: rratepol_example_4
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_4.png")
+```
+
+## RRatepol
+
+```{r}
+#| label: rratepol_example_5
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_5.png")
+```
+
+## RRatepol
+
+```{r}
+#| label: rratepol_example_6
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_6.png")
+```
 
