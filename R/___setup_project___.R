@@ -132,7 +132,7 @@ if (
     ) |>
     purrr::chuck(Sys.info()["user"])
 } else {
-  stop(
+  warning(
     paste(
       "The path to the VegVault data is not specified.",
       " Please, create a 'path.yaml' file."
