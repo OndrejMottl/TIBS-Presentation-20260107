@@ -80,6 +80,11 @@ data_example_age <-
 data_example_uncertainty <-
   RRatepol::example_data$age_uncertainty[[4]]
 
+
+#----------------------------------------------------------#
+# 3. Rate of change estimation -----
+#----------------------------------------------------------#
+
 set.seed(19900723)
 data_roc_levels <-
   RRatepol::estimate_roc(
@@ -90,8 +95,6 @@ data_roc_levels <-
     working_units = "levels",
     time_standardisation = 500
   )
-
-RRatepol::plot_roc(data_roc_levels)
 
 set.seed(19900723)
 data_roc_bins <-
@@ -106,8 +109,6 @@ data_roc_bins <-
     working_units = "bins"
   )
 
-RRatepol::plot_roc(data_roc_bins)
-
 set.seed(19900723)
 data_roc_mw <-
   RRatepol::estimate_roc(
@@ -121,9 +122,6 @@ data_roc_mw <-
     dissimilarity_coefficient = "chisq",
     working_units = "MW"
   )
-
-RRatepol::plot_roc(data_roc_mw)
-
 
 set.seed(19900723)
 data_roc_mw_standardise <-
@@ -141,8 +139,6 @@ data_roc_mw_standardise <-
     working_units = "MW",
     use_parallel = TRUE
   )
-
-RRatepol::plot_roc(data_roc_mw_standardise)
 
 set.seed(19900723)
 data_roc_with_uncertainty <-
@@ -162,17 +158,19 @@ data_roc_with_uncertainty <-
     use_parallel = TRUE
   )
 
-RRatepol::plot_roc(data_roc_with_uncertainty)
+
+#----------------------------------------------------------#
+# 4. Visualisation -----
+#----------------------------------------------------------#
 
 vec_method_colors <-
   c(
     "1. levels" = colours[["green"]],
     "2. bins" = colours[["purple"]],
-    "3. MW" = colours[["pink"]],
-    "4. MW_standardise" = colours[["coral"]],
-    "5. MW_with_uncertainty" = colours[["orange"]]
+    "3. Moving window" = colours[["pink"]],
+    "4. MW + standardise" = colours[["coral"]],
+    "5. MW + stand. + uncertainty" = colours[["orange"]]
   )
-
 
 p_0 <-
   tibble::tibble(
@@ -184,16 +182,16 @@ p_0 <-
       c(
         "1. levels",
         "2. bins",
-        "3. MW",
-        "4. MW_standardise",
-        "5. MW_with_uncertainty"
+        "3. Moving window",
+        "4. MW + standardise",
+        "5. MW + stand. + uncertainty"
       ),
       levels = c(
         "1. levels",
         "2. bins",
-        "3. MW",
-        "4. MW_standardise",
-        "5. MW_with_uncertainty"
+        "3. Moving window",
+        "4. MW + standardise",
+        "5. MW + stand. + uncertainty"
       )
     )
   ) |>
@@ -224,17 +222,15 @@ p_0 <-
   ggplot2::labs(
     x = "Age (cal yr BP)",
     y = "Rate of Change\n(dissimilarity per 500 years)",
-    color = "Legend",
-    fill = "Legend"
+    color = NA,
+    fill = NA
   ) +
   theme_presentation() +
   ggplot2::theme(
     legend.position = "right"
   )
 
-p_0
-
-p_2 <-
+p_1 <-
   p_0 +
   ggplot2::geom_line(
     data = data_roc_levels |>
@@ -244,10 +240,8 @@ p_2 <-
     linetype = "dotted"
   )
 
-p_2
-
-p_3 <-
-  p_2 +
+p_2 <-
+  p_1 +
   ggplot2::geom_line(
     data = data_roc_bins |>
       dplyr::mutate(
@@ -256,69 +250,69 @@ p_3 <-
     linetype = "dashed"
   )
 
-p_3
-
-p_4 <-
-  p_3 +
+p_3 <-
+  p_2 +
   ggplot2::geom_line(
     data = data_roc_mw |>
       dplyr::mutate(
-        method = "3. MW"
+        method = "3. Moving window"
       ),
     linetype = "solid"
   )
 
-p_4
+p_4 <-
+  p_0 +
+  ggplot2::coord_cartesian(
+    ylim = c(0, 1.5),
+    xlim = c(10e3, -500)
+  ) +
+  ggplot2::geom_line(
+    data = data_roc_mw |>
+      dplyr::mutate(
+        method = "3. Moving window"
+      ),
+    linetype = "solid"
+  )
 
 p_5 <-
   p_4 +
   ggplot2::geom_ribbon(
     data = data_roc_mw_standardise |>
       dplyr::mutate(
-        method = "4. MW_standardise"
+        method = "4. MW + standardise"
       ),
-    alpha = 0.3
+    alpha = 0.3,
+    color = NA
   ) +
   ggplot2::geom_line(
     data = data_roc_mw_standardise |>
       dplyr::mutate(
-        method = "4. MW_standardise"
+        method = "4. MW + standardise"
       )
   )
-
-p_5
 
 p_6 <-
   p_5 +
   ggplot2::geom_ribbon(
     data = data_roc_with_uncertainty |>
       dplyr::mutate(
-        method = "5. MW_with_uncertainty"
+        method = "5. MW + stand. + uncertainty"
       ),
-    alpha = 0.3
+    alpha = 0.3,
+    color = NA
   ) +
   ggplot2::geom_line(
     data = data_roc_with_uncertainty |>
       dplyr::mutate(
-        method = "5. MW_with_uncertainty"
+        method = "5. MW + stand. + uncertainty"
       )
   )
 
-p_6
-
-p_samples <-
-  data_example_uncertainty |>
-  as.vector() |>
-  as.data.frame() |>
-  tibble::as_tibble() |>
-  rlang::set_names("age") |>
+p_0_samples <-
   ggplot2::ggplot(
     mapping = ggplot2::aes(
       x = age
     )
-  ) +
-  ggplot2::geom_density(
-    fill = colours[["grey"]]
   ) +
   ggplot2::scale_x_continuous(
     transform = "reverse",
@@ -336,6 +330,14 @@ p_samples <-
     axis.text.y = ggplot2::element_blank(),
     axis.ticks.y = ggplot2::element_blank()
   ) +
+  ggplot2::geom_density(
+    data = data_example_uncertainty |>
+      as.vector() |>
+      as.data.frame() |>
+      tibble::as_tibble() |>
+      rlang::set_names("age"),
+    fill = colours[["grey"]]
+  ) +
   ggplot2::geom_rug(
     data = data_example_age,
     mapping = ggplot2::aes(
@@ -343,7 +345,7 @@ p_samples <-
     )
   )
 
-save_plot_with_legend <- function(sel_plot_name) {
+save_plot_with_legend <- function(sel_plot_name, add_legend = TRUE) {
   sel_plot <-
     get(sel_plot_name, envir = parent.frame())
 
@@ -357,18 +359,25 @@ save_plot_with_legend <- function(sel_plot_name) {
       sel_plot +
         ggplot2::theme(
           legend.position = "none"
-        ) +
-        ggplot2::annotation_custom(
-          grob = cowplot::get_legend(p_6),
-          xmin = I(0.1),
-          xmax = I(0.6),
-          ymin = I(0.6),
-          ymax = I(0.7)
         ),
       ncol = 1,
       align = "v",
       rel_heights = c(1, 2.5)
     )
+
+  if (
+    isTRUE(add_legend)
+  ) {
+    p_to_plot <-
+      p_to_plot +
+      ggplot2::annotation_custom(
+        grob = cowplot::get_legend(sel_plot),
+        xmin = I(0.3),
+        xmax = I(0.8),
+        ymin = I(0.6),
+        ymax = I(0.7)
+      )
+  }
 
   ggplot2::ggsave(
     filename = here::here(
@@ -386,14 +395,20 @@ save_plot_with_legend <- function(sel_plot_name) {
   )
 }
 
-list(
-  "p_0",
-  "p_2",
-  "p_3",
-  "p_4",
-  "p_5",
-  "p_6"
-) |>
-  purrr::walk(
-    save_plot_with_legend
+purrr::walk2(
+  .progress = TRUE,
+  .x = list(
+    "p_0",
+    "p_1",
+    "p_2",
+    "p_3",
+    "p_4",
+    "p_5",
+    "p_6"
+  ),
+  .y = c(FALSE, rep(TRUE, 6)),
+  .f = ~ save_plot_with_legend(
+    sel_plot_name = .x,
+    add_legend = .y
   )
+)

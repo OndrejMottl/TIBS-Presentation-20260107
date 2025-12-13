@@ -545,6 +545,13 @@ include_local_figure("Printscreens/GEB_certifiate.png")
 include_local_figure("R_generated/RRatepol/RRatepol_example_p_0.png")
 ```
 
+## RRatepol
+
+```{r}
+#| label: rratepol_example_1
+include_local_figure("R_generated/RRatepol/RRatepol_example_p_1.png")
+```
+
 
 ## RRatepol
 
@@ -562,6 +569,9 @@ include_local_figure("R_generated/RRatepol/RRatepol_example_p_3.png")
 ```
 
 ## RRatepol
+
+
+<!-- Here we need to sortout the legend and also the sample figure (show bins / uncertainty) -->
 
 ```{r}
 #| label: rratepol_example_4
