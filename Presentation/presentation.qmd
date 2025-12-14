@@ -592,3 +592,33 @@ include_local_figure("R_generated/RRatepol/RRatepol_example_p_5.png")
 include_local_figure("R_generated/RRatepol/RRatepol_example_p_6.png")
 ```
 
+
+## Global RoC
+
+```{r}
+#| label: global_roc_example_0
+include_local_figure("R_generated/Global_RoC/p0_empty_plot.png")
+```
+
+## Global RoC
+
+```{r}
+#| label: global_roc_example_1
+include_local_figure("R_generated/Global_RoC/p1_data_points.png")
+```
+
+
+## Global RoC
+
+```{r}
+#| label: global_roc_example_2
+include_local_figure("R_generated/Global_RoC/p2_gam_fit_with_ci.png")
+```
+
+## Global RoC
+
+```{r}
+#| label: global_roc_example_3
+include_local_figure("R_generated/Global_RoC/p3_significant_changes.png")
+```
+
