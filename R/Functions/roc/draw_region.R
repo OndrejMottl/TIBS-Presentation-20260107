@@ -13,7 +13,7 @@ draw_region <- function(sel_region,
 
   # 95% quantile ROC GAM
   mod_roc <-
-    select_model(
+    fit_gam_model(
       var_y = "roc_upq",
       var_x = "bin",
       family = "tw()",

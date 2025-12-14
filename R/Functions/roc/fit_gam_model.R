@@ -1,14 +1,20 @@
-# This is a updated version of 'draw.region' avauilable at:
-# https://github.dev/HOPE-UIB-BIO/Global_RoC/blob/v-1-1-1/R/functions/draw.region.R
-select_model <- function(
+# This is a updated version of 'select.model' avauilable at:
+# https://github.com/HOPE-UIB-BIO/Global_RoC/blob/v-1-1-1/R/functions/select.model.R
+fit_gam_model <- function(
   var_y,
   var_x,
   family,
   data,
   weights = NA_character_
 ) {
+  require(mgcv)
+  require(stringr)
+  require(dplyr)
+
   n_row_data <-
     nrow(data)
+
+  gam_w_success <- NULL
 
   for (i in seq(
     from = 10,
@@ -84,5 +90,6 @@ select_model <- function(
       }
     }
   }
+
   return(gam_w_success)
 }
