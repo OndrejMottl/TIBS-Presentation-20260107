@@ -622,3 +622,41 @@ include_local_figure("R_generated/Global_RoC/p2_gam_fit_with_ci.png")
 include_local_figure("R_generated/Global_RoC/p3_significant_changes.png")
 ```
 
+
+## Asia synthesis
+
+```{r}
+#| label: Asia_spatial_trends
+include_local_figure("R_generated/Asia/Asia_spatial_trends.png")
+```
+
+## Asia synthesis
+
+```{r}
+#| label: Asia_temporal_trends_p0
+include_local_figure("R_generated/Asia/temporal_p0_empty_plot.png")
+```
+
+
+## Asia synthesis
+
+```{r}
+#| label: Asia_temporal_trends_p1
+include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
+```
+
+
+## Asia synthesis
+
+```{r}
+#| label: Asia_temporal_trends_p2
+include_local_figure("R_generated/Asia/temporal_p2_climate_zone_level.png")
+```
+
+## Asia synthesis
+
+```{r}
+#| label: Asia_temporal_trends_p3
+include_local_figure("R_generated/Asia/temporal_p3_continent_level.png")
+```
+
