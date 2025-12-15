@@ -660,3 +660,27 @@ include_local_figure("R_generated/Asia/temporal_p2_climate_zone_level.png")
 include_local_figure("R_generated/Asia/temporal_p3_continent_level.png")
 ```
 
+
+## Phylogenetic diversity
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: Asia_phylo_temporal
+include_local_figure("R_generated/Phylogenetic/Temporal_trends.png")
+```
+
+:::
+
+::: {.column width="50%" .fragment}
+
+```{r}
+#| label: Asia_phylo_latitudinal
+include_local_figure("R_generated/Phylogenetic/Latitudinal_trends.png")
+```
+:::
+
+::::
+
+
