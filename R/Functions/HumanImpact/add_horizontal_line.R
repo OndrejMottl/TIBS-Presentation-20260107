@@ -1,4 +1,4 @@
-add_vertical_line <- function(plot, data_source, sel_var = "human") {
+add_horizontal_line <- function(plot, data_source, sel_var = "human") {
   plot +
     ggplot2::geom_segment(
       data = data_source %>%
@@ -9,10 +9,10 @@ add_vertical_line <- function(plot, data_source, sel_var = "human") {
           importance_type == "ratio_ind_wmean"
         ),
       mapping = ggplot2::aes(
-        x = Inf,
-        xend = -Inf,
-        y = predictor_importance,
-        yend = predictor_importance,
+        y = Inf,
+        yend = -Inf,
+        x = predictor_importance,
+        xend = predictor_importance,
         color = predictor_importance
       ),
       lty = 1,

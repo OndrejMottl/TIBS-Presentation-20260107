@@ -2,15 +2,21 @@ plot_summary_regions_points <- function(data_source, sel_var = "human", sel_var_
   set.seed(1234)
 
   p_summary_0 +
-    ggplot2::scale_fill_manual(
-      values = palette_ecozones_labels
+    ggplot2::scale_fill_gradient2(
+      low = palette_predictors["climate.blue"],
+      high = palette_predictors["human.green"],
+      na.value = colours["white"],
+      midpoint = 0,
+      mid = colours["grey"],
+      limits = sel_range
     ) +
-    ggplot2::scale_color_manual(
-      values = palette_ecozones_labels
-    ) +
-    ggplot2::labs(
-      x = "",
-      y = sel_var_label
+    ggplot2::scale_color_gradient2(
+      low = palette_predictors["climate.blue"],
+      high = palette_predictors["human.green"],
+      na.value = colours["white"],
+      midpoint = 0,
+      mid = colours["grey"],
+      limits = sel_range
     ) +
     ggplot2::facet_grid(
       region ~ climatezone_label,
@@ -21,9 +27,9 @@ plot_summary_regions_points <- function(data_source, sel_var = "human", sel_var_
     ) +
     ggplot2::theme(
       strip.background = ggplot2::element_blank(),
-      axis.text = ggplot2::element_blank(),
-      axis.line = ggplot2::element_blank(),
-      axis.ticks = ggplot2::element_blank()
+      axis.text.x = ggplot2::element_blank(),
+      axis.line.x = ggplot2::element_blank(),
+      axis.ticks.x = ggplot2::element_blank()
     ) +
     ggplot2::geom_jitter(
       data = data_source %>%
@@ -32,9 +38,10 @@ plot_summary_regions_points <- function(data_source, sel_var = "human", sel_var_
         ),
       mapping = ggplot2::aes(
         x = predictor,
-        y = ratio_ind,
-        col = climatezone_label
+        y = predictor_importance,
+        col = predictor_importance
       ),
+      position = ggplot2::position_jitter(height = 0),
       alpha = 0.8
     )
 }
