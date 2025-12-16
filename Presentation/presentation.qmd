@@ -1454,3 +1454,122 @@ include_local_figure("QR/qr_vaultkeepr.svg")
 :::::
 
 ::::::
+
+# Human Impact
+
+## Human Impact
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: map_example_record_bare
+include_local_figure("R_generated/HumanImpact/fig_map_example_record_bare.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: example_record_importance
+include_local_figure("R_generated/HumanImpact/fig_summary_example_record.png")
+```
+
+:::
+
+::::
+
+## Human Impact
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: map_eu_temperate_record
+include_local_figure("R_generated/HumanImpact/fig_map_europe_temperate.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: eu_temperate_importance
+include_local_figure("R_generated/HumanImpact/fig_summary_eu_temperate.png")
+```
+
+:::
+
+::::
+
+## Human Impact
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: map_eu_temperate_record_2
+include_local_figure("R_generated/HumanImpact/fig_map_europe_temperate.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: eu_temperate_importance_quantile
+include_local_figure("R_generated/HumanImpact/fig_summary_eu_temperate_quantile.png")
+```
+
+:::
+
+::::
+
+## Human Impact
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: map_eu
+include_local_figure("R_generated/HumanImpact/fig_map_europe.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: eu_importance
+include_local_figure("R_generated/HumanImpact/fig_summary_eu_quantile.png")
+```
+
+:::
+
+::::
+
+## Human Impact
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+#| label: map_eu_2
+include_local_figure("R_generated/HumanImpact/fig_map_europe.png")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: eu_importance_density
+include_local_figure("R_generated/HumanImpact/fig_summary_eu_with_density.png")
+```
+
+:::
+
+::::
+
+## Human Impact
+
+```{r}
+#| label: global_human_impact
+include_local_figure("R_generated/HumanImpact/fig_map_full.png")
+```
