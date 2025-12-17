@@ -537,6 +537,22 @@ include_local_figure("Printscreens/GEB_certifiate.png")
 
 ::::
 
+# Technical progress
+
+## Computational infrastructure
+
+```{r}
+#| label: computational_infrastructure
+include_local_figure("R_generated/Computers/PC_power_in_time.png")
+```
+
+::: {.footer}
+The data obtained from [wikipedia/Instructions_per_second](https://en.wikipedia.org/wiki/Instructions_per_second)
+:::
+
+## Statistical Innovation
+
+
 ## RRatepol
 
 ```{r}
