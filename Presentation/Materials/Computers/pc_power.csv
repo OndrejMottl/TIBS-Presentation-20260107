@@ -1,0 +1,19 @@
+Year,Model,CPU,Low_MIPS,High_MIPS
+1971,Kenbak-1 / Intel 4004 class,Intel 4004-like,0.05,0.07
+1977,Apple II / Commodore PET,MOS 6502,0.3,0.5
+1981,IBM PC 5150,Intel 8088,0.7,0.8
+1984,Macintosh 128K,Motorola 68000,1.0,1.5
+1986,Early 286 desktops,Intel 80286,0.9,1.4
+1987,Compaq Deskpro 386,Intel 80386,4.0,6.0
+1990,Typical 386DX/25,Intel 80386,5.0,8.0
+1992,Typical 486DX,Intel 80486,20,30
+1994,High-end 486,Intel 80486,35,50
+1996,Early Pentium,Intel Pentium P5,80,150
+1998,High-end Pentium,Intel Pentium MMX,150,300
+2000,Pentium III,Pentium III,300,1000
+2003,Pentium 4 / Athlon XP,Intel P4 / AMD K7,800,2000
+2006,Early dual-core,Intel Core Duo / AMD X2,2000,5000
+2010,Early Core i-series,Intel Nehalem/Westmere,5000,15000
+2015,Skylake Core i-series,Intel Core i5/i7,10000,50000
+2020,Modern multi-core desktop,AMD Ryzen/Intel Core,30000,200000
+2024,High-end enthusiast,Ryzen 7950X / Intel 14900K,200000,600000
