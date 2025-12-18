@@ -35,3 +35,17 @@ fs::file_copy(
   new_path = here::here("docs/index.html"),
   overwrite = TRUE
 )
+
+
+# Make PDF version -----
+
+# decktape needs to be installed separately.
+# See https://github.com/astefanutti/decktape
+system2(
+  command = "decktape.cmd",
+  args = c(
+    "reveal", "--fragments=true",
+    here::here("Presentation/index.html"),
+    here::here("Presentation/presentation.pdf")
+  )
+)
