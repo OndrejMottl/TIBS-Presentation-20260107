@@ -366,6 +366,79 @@ include_local_figure("QR/qr_personal_web.svg")
 
 ::::
 
+# Palaeoecology
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| label: fordham_2020_a
+include_local_figure("Fordham/369_abc5654_fa.jpeg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+
+::: {.column width="50%"}
+
+<br>
+
+```{r}
+#| label: fordham_2020_b
+include_local_figure("Fordham/369_abc5654_f4.jpeg")
+```
+:::
+
+::::
+
+::: {.text-center .text-size-heading3 .text-font-heading}
+Using [paleo-archives]{.text-highlight-blue .text-shadow-dark} to [safeguard]{.text-highlight-pink .text-shadow-dark} biodiversity 
+:::
+
+::: {.footer}
+Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654))
+:::
+
+## 
+
+<br>
+
+
+:::: {.columns}
+
+::: {.column width = "50%" .text-size-heading3 .text-italic .text-center .text-font-heading}
+
+<br>
+<br>
+<br>
+
+"[Fossil pollen]{.text-background-purple .text-bold} as a window to the past [vegetation]{.text-background-orange} patterns"
+:::
+
+::: {.column width = "50%"}
+
+```{r}
+#| label: palaeoecology
+include_local_figure("Ai_generated/fossilpollen.jpeg")
+```
+:::
+
+::::
+
+::: {.footer}
+Image created by Bing 
+:::
+
+
 ## {background-image="../Presentation/Materials/R_generated/Fossil_pollen/Neotoma_spatial_data_full-2025-12-09.png" background-size="1500px" background-repeat="no-repeat" background-opacity="0.65"}
 
 <br>
@@ -396,104 +469,10 @@ fossil pollen timeseries (records)
 Fossil pollen datasets accessed from Neotoma on 2025-12-09
 :::
 
-## Palaeoecological dataset compilation
-
-<br>
-
-:::: {.columns}
-
-::: {.column width = "70%"}
-
-```{r}
-#| label: compilation_1
-include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_1.png")
-```
-:::
-
-::: {.column width = "30%"}
-:::
-
-::::
 
 ## Palaeoecological dataset compilation
 
 <br>
-
-:::: {.columns}
-
-::: {.column width = "70%"}
-
-```{r}
-#| label: compilation_2
-include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_2.png")
-```
-:::
-
-::: {.column width = "30%"}
-:::
-
-::::
-
-## Palaeoecological dataset compilation
-
-<br>
-
-:::: {.columns}
-
-::: {.column width = "70%"}
-
-```{r}
-#| label: compilation_3
-include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_3.png")
-```
-:::
-
-::: {.column width = "30%"}
-:::
-
-::::
-
-## Palaeoecological dataset compilation
-
-<br>
-
-:::: {.columns}
-
-::: {.column width = "70%"}
-
-```{r}
-#| label: compilation_4
-include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_4.png")
-```
-:::
-
-::: {.column width = "30%"}
-:::
-
-::::
-
-## Palaeoecological dataset compilation
-
-<br>
-
-:::: {.columns}
-
-::: {.column width = "70%"}
-
-```{r}
-#| label: compilation_5
-include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_5.png")
-```
-:::
-
-::: {.column width = "30%"}
-:::
-
-::::
-
-
-## Palaeoecological dataset compilation
-
 <br>
 
 :::: {.columns}
@@ -506,7 +485,10 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 ```
 :::
 
-::: {.column width = "30%" .incremental}
+::: {.column width = "30%" .fragment}
+
+<br>
+
 
 - Macro-scale data analysis
 - Project specific
@@ -516,25 +498,32 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 
 ::::
 
-# 
+## 
+
+<br>
 
 :::: {.columns}
 
-::: {.column width = "50%"}
+::: {.column width = "45%"}
+
+<br>
+
+
 ```{r}
 #| label: fossilpol_logo_2
 include_local_figure("Logos/FOSSILPOL_logo_600ppi.png")
 ```
+
 :::
 
-::: {.column width = "50%" .center-vertical .text-larger .text-center}
+::: {.column width = "55%" .center-vertical .text-larger .text-center}
 The workflow to process global [palaeoecological data]{.text-highlight-purple} of fossil pollen for [vegetation]{.text-highlight-pink }-based [macroecological]{.text-highlight-coral} [synthesis]{.text-highlight-orange}
 :::
 
 ::::
 
 
-## [Inputs]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_1.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [INPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_1.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -545,7 +534,7 @@ The workflow to process global [palaeoecological data]{.text-highlight-purple} o
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_0.png")
 ```
 
-## [SOURCING]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_2.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [SOURCING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_2.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -556,7 +545,7 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_0.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_2.png")
 ```
 
-## [CHRONOLOGIES]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_3.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [CHRONOLOGIES]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_3.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -567,7 +556,7 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_2.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_4.png")
 ```
 
-## [HARMONISATION]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_4.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [HARMONISATION]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_4.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -578,7 +567,7 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_4.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_6.png")
 ```
 
-## [FILTERING]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [FILTERING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -589,7 +578,7 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_6.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
 ```
 
-## [Outputs]{.text-color-white} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_6.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [OUTPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_6.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -600,9 +589,7 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
 
-## Documentation
-
-### Website
+## Website - Documentation
 
 <br>
 
@@ -616,7 +603,7 @@ include_local_figure("Printscreens/website_preview.png")
 ```
 :::
 
-::: {.column width="60%" .fragment}
+::: {.column width="60%" .fragment fragment-index="1"}
 
 ```{r}
 #| label: website_doc_preview
@@ -625,22 +612,17 @@ include_local_figure("Printscreens/website_doc_preview.png")
 
 [check it out!]{.text-highlight-orange} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
 
+Now bilingual! ([English]{.text-highlight-purple}/ [Spanish]{.text-highlight-pink})
+
 :::
 
 ::::
-
-::: {.text-center .fragment}
-
-Now billingual: [English]{.text-highlight-purple} and [Spanish]{.text-highlight-pink}
-
-:::
-
 
 ## FOSSILPOL
 
 :::: {.columns}
 
-::: {.column width="75%" .incremental}
+::: {.column width="75%"}
 
 <br>
 
@@ -649,7 +631,7 @@ Now billingual: [English]{.text-highlight-purple} and [Spanish]{.text-highlight-
 - Open-source and fully [reproducible]{.text-highlight-green} workflow written in [R]{.text-highlight-blue}
 :::
 
-::: {.column width="25%" .fragment}
+::: {.column width="25%"}
 
 <br> 
 
