@@ -680,7 +680,9 @@ include_local_figure("Printscreens/GEB_certifiate.png")
 
 ::::
 
-# Technical progress
+# 
+
+
 
 ## Computational infrastructure
 
@@ -695,6 +697,48 @@ The data obtained from [wikipedia/Instructions_per_second](https://en.wikipedia.
 
 ## Statistical Innovation
 
+## Analytical paleobiology
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+### Challenges
+
+```{r}
+#| label: Dillon
+include_local_figure("Dillon/urn_cambridge.org_id_binary_20230829075443580-0059_S0094837323000039_S0094837323000039_fig1.png")
+```
+
+:::
+
+::: {.column width="3%"}
+
+:::
+
+::: {.column width="57%" .fragment}
+
+<br>
+<br>
+
+### Advancements
+
+::: {.text-smaller}
+
+Best practices and [reproducible workflows]{.text-highlight-blue} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple}, Incentive structures that reward [software development]{.text-highlight-pink}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral} in quantitative methods and [Data Science]{.text-highlight-orange}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green} communication, collaboration, and funding
+:::
+
+Erin has talk direcly after me!
+
+:::
+
+::::
+
+::: {.footer}
+Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
+:::
 
 ## RRatepol
 
