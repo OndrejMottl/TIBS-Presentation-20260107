@@ -905,12 +905,11 @@ An R package for estimating [rate of change]{.text-highlight-blue} (RoC) from [m
 
 ## {RRatepol}
 
-<br>
-
 :::: {.columns}
 
 ::: {.column width="20%"}
 
+<br>
 
 ```{r}
 #| label: RRatepol_logo_empty
@@ -938,16 +937,13 @@ include_local_figure("R_generated/RRatepol/empty_plot.png")
 
 ::::
 
-
-
 ## {RRatepol}
-
-<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
 
+<br>
 
 ```{r}
 #| label: RRatepol_logo_levels
@@ -976,13 +972,11 @@ include_local_figure("R_generated/RRatepol/levels.png")
 
 ## {RRatepol}
 
-
-<br>
-
 :::: {.columns}
 
 ::: {.column width="20%"}
 
+<br>
 
 ```{r}
 #| label: RRatepol_logo_bins
@@ -1014,12 +1008,11 @@ include_local_figure("R_generated/RRatepol/bins.png")
 
 ## {RRatepol}
 
-<br>
-
 :::: {.columns}
 
 ::: {.column width="20%"}
 
+<br>
 
 ```{r}
 #| label: RRatepol_logo_mw
@@ -1050,13 +1043,11 @@ include_local_figure("R_generated/RRatepol/moving_window.png")
 
 ## {RRatepol}
 
-
-<br>
-
 :::: {.columns}
 
 ::: {.column width="20%"}
 
+<br>
 
 ```{r}
 #| label: RRatepol_logo_mw_uncer
@@ -1074,7 +1065,6 @@ include_local_figure("QR/qr_rratepol.svg")
 :::
 
 ::: {.column width="75%"}
-
 
 ```{r}
 #| label: rratepol_example_mw_uncer
