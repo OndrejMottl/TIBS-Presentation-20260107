@@ -119,7 +119,7 @@ p_0 <-
     legend.box.spacing = ggplot2::unit(0.01, "cm")
   ) +
   ggview::canvas(
-    width = 16,
+    width = 12,
     height = 9,
     dpi = 300,
     units = "cm"

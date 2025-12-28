@@ -905,40 +905,185 @@ An R package for estimating [rate of change]{.text-highlight-blue} (RoC) from [m
 
 ## {RRatepol}
 
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+
 ```{r}
-#| label: rratepol_example_0
+#| label: RRatepol_logo_empty
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_empy
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| label: rratepol_example_empty
 include_local_figure("R_generated/RRatepol/empty_plot.png")
 ```
 
+:::
+
+::::
+
+
+
 ## {RRatepol}
 
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+
 ```{r}
-#| label: rratepol_example_1
-include_local_figure("R_generated/RRatepol/levels.png")
+#| label: RRatepol_logo_levels
+include_local_figure("Logos/RRatepol_logo.png")
 ```
 
+```{r}
+#| label: RRatepol_github_qr_levels
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| label: rratepol_example_levels
+include_local_figure("R_generated/RRatepol/levels.png")
+```
+:::
+
+::::
 
 ## {RRatepol}
 
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+
 ```{r}
-#| label: rratepol_example_2
+#| label: RRatepol_logo_bins
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_bins
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+
+```{r}
+#| label: rratepol_example_bins
 include_local_figure("R_generated/RRatepol/bins.png")
 ```
 
+:::
+
+::::
+
 
 ## {RRatepol}
 
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+
 ```{r}
-#| label: rratepol_example_3
+#| label: RRatepol_logo_mw
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_mw
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+
+```{r}
+#| label: rratepol_example_mw
 include_local_figure("R_generated/RRatepol/moving_window.png")
 ```
 
+:::
+
+::::
+
 ## {RRatepol}
 
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+
 ```{r}
-#| label: rratepol_example_4
+#| label: RRatepol_logo_mw_uncer
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_mw_uncer
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+
+```{r}
+#| label: rratepol_example_mw_uncer
 include_local_figure("R_generated/RRatepol/moving_window_with_uncerntainty.png")
 ```
+
+:::
+
+::::
 
 
 ## Global RoC
