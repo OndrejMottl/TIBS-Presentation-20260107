@@ -58,9 +58,8 @@ p_0 <-
     panel.grid.minor = ggplot2::element_blank()
   ) +
   ggplot2::labs(
-    caption = "MIPS = Million Instructions Per Second",
     x = "Year",
-    y = "Computing Power (MIPS)"
+    y = "Computing Power\n(Million Instructions Per Second)"
   ) +
   ggplot2::scale_color_gradient(
     low = colours["purple"],
@@ -100,7 +99,7 @@ p_0 <-
       y = mips_avg
     ),
     alpha = 0.8,
-    size = 3
+    size = 4
   ) +
   ggview::canvas(
     width = 16,
