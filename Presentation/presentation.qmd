@@ -411,7 +411,7 @@ Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654))
 ## 
 
 <br>
-
+<br>
 
 :::: {.columns}
 
@@ -421,7 +421,7 @@ Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654))
 <br>
 <br>
 
-[Fossil pollen]{.text-background-purple .text-bold} as a window to the past [vegetation]{.text-background-orange} patterns
+[Fossil pollen]{.text-highlight-purple .text-bold .text-shadow-dark} as a window to the past [vegetation]{.text-highlight-orange .text-shadow-light} patterns
 :::
 
 ::: {.column width = "50%"}
@@ -439,18 +439,20 @@ Image created by Bing
 :::
 
 
-## {background-image="../Presentation/Materials/R_generated/Fossil_pollen/Neotoma_spatial_data_full-2025-12-09.png" background-size="1500px" background-repeat="no-repeat" background-opacity="0.65"}
+## Neotoma Paleoecology Database {.text-center background-image="../Presentation/Materials/R_generated/Fossil_pollen/Neotoma_spatial_data_full-2025-12-09.png" background-size="1500px" background-repeat="no-repeat" background-opacity="0.65"}
 
-<br>
+![](Materials/Logos/neotoma_1.png){.absolute top=600 left=0 width="100" height="100"}
+![](Materials/Logos/neotoma_2.svg){.absolute top=600 right=0 width="100" height="100"}
+
 <br>
 <br>
 
 :::: {.columns}
 
-::: {.column width = "20%"}
+::: {.column width = "15%"}
 :::
 
-::: {.column width = "60%" .text-center}
+::: {.column width = "70%"}
 
 ::: {.text-bold .r-fit-text .text-color-black}
 \>6650
@@ -460,7 +462,9 @@ Image created by Bing
 fossil pollen timeseries (records)
 :::
 
+:::
 
+::: {.column width = "15%"}
 :::
 
 ::::
@@ -485,7 +489,7 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 ```
 :::
 
-::: {.column width = "30%" .fragment}
+::: {.column width = "30%"}
 
 <br>
 
@@ -498,9 +502,7 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 
 ::::
 
-## 
-
-<br>
+## {.bg-black .text-color-white}
 
 :::: {.columns}
 
@@ -516,69 +518,13 @@ include_local_figure("Logos/FOSSILPOL_logo_600ppi.png")
 
 :::
 
-::: {.column width = "55%" .center-vertical .text-larger .text-center}
-The workflow to process global [palaeoecological data]{.text-highlight-purple} of fossil pollen for [vegetation]{.text-highlight-pink }-based [macroecological]{.text-highlight-coral} [synthesis]{.text-highlight-orange}
+::: {.column width = "55%" .center-vertical .text-larger .text-center .text-bold}
+The workflow to process [global]{.text-highlight-blue .text-shadow-dark} palaeoecological data of [fossil pollen]{.text-highlight-purple .text-shadow-dark} for [vegetation]{.text-highlight-pink .text-shadow-dark}-based [macroecological]{.text-highlight-coral .text-shadow-dark} [synthesis]{.text-highlight-orange .text-shadow-light}
 :::
 
 ::::
 
-
-## [INPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_1.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
-
-<br>
-
-```{r}
-#| label: workflow_0
-#| out.height: 100%
-#| out.width: NULL
-include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_0.png")
-```
-
-## [SOURCING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_2.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
-
-<br>
-
-```{r}
-#| label: workflow_2
-#| out.height: 100%
-#| out.width: NULL
-include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_2.png")
-```
-
-## [CHRONOLOGIES]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_3.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
-
-<br>
-
-```{r}
-#| label: workflow_4
-#| out.height: 100%
-#| out.width: NULL
-include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_4.png")
-```
-
-## [HARMONISATION]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_4.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
-
-<br>
-
-```{r}
-#| label: workflow_6
-#| out.height: 100%
-#| out.width: NULL
-include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_6.png")
-```
-
-## [FILTERING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
-
-<br>
-
-```{r}
-#| label: workflow_8
-#| out.height: 100%
-#| out.width: NULL
-include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
-```
-
-## [OUTPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_6.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+## [FOSSILPOL workflow]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
 
 <br>
 
@@ -589,51 +535,19 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
 
-## Website - Documentation
+## Documentation (website)
 
 <br>
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="30%"}
 
 ```{r}
 #| label: website_preview
 include_local_figure("Printscreens/website_preview.png")
 ```
-:::
 
-::: {.column width="60%" .fragment fragment-index="1"}
-
-```{r}
-#| label: website_doc_preview
-include_local_figure("Printscreens/website_doc_preview.png")
-```
-
-[check it out!]{.text-highlight-orange} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
-
-Now bilingual! ([English]{.text-highlight-purple}/ [Spanish]{.text-highlight-pink})
-
-:::
-
-::::
-
-## FOSSILPOL
-
-:::: {.columns}
-
-::: {.column width="75%"}
-
-<br>
-
-- Handles all the steps and flags places where the [user]{.text-highlight-purple} needs to specify their [choices]{.text-highlight-pink}
-- Modular structure to allow [flexibility]{.text-highlight-coral} and [customisation]{.text-highlight-orange} for different [projects]{.text-highlight-yellow}
-- Open-source and fully [reproducible]{.text-highlight-green} workflow written in [R]{.text-highlight-blue}
-:::
-
-::: {.column width="25%"}
-
-<br> 
 
 ```{r}
 #| label: QR code https://bit.ly/FOSSILPOL 
@@ -653,6 +567,54 @@ qrcode::generate_svg(
 
 include_local_figure("QR/qr_fossilpol.svg")
 ```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+```{r}
+#| label: website_doc_preview
+include_local_figure("Printscreens/website_doc_preview.png")
+```
+
+Now bilingual! ([English]{.text-highlight-purple}/[Spanish]{.text-highlight-pink})
+
+[Check it out!]{.text-highlight-orange .text-bold} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
+
+:::
+
+::::
+
+## FOSSILPOL
+
+![](Materials/Logos/FOSSILPOL_logo_600ppi.png){.absolute top=20 right=70 width="100" height="115"}
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+<br>
+
+- Open-source and fully [reproducible workflow]{.text-highlight-blue} written in [R]{.text-highlight-purple}
+- Handles all the steps and [flags places]{.text-highlight-pink}, where the user needs to [specify their choices]{.text-highlight-coral}
+- Modular structure to allow [flexibility]{.text-highlight-orange} and [customisation]{.text-highlight-green} for different projects
+
+:::
+
+::: {.column width="25%"}
+
+<br> 
+
+```{r}
+#| label: fossilpol_qr_2
+include_local_figure("QR/qr_fossilpol.svg")
+```
+
 :::
 
 ::::
@@ -2056,4 +2018,73 @@ include_local_figure("R_generated/HumanImpact/fig_summary_eu_with_density.png")
 ```{r}
 #| label: global_human_impact
 include_local_figure("R_generated/HumanImpact/fig_map_full.png")
+```
+
+
+# Outro
+
+## [INPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_1.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_0
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_0.png")
+```
+
+## [SOURCING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_2.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_2
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_2.png")
+```
+
+## [CHRONOLOGIES]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_3.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_4
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_4.png")
+```
+
+## [HARMONISATION]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_4.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_6
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_6.png")
+```
+
+## [FILTERING]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_8
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
+```
+
+## [OUTPUTS]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_6.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+<br>
+
+```{r}
+#| label: workflow_full-outro
+#| out.height: 100%
+#| out.width: NULL
+include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
