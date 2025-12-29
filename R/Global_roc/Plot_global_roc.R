@@ -145,9 +145,17 @@ data_mod_predictions <-
       .f = ~ dplyr::left_join(
         x = .x,
         y = .y |>
+          dplyr::mutate(
+            direction_change = dplyr::case_when(
+              d_lower < 0 ~ "increasing",
+              d_lower > 0 ~ "decreasing",
+              TRUE ~ "no_change"
+            ),
+          ) |>
           dplyr::select(
             bin,
-            significante_change
+            significante_change,
+            direction_change
           ),
         by = "bin"
       )
@@ -260,6 +268,12 @@ data_to_plot <-
         x = bin,
         y = roc_upq
       )
+    ) +
+    ggview::canvas(
+      width = 16,
+      height = 9,
+      units = "cm",
+      dpi = 300
     )
 )
 
@@ -308,19 +322,54 @@ data_to_plot <-
 
 (
   p3 <-
-    p2 +
+    p0 +
     ggplot2::geom_point(
+      data = data_to_plot |>
+        tidyr::unnest(data),
+      mapping = ggplot2::aes(
+        x = bin,
+        y = roc_upq
+      ),
+      size = 1,
+      alpha = 1,
+      shape = 15,
+      color = colours["grey"]
+    ) +
+    ggplot2::geom_ribbon(
+      data = data_to_plot |>
+        tidyr::unnest(data_pred_with_deriv),
+      mapping = ggplot2::aes(
+        x = bin,
+        ymin = lower,
+        ymax = upper
+      ),
+      alpha = 0.3,
+      fill = colours["grey"]
+    ) +
+    ggplot2::geom_line(
+      data = data_to_plot |>
+        tidyr::unnest(data_pred_with_deriv),
+      mapping = ggplot2::aes(
+        x = bin,
+        y = fit,
+      ),
+      linewidth = 0.5,
+      color = colours["grey"]
+    ) +
+    ggplot2::geom_line(
       data = data_to_plot |>
         tidyr::unnest(data_pred_with_deriv) |>
         dplyr::filter(
-          significante_change == TRUE
+          significante_change == TRUE,
+          bin < 10e3,
+          direction_change == "increasing"
         ),
       mapping = ggplot2::aes(
         x = bin,
-        y = fit
+        y = fit,
+        color = region
       ),
-      size = 0.5,
-      shape = 8
+      linewidth = 2
     )
 )
 
@@ -342,18 +391,14 @@ c(
   ) |>
   purrr::iwalk(
     .progress = TRUE,
-    .f = ~ ggplot2::ggsave(
-      filename = here::here(
+    .f = ~ ggview::save_ggplot(
+      file = here::here(
         "Presentation",
         "Materials",
         "R_generated",
         "Global_RoC",
         paste0(.y, ".png")
       ),
-      plot = .x,
-      width = 16,
-      height = 9,
-      units = "cm",
-      dpi = 300
+      plot = .x
     )
   )
