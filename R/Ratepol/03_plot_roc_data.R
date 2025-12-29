@@ -52,6 +52,10 @@ data_example_age <-
 # 3. Visualisation -----
 #----------------------------------------------------------#
 
+#----------------------------------------------------#
+## 3.1. Detailed -----
+#----------------------------------------------------#
+
 vec_method_colors <-
   c(
     "1. levels" = colours[["green"]],
@@ -89,7 +93,7 @@ p_0 <-
     values = vec_method_colors
   ) +
   ggplot2::coord_cartesian(
-    ylim = c(0, 4),
+    ylim = c(0, 3),
     xlim = c(10e3, -500)
   ) +
   ggplot2::guides(
@@ -254,6 +258,128 @@ p_uncertaint_legend_inset <-
     ymax = I(0.7)
   )
 
+#----------------------------------------------------#
+## 3.2. Simple -----
+#----------------------------------------------------#
+
+vec_method_colors_simple <-
+  c(
+    "Classical" = colours[["green"]],
+    "RRatepol" = colours[["orange"]]
+  )
+
+p_clasical <-
+  p_0 +
+  ggplot2::scale_color_manual(
+    values = vec_method_colors_simple
+  ) +
+  ggplot2::scale_fill_manual(
+    values = vec_method_colors_simple
+  ) +
+  ggplot2::geom_line(
+    data = list_res$levels |>
+      dplyr::mutate(
+        method = "Classical"
+      ),
+    mapping = ggplot2::aes(
+      x = Age,
+      y = ROC,
+      col = method
+    ),
+    linewidth = 0.3,
+    linetype = "dashed"
+  )
+
+
+p_clasical_legend_inset <-
+  p_clasical +
+  ggplot2::theme(
+    legend.position = "none"
+  ) +
+  ggplot2::annotation_custom(
+    grob = cowplot::get_legend(p_clasical),
+    xmin = I(0.2),
+    xmax = I(0.3),
+    ymin = I(0.6),
+    ymax = I(0.7)
+  )
+
+p_rratepol <-
+  p_clasical +
+  ggplot2::geom_ribbon(
+    data = list_res$mw_with_age_uncertainty |>
+      dplyr::mutate(
+        method = "RRatepol"
+      ),
+    mapping = ggplot2::aes(
+      x = Age,
+      y = ROC,
+      ymin = ROC_dw,
+      ymax = ROC_up,
+      fill = method
+    ),
+    alpha = 0.3,
+    color = NA
+  ) +
+  ggplot2::geom_line(
+    data = list_res$mw_with_age_uncertainty |>
+      dplyr::mutate(
+        method = "RRatepol"
+      ),
+    mapping = ggplot2::aes(
+      x = Age,
+      y = ROC,
+      col = method
+    ),
+    linetype = "solid",
+    linewidth = 1
+  )
+
+p_rratepol_highlight <-
+  p_rratepol +
+  ggplot2::geom_line(
+    data = list_res$mw_with_age_uncertainty |>
+      RRatepol::detect_peak_points(
+        sel_method = "trend_non_linear"
+      ) |>
+      dplyr::filter(Peak),
+    mapping = ggplot2::aes(
+      x = Age,
+      y = ROC,
+    ),
+    linetype = "solid",
+    linewidth = 2,
+    col = colours[["purple"]]
+  )
+
+p_rratepol_legend_inset <-
+  p_rratepol +
+  ggplot2::theme(
+    legend.position = "none"
+  ) +
+  ggplot2::annotation_custom(
+    grob = cowplot::get_legend(p_rratepol),
+    xmin = I(0.2),
+    xmax = I(0.3),
+    ymin = I(0.6),
+    ymax = I(0.7)
+  )
+
+
+p_rratepol_highlight_legend_inset <-
+  p_rratepol_highlight +
+  ggplot2::theme(
+    legend.position = "none"
+  ) +
+  ggplot2::annotation_custom(
+    grob = cowplot::get_legend(p_rratepol),
+    xmin = I(0.2),
+    xmax = I(0.3),
+    ymin = I(0.6),
+    ymax = I(0.7)
+  )
+
+
 #----------------------------------------------------------#
 # 4. Save -----
 #----------------------------------------------------------#
@@ -311,5 +437,39 @@ ggview::save_ggplot(
     "R_generated",
     "RRatepol",
     "moving_window_with_uncerntainty.png"
+  )
+)
+
+ggview::save_ggplot(
+  plot = p_clasical_legend_inset,
+  file = here::here(
+    "Presentation",
+    "Materials",
+    "R_generated",
+    "RRatepol",
+    "simple_classical.png"
+  )
+)
+
+ggview::save_ggplot(
+  plot = p_rratepol_legend_inset,
+  file = here::here(
+    "Presentation",
+    "Materials",
+    "R_generated",
+    "RRatepol",
+    "simple_rratepol.png"
+  )
+)
+
+
+ggview::save_ggplot(
+  plot = p_rratepol_highlight_legend_inset,
+  file = here::here(
+    "Presentation",
+    "Materials",
+    "R_generated",
+    "RRatepol",
+    "simple_rratepol_highlight.png"
   )
 )

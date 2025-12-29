@@ -219,10 +219,10 @@ include_local_figure("AI_generated/Earth.jpeg")
 
 ::: {.column width="50%" .text-center .center-vertical}
 
-6/9 [global]{.text-highlight-purple} Earth [Planetary Boundaries]{.text-highlight-pink} are already [exceeded]{.text-highlight-orange} 
+6/9 [global]{.text-highlight-purple .text-shadow-dark} Earth [Planetary Boundaries]{.text-highlight-pink .text-shadow-dark} are already [exceeded]{.text-highlight-orange .text-shadow-light} 
 
 ::: {.text-smaller .text-color-grey}
-(Katherine Richardson et al. [2023](https://doi.org/10.1126/sciadv.adh2458))
+(Richardson et al. [2023](https://doi.org/10.1126/sciadv.adh2458))
 :::
 
 :::
@@ -282,7 +282,7 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 <br>
 
 
-What if we inform the [conservation]{.text-highlight-blue} policies by incorporating a [global]{.text-highlight-purple}, [long-term]{.text-highlight-pink} synthesis on ecosystem [dynamics]{.text-highlight-coral} using [Big Data]{.text-highlight-orange}?
+What if we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global]{.text-highlight-purple .text-shadow-dark}, [long-term]{.text-highlight-pink .text-shadow-dark} synthesis on ecosystem [dynamics]{.text-highlight-coral .text-shadow-dark} using [Big Data]{.text-highlight-orange .text-shadow-light}?
 :::
 
 ::::
@@ -307,7 +307,7 @@ include_local_figure("About/head_photo.png")
 
 :::
 
-::: {.column width="64%"}
+::: {.column width="64%" .text-center}
 
 <br>
 
@@ -315,7 +315,7 @@ Assistant Professor at 🏛️[Charles University](https://cuni.cz/UK-1.html), P
 
 Head of the 🧑‍💻[Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html)
 
-Interested in [macroecology]{.text-highlight-purple}, [palaeoecology]{.text-highlight-pink}, [biodiversity]{.text-highlight-coral}, and [data science]{.text-highlight-orange}
+Interested in [macroecology]{.text-highlight-purple .text-shadow-dark}, [palaeoecology]{.text-highlight-pink .text-shadow-dark}, [biodiversity]{.text-highlight-coral .text-shadow-dark}, and [data science]{.text-highlight-orange .text-shadow-light}
 
 :::
 
@@ -326,7 +326,7 @@ Interested in [macroecology]{.text-highlight-purple}, [palaeoecology]{.text-high
 ::: {.column width="5%"}
 :::
 
-::: {.column width="55%" .text-smaller}
+::: {.column width="45%" .text-smaller}
 
 * 📧 ondrej.mottl(at)gmail.com
 * 🦋 [ondrejmottl.bsky.social](https://bsky.app/profile/ondrejmottl.bsky.social)
@@ -335,7 +335,15 @@ Interested in [macroecology]{.text-highlight-purple}, [palaeoecology]{.text-high
 * 🌐 [Personal webpage](https://ondrejmottl.github.io/)
 :::
 
-::: {.column width="15%"}
+::: {.column width="20%"}
+```{r}
+#| label: loqe-logo-about_me
+include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
+```
+
+:::
+
+::: {.column width="5%"}
 :::
 
 ::: {.column width="20%"}
@@ -573,7 +581,7 @@ include_local_figure("QR/qr_fossilpol.svg")
 ::: {.column width="5%"}
 :::
 
-::: {.column width="60%"}
+::: {.column width="60%" .text-center}
 
 <br>
 
@@ -582,9 +590,9 @@ include_local_figure("QR/qr_fossilpol.svg")
 include_local_figure("Printscreens/website_doc_preview.png")
 ```
 
-Now bilingual! ([English]{.text-highlight-purple}/[Spanish]{.text-highlight-pink})
+Now bilingual! ([English]{.text-highlight-purple .text-shadow-dark}/[Spanish]{.text-highlight-pink .text-shadow-dark})
 
-[Check it out!]{.text-highlight-orange .text-bold} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
+[Check it out!]{.text-highlight-orange .text-bold .text-shadow-light} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
 
 :::
 
@@ -600,9 +608,9 @@ Now bilingual! ([English]{.text-highlight-purple}/[Spanish]{.text-highlight-pink
 
 <br>
 
-- Open-source and fully [reproducible workflow]{.text-highlight-blue} written in [R]{.text-highlight-purple}
-- Handles all the steps and [flags places]{.text-highlight-pink}, where the user needs to [specify their choices]{.text-highlight-coral}
-- Modular structure to allow [flexibility]{.text-highlight-orange} and [customisation]{.text-highlight-green} for different projects
+- Open-source and fully [reproducible workflow]{.text-highlight-blue .text-shadow-dark} written in [R]{.text-highlight-purple .text-shadow-dark}
+- Handles all the steps and [flags places]{.text-highlight-pink .text-shadow-dark}, where the user needs to [specify their choices]{.text-highlight-coral .text-shadow-dark}
+- Modular structure to allow [flexibility]{.text-highlight-orange .text-shadow-light} and [customisation]{.text-highlight-green .text-shadow-dark} for different projects
 
 :::
 
@@ -622,7 +630,7 @@ include_local_figure("QR/qr_fossilpol.svg")
 :::: {.columns .fragment}
 
 ::: {.column width="60%" .text-center}
-'*A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen*' (GEB 2023)
+*A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen* (GEB 2023)
 
 [![](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
 :::
@@ -701,16 +709,14 @@ include_local_figure("Dillon/urn_cambridge.org_id_binary_20230829075443580-0059_
 
 ::: {.column width="57%" .fragment}
 
-<br>
-<br>
-
 ### Advancements
 
 ::: {.text-smaller}
 
-Best practices and [reproducible workflows]{.text-highlight-blue} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple}, Incentive structures that reward [software development]{.text-highlight-pink}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral} in quantitative methods and [Data Science]{.text-highlight-orange}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green} communication, collaboration, and funding
+Best practices and [reproducible workflows]{.text-highlight-blue .text-shadow-dark} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple .text-shadow-dark}, Incentive structures that reward [software development]{.text-highlight-pink .text-shadow-dark}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral .text-shadow-dark} in quantitative methods and [Data Science]{.text-highlight-orange .text-shadow-light}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green .text-shadow-dark} communication, collaboration, and funding
 :::
 
+<br>
 <br>
 
 [Erin Dillon]{.text-highlight-black} has talk direcly after me!
@@ -723,15 +729,17 @@ Best practices and [reproducible workflows]{.text-highlight-blue} for data stand
 Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
 :::
 
-## Statistica advancements
+## Statistical advancements
 
 <br>
 
-New methods accounting for [effort]{.text-highlight-blue}, [bias]{.text-highlight-purple}, and [uncertainty]{.text-highlight-pink}
+New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bias]{.text-highlight-purple .text-shadow-dark}, and [uncertainty]{.text-highlight-pink .text-shadow-dark}
 
 :::: {.columns}
 
-::: {.column width="50%" .incremental}
+::: {.column width="50%" .fragment}
+
+<br>
 
  - Hierarchical  regression models
  - Joined Species Distribution Models (jSDM)
@@ -761,7 +769,7 @@ More details in a moment in talk by [Gavin Simpson]{.text-highlight-black} in th
 image generated by GPT 5.2
 :::
 
-## Estimating rate of change
+## Estimating Rate of Change (RoC)
 
 :::: {.columns}
 
@@ -769,7 +777,8 @@ image generated by GPT 5.2
 
 <br>
 
-[Issues with palaeoecological rate of change estimation]{.text-bold}
+
+**[Issues]{.text-highlingt-black} with palaeoecological RoC estimation**
 
 [- Age uncertainties]{.fragment fragment-index="1"}
 
@@ -779,7 +788,7 @@ image generated by GPT 5.2
 
 <br>
 
-::: {.fragment .text-center fragment-index="6"}
+::: {.fragment .text-center fragment-index="3"}
 [😱😱😱]{.r-fit-text}
 :::
 
@@ -787,7 +796,7 @@ image generated by GPT 5.2
 
 ::: {.column width="50%"}
 
-::: {.fragment fragment-index="4"}
+::: {.fragment fragment-index="1"}
 
 [example data]{.text-bold .text-larger}
 
@@ -797,7 +806,7 @@ include_local_figure("R_generated/RRatepol/example_data_age_uncertainty_ridges.p
 ```
 :::
 
-::: {.fragment fragment-index="5"}
+::: {.fragment fragment-index="2"}
 ```{r}
 #| label: roc_issues_b
 include_local_figure("R_generated/RRatepol/example_data_samples_density.png")
@@ -814,8 +823,7 @@ include_local_figure("R_generated/RRatepol/example_data_samples_density.png")
 
 :::: {.columns}
 
-::: {.column width="20%"}
-
+::: {.column width="30%"}
 
 ```{r}
 #| label: RRatepol_logo
@@ -837,27 +845,27 @@ qrcode::generate_svg(
   background = colours[["white"]],
   show = FALSE
 )
-
-include_local_figure("QR/qr_rratepol.svg")
 ```
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=75 width="150" height="150"}
 
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="75%"}
+::: {.column width="65%"}
 
 <br>
 <br>
 
-An R package for estimating [rate of change]{.text-highlight-blue} (RoC) from [multivariate]{.text-highlight-pink} (community) data in [time series]{.text-highlight-orange}
+An R package for estimating [rate of change]{.text-highlight-blue .text-shadow-dark} (RoC) from [multivariate]{.text-highlight-purple .text-shadow-dark} (community) data in [time series]{.text-highlight-pink .text-shadow-dark}
 
 ::: {.incremental}
 
-- Handles uneven time series
-- Propagates uncertainty (age, taxonomic)
-- Can work with various data types
+- Handles [uneven time series]{.text-highlight-coral .text-shadow-dark}
+- [Propagates uncertainty]{.text-highlight-orange .text-shadow-light} (age, taxonomic)
+- Can work with [various data types]{.text-highlight-green .text-shadow-dark} (palaeoecological proxies)
 
 :::
 
@@ -874,12 +882,12 @@ An R package for estimating [rate of change]{.text-highlight-blue} (RoC) from [m
 <br>
 
 ```{r}
-#| label: RRatepol_logo_empty
+#| label: RRatepol_logo_simple_classical
 include_local_figure("Logos/RRatepol_logo.png")
 ```
 
 ```{r}
-#| label: RRatepol_github_qr_empy
+#| label: RRatepol_github_simple_classical
 include_local_figure("QR/qr_rratepol.svg")
 ```
 
@@ -891,8 +899,8 @@ include_local_figure("QR/qr_rratepol.svg")
 ::: {.column width="75%"}
 
 ```{r}
-#| label: rratepol_example_empty
-include_local_figure("R_generated/RRatepol/empty_plot.png")
+#| label: rratepol_example_simple_classical
+include_local_figure("R_generated/RRatepol/simple_classical.png")
 ```
 
 :::
@@ -908,12 +916,12 @@ include_local_figure("R_generated/RRatepol/empty_plot.png")
 <br>
 
 ```{r}
-#| label: RRatepol_logo_levels
+#| label: RRatepol_logo_simple_rratepol
 include_local_figure("Logos/RRatepol_logo.png")
 ```
 
 ```{r}
-#| label: RRatepol_github_qr_levels
+#| label: RRatepol_github_simple_rratepol
 include_local_figure("QR/qr_rratepol.svg")
 ```
 
@@ -925,42 +933,8 @@ include_local_figure("QR/qr_rratepol.svg")
 ::: {.column width="75%"}
 
 ```{r}
-#| label: rratepol_example_levels
-include_local_figure("R_generated/RRatepol/levels.png")
-```
-:::
-
-::::
-
-## {RRatepol}
-
-:::: {.columns}
-
-::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_bins
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_qr_bins
-include_local_figure("QR/qr_rratepol.svg")
-```
-
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
-
-
-```{r}
-#| label: rratepol_example_bins
-include_local_figure("R_generated/RRatepol/bins.png")
+#| label: rratepol_example_simple_rratepol
+include_local_figure("R_generated/RRatepol/simple_rratepol.png")
 ```
 
 :::
@@ -977,47 +951,12 @@ include_local_figure("R_generated/RRatepol/bins.png")
 <br>
 
 ```{r}
-#| label: RRatepol_logo_mw
+#| label: RRatepol_logo_simple_rratepol_highlight
 include_local_figure("Logos/RRatepol_logo.png")
 ```
 
 ```{r}
-#| label: RRatepol_github_qr_mw
-include_local_figure("QR/qr_rratepol.svg")
-```
-
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
-
-
-```{r}
-#| label: rratepol_example_mw
-include_local_figure("R_generated/RRatepol/moving_window.png")
-```
-
-:::
-
-::::
-
-## {RRatepol}
-
-:::: {.columns}
-
-::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_mw_uncer
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_qr_mw_uncer
+#| label: RRatepol_github_simple_rratepol_highlight
 include_local_figure("QR/qr_rratepol.svg")
 ```
 
@@ -1029,8 +968,8 @@ include_local_figure("QR/qr_rratepol.svg")
 ::: {.column width="75%"}
 
 ```{r}
-#| label: rratepol_example_mw_uncer
-include_local_figure("R_generated/RRatepol/moving_window_with_uncerntainty.png")
+#| label: rratepol_example_simple_rratepol_highlight
+include_local_figure("R_generated/RRatepol/simple_rratepol_highlight.png")
 ```
 
 :::
@@ -2216,3 +2155,176 @@ include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_8.png")
 #| out.width: NULL
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
+
+
+## {RRatepol}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+<br>
+
+```{r}
+#| label: RRatepol_logo_empty
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_empy
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| label: rratepol_example_empty
+include_local_figure("R_generated/RRatepol/empty_plot.png")
+```
+
+:::
+
+::::
+
+## {RRatepol}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+<br>
+
+```{r}
+#| label: RRatepol_logo_levels
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_levels
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| label: rratepol_example_levels
+include_local_figure("R_generated/RRatepol/levels.png")
+```
+:::
+
+::::
+
+## {RRatepol}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+<br>
+
+```{r}
+#| label: RRatepol_logo_bins
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_bins
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+
+```{r}
+#| label: rratepol_example_bins
+include_local_figure("R_generated/RRatepol/bins.png")
+```
+
+:::
+
+::::
+
+
+## {RRatepol}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+<br>
+
+```{r}
+#| label: RRatepol_logo_mw
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_mw
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+
+```{r}
+#| label: rratepol_example_mw
+include_local_figure("R_generated/RRatepol/moving_window.png")
+```
+
+:::
+
+::::
+
+## {RRatepol}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+<br>
+
+```{r}
+#| label: RRatepol_logo_mw_uncer
+include_local_figure("Logos/RRatepol_logo.png")
+```
+
+```{r}
+#| label: RRatepol_github_qr_mw_uncer
+include_local_figure("QR/qr_rratepol.svg")
+```
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| label: rratepol_example_mw_uncer
+include_local_figure("R_generated/RRatepol/moving_window_with_uncerntainty.png")
+```
+
+:::
+
+::::
