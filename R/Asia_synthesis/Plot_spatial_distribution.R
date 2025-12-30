@@ -94,7 +94,6 @@ data_raster_df <-
   janitor::clean_names()
 
 
-
 #----------------------------------------------------------#
 # 3. Make plot -----
 #----------------------------------------------------------#
@@ -119,7 +118,7 @@ p1 <-
       y = lat
     )
   ) +
-  ggplot2::coord_fixed(
+  ggplot2::coord_quickmap(
     ylim = c(5.00, 80.00),
     xlim = c(30.00, 173.00)
   ) +
@@ -153,7 +152,15 @@ p1 <-
   ggplot2::theme(
     legend.position = "bottom",
     legend.box = "vertical",
-    legend.direction = "horizontal"
+    legend.direction = "horizontal",
+    legend.margin = ggplot2::margin(t = 5, r = 0, b = 0, l = 0),
+    legend.box.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
+    margins = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
+    panel.spacing = ggplot2::unit(0.01, "cm"),
+    legend.spacing = ggplot2::unit(0.001, "cm"),
+    panel.grid.minor = ggplot2::element_blank(),
+    legend.key.spacing = ggplot2::unit(0.1, "cm"),
+    legend.box.spacing = ggplot2::unit(0.01, "cm")
   ) +
   ggplot2::borders(
     colour = colours[["grey"]],
@@ -170,6 +177,12 @@ p1 <-
     alpha = 0.9,
     size = 2,
     color = colours[["black"]]
+  ) +
+  ggview::canvas(
+    width = 8,
+    height = 6.2,
+    units = "cm",
+    dpi = 300
   )
 
 p1_no_legend <-
@@ -178,14 +191,13 @@ p1_no_legend <-
     legend.position = "none"
   )
 
-  
 #----------------------------------------------------------#
 # 4. Save plot -----
 #----------------------------------------------------------#
 
 
-ggplot2::ggsave(
-  filename = here::here(
+ggview::save_ggplot(
+  file = here::here(
     "Presentation",
     "Materials",
     "R_generated",
@@ -193,9 +205,5 @@ ggplot2::ggsave(
     "Asia_spatial_trends.png"
   ),
   plot = p1_no_legend,
-  width = 16,
-  height = 9,
-  units = "cm",
-  dpi = 300,
   bg = colours[["white"]]
 )

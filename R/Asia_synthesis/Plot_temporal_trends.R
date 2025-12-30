@@ -42,7 +42,7 @@ data_raw <-
 data_to_plot <-
   data_raw |>
   dplyr::filter(
-    var_name %in% c("N0", "DCCA1", "RoC"),
+    var_name %in% c("N0", "DCCA1", "N2 divided by N1"),
     var_type == "var"
   ) |>
   tidyr::unnest(merge_data) |>
@@ -50,7 +50,7 @@ data_to_plot <-
     var_name = dplyr::case_when(
       var_name == "N0" ~ "Pollen richness",
       var_name == "DCCA1" ~ "Tunnover",
-      var_name == "RoC" ~ "Rate of Change",
+      var_name == "N2 divided by N1" ~ "Evenness",
       TRUE ~ var_name
     ),
     line_alpha = dplyr::case_when(
@@ -82,6 +82,10 @@ data_to_plot <-
       grain,
       levels = c("sequence", "climate-zone", "continent"),
       labels = c("Site", "Climate zone", "Continent")
+    ),
+    var_name = factor(
+      var_name,
+      levels = c("Pollen richness", "Evenness", "Tunnover")
     ),
     dplyr::across(
       where(is.character),
@@ -119,11 +123,13 @@ p0 <-
     scales = "free_y",
     switch = "y"
   ) +
-  ggplot2::expand_limits(
-    y = c(0, 0.6)
+  ggplot2::scale_y_continuous(
+    expand = ggplot2::expansion(mult = c(0.05, 0.1))
   ) +
   ggplot2::scale_x_continuous(
-    transform = "reverse"
+    transform = "reverse",
+    breaks = seq(0, 12e3, by = 2e3),
+    labels = seq(0, 12, by = 2)
   ) +
   theme_presentation() +
   ggplot2::theme(
@@ -131,6 +137,7 @@ p0 <-
     legend.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
     legend.box.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
     strip.clip = "off",
+    axis.title.y = ggplot2::element_blank(),
     legend.spacing = ggplot2::unit(0.001, "cm"),
     panel.grid.minor = ggplot2::element_blank(),
     legend.key.spacing = ggplot2::unit(0.001, "cm"),
@@ -168,6 +175,12 @@ p0 <-
     y = "Value of variable",
     colour = "",
     fill = ""
+  ) +
+  ggview::canvas(
+    width = 16,
+    height = 8,
+    units = "cm",
+    dpi = 300
   )
 
 # Site level
@@ -192,7 +205,6 @@ p1 <-
 # Climate zone level
 p2 <-
   p1 +
-
   ggplot2::geom_ribbon(
     data = data_to_plot |>
       dplyr::filter(
@@ -245,18 +257,14 @@ c(
   ) |>
   purrr::iwalk(
     .progress = TRUE,
-    .f = ~ ggplot2::ggsave(
-      filename = here::here(
+    .f = ~ ggview::save_ggplot(
+      file = here::here(
         "Presentation",
         "Materials",
         "R_generated",
         "Asia",
         paste0("temporal_", .y, ".png")
       ),
-      plot = .x,
-      width = 16,
-      height = 9,
-      units = "cm",
-      dpi = 300
+      plot = .x
     )
   )
