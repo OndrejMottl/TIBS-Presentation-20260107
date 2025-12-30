@@ -42,7 +42,6 @@ data_mntd_predicted <-
   tidyr::unnest(cols = c(predicted_gam))
 
 
-
 #----------------------------------------------------------#
 # 3. Make figures -----
 #----------------------------------------------------------#
@@ -59,6 +58,9 @@ p0 <-
   theme_presentation() +
   ggplot2::theme(
     legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.text.position = "bottom",
+    legend.title.position = "top",
     legend.margin = ggplot2::margin(t = 5, r = 0, b = 0, l = 0),
     legend.box.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
     margins = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
@@ -73,16 +75,49 @@ p0 <-
   ) +
   ggplot2::coord_cartesian(
     ylim = c(-1.25, 1.25)
+  ) +
+  ggplot2::labs(
+    y = "Mean Nearest Taxon Distance (SES)"
+  ) +
+  ggview::canvas(
+    width = 8,
+    height = 7,
+    units = "cm",
+    dpi = 300
   )
 
 p1 <-
   p0 +
-  ggplot2::scale_color_gradientn(
-    colors = colours[c("blue", "pink", "coral")],
+  ggplot2::scale_x_continuous(
+    transform = "reverse",
+    breaks = seq(0, 12e3, by = 2e3),
+    labels = seq(0, 12, by = 2)
+  ) +
+  ggplot2::geom_line(
+    mapping = ggplot2::aes(
+      group = lat,
+      x = age
+    ),
+    col = colours["green"],
+    linewidth = 0.5,
+    alpha = 0.8
+  ) +
+  ggplot2::labs(
+    x = "Age (ka BP)",
+    subtitle = "Phylogenetic diversity in time"
+  )
+
+
+p2 <-
+  p0 +
+  ggplot2::scale_colour_steps(
+    low = colours["blue"],
+    high = colours["coral"],
     name = "Age (cal yr BP)"
   ) +
-  ggplot2::scale_fill_gradientn(
-    colors = colours[c("blue", "pink", "coral")],
+  ggplot2::scale_fill_steps(
+    low = colours["blue"],
+    high = colours["coral"],
     name = "Age (cal yr BP)"
   ) +
   ggplot2::geom_ribbon(
@@ -101,54 +136,31 @@ p1 <-
       group = age,
       x = lat
     ),
-    linewidth = 0.1
+    linewidth = 0.1,
+    alpha = 0.8
   ) +
   ggplot2::labs(
     x = "Latitude (°)",
-    y = "Mean Nearest Taxon Distance (MNTD)"
+    subtitle = "Phylogenetic diversity across latitude"
   )
 
-p2 <-
-  p0 +
-  ggplot2::scale_color_gradientn(
-    colors = colours[c("orange", "green")],
-    name = "Latitude (°)"
+p2_legend_inset <-
+  p2 +
+  ggplot2::theme(
+    legend.position = "none"
   ) +
-  ggplot2::scale_fill_gradientn(
-    colors = colours[c("orange", "green")],
-    name = "Latitude (°)"
-  ) +
-  ggplot2::scale_x_continuous(
-    breaks = seq(0, 12.5e3, by = 2.5e3),
-    labels = seq(0, 12.5, by = 2.5)
-  ) +
-  ggplot2::geom_ribbon(
-    ggplot2::aes(
-      color = lat,
-      fill = lat,
-      group = lat,
-      x = age
-    ),
-    color = NA,
-    alpha = 0.05
-  ) +
-  ggplot2::geom_line(
-    mapping = ggplot2::aes(
-      group = lat,
-      color = lat,
-      x = age
-    ),
-    linewidth = 0.5
-  ) +
-  ggplot2::labs(
-    x = "Age (ka BP)",
-    y = "Mean Nearest Taxon Distance (MNTD)"
+  ggplot2::annotation_custom(
+    grob = cowplot::get_legend(p2),
+    xmin = I(0.1),
+    xmax = I(1.0),
+    ymin = I(0.1),
+    ymax = I(0.3)
   )
 
 p3 <-
   cowplot::plot_grid(
     p1,
-    p2 +
+    p2_legend_inset +
       ggplot2::theme(
         axis.title.y = ggplot2::element_blank(),
         axis.text.y = ggplot2::element_blank(),
@@ -163,33 +175,24 @@ p3 <-
 # 4. Save figures -----
 #----------------------------------------------------------#
 
-ggplot2::ggsave(
-  filename = here::here(
-    "Presentation",
-    "Materials",
-    "R_generated",
-    "Phylogenetic",
-    "Latitudinal_trends.png"
-  ),
-  plot = p1,
-  width = 16 / 2,
-  height = 9,
-  units = "cm",
-  dpi = 300
-)
-
-
-ggplot2::ggsave(
-  filename = here::here(
+ggview::save_ggplot(
+  file = here::here(
     "Presentation",
     "Materials",
     "R_generated",
     "Phylogenetic",
     "Temporal_trends.png"
   ),
-  plot = p2,
-  width = 16 / 2,
-  height = 9,
-  units = "cm",
-  dpi = 300
+  plot = p1
+)
+
+ggview::save_ggplot(
+  file = here::here(
+    "Presentation",
+    "Materials",
+    "R_generated",
+    "Phylogenetic",
+    "Latitudinal_trends.png"
+  ),
+  plot = p2_legend_inset
 )

@@ -1134,46 +1134,156 @@ qrcode::generate_svg(
 
 ![](Materials/QR/qr_global_roc.svg){.absolute bottom=0 right=0 width="150" height="150"}
 
+# Continental Patterns 
 
-## Asia synthesis
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+We do not have to stop at single [ecosystem property]{.text-highlight-blue .text-shadow-dark} (e.g., RoC)
+
+[Asia as a case study spanning [diverse climates]{.text-highlight-pink .text-shadow-dark} and vegetation types]{.fragment fragment-index="1"}
+
+::: {.blockquote .text-center .text-italic .fragment fragment-index="2"}
+Can we identify [consistent continental trend]{.text-highlight-orange .text-shadow-light} of vegetation change across Asia during the Holocene?
+:::
+
+:::
+
+::: {.column width="50%" .fragment fragment-index="1" .text-center}
+
+[Asia Case Study]{.text-larger .text-font-heading .text-bold}
 
 ```{r}
 #| label: Asia_spatial_trends
 include_local_figure("R_generated/Asia/Asia_spatial_trends.png")
 ```
 
-## Asia synthesis
+:::
+
+::::
+
+::: {.footer}
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+:::
+
+## Continental Patterns
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+
+:::
+
+::::
 
 ```{r}
-#| label: Asia_temporal_trends_p0
-include_local_figure("R_generated/Asia/temporal_p0_empty_plot.png")
+#| label: qr_asia_synthesis
+qr_asia_synthesis <-
+  qrcode::qr_code(
+    "https://doi.org/10.3389/fevo.2023.1115784",
+    ecl = "H"
+  )
+qrcode::generate_svg(
+  qrcode = qr_asia_synthesis,
+  filename = here::here("Presentation/Materials/QR/qr_asia_synthesis.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
 ```
 
-
-## Asia synthesis
 
 ```{r}
 #| label: Asia_temporal_trends_p1
 include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
 ```
 
+![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
-## Asia synthesis
+::: {.footer}
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+:::
+
+## Continental Patterns
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+
+:::
+
+::::
 
 ```{r}
 #| label: Asia_temporal_trends_p2
 include_local_figure("R_generated/Asia/temporal_p2_climate_zone_level.png")
 ```
 
-## Asia synthesis
+![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
+
+::: {.footer}
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+:::
+
+## Continental Patterns
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+
+:::
+
+::::
 
 ```{r}
 #| label: Asia_temporal_trends_p3
 include_local_figure("R_generated/Asia/temporal_p3_continent_level.png")
 ```
 
+![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
-## Phylogenetic diversity
+::: {.footer}
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+:::
+
+## Continental Patterns
+
+```{r}
+#| label: qr_asia_phylogenetic
+qr_asia_phylogenetic <-
+  qrcode::qr_code(
+    "https://doi.org/10.1038/s41598-024-67650-1",
+    ecl = "H"
+  )
+qrcode::generate_svg(
+  qrcode = qr_asia_phylogenetic,
+  filename = here::here("Presentation/Materials/QR/qr_asia_phylogenetic.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_asia_phylogenetic.svg){.absolute top=0 right=0 width="150" height="150"}
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+[Latitudinal gradients in the [phylogenetic]{.text-highlight-pink .text-shadow-dark} assembly of angiosperms in Asia  during the Holocene]{.text-italic}
+
+:::
+
+::::
 
 :::: {.columns}
 
@@ -1194,6 +1304,68 @@ include_local_figure("R_generated/Phylogenetic/Latitudinal_trends.png")
 :::
 
 ::::
+
+::: {.footer}
+Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1))
+:::
+
+
+## Student intermezzo {.bg-coral .text-center}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="58%"}
+
+<br>
+<br>
+
+[Poster No. [2006]{.text-highlight-black}]{.text-size-heading3}
+
+[A Comparative Analysis of Methodological Frameworks for Reconstructing Continental Diversity Trends of Vegetation]{.text-italic .text-larger .text-bold .text-shadow-light}
+
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| label: poster_bryan
+include_local_figure("Posters/novio_tibs_poster_draft_v.3.0.1.png")
+```
+:::
+
+::::
+
+# Functional Trait Integration {.text-center}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+WIP
+
+:::
+
+::: {.column width="35%"}
+
+```{r}
+#| label: fnc_traits_figure1
+include_local_figure("Functional_traits/fec14415-fig-0001-m.jpg")
+```
+
+:::
+
+::::
+
+::: {.footer}
+Figure 1 from Brown et al. ([2023](https://doi.org/10.1111/1365-2435.14415))
+:::
 
 # VegVault
 
