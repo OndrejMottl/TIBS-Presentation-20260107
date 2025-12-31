@@ -3,7 +3,7 @@ format:
   revealjs:
     slide-number: true
     theme: [default, custom_theme.scss]
-    preview-links: auto
+    preview-links: false
     output-file: "index"
     output-ext: "html"
     output-dir: "../docs"
@@ -263,7 +263,7 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 :::
 
 ::: {.footer}
-[Image by Justus Menke from Pexels]{.text-background-white}
+[Image by Justus Menke from Pexels]{.text-color-black}
 :::
 
 ## What if ... {.text-center}
@@ -379,10 +379,8 @@ qrcode::generate_svg(
 
 :::: {.columns}
 
-::: {.column width="5%"}
-:::
 
-::: {.column width="40%"}
+::: {.column width="39%"}
 
 ```{r}
 #| label: fordham_2020_a
@@ -391,28 +389,47 @@ include_local_figure("Fordham/369_abc5654_fa.jpeg")
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="1%"}
 :::
 
 
-::: {.column width="50%"}
-
-<br>
+::: {.column width="60%"}
 
 ```{r}
-#| label: fordham_2020_b
-include_local_figure("Fordham/369_abc5654_f4.jpeg")
+#| label: rordham_2020_printscreen
+include_local_figure("Printscreens/fordham_2020.png")
 ```
+
+::: {.blockquote .text-smaller}
+Because [warning signals]{.text-highlight-blue .text-shadow-dark} … are commonly identified by using time-series … data, [paleo-archives]{.text-highlight-pink .text-shadow-dark} provide opportunities to [test conservation criteria]{.text-highlight-coral .text-shadow-dark} …
+:::
+
 :::
 
 ::::
 
-::: {.text-center .text-size-heading3 .text-font-heading}
-Using [paleo-archives]{.text-highlight-blue .text-shadow-dark} to [safeguard]{.text-highlight-pink .text-shadow-dark} biodiversity 
-:::
+```{r}
+#| label: QR code fordham 2020 
+qr_fordham <-
+  qrcode::qr_code(
+    "https://doi.org/10.1126/science.abc5654",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_fordham,
+  filename = here::here("Presentation/Materials/QR/qr_fordham.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_fordham.svg){.absolute top=0 right=0 width="120" height="120"}
+
 
 ::: {.footer}
-Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654))
+Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654)) _Science_
 :::
 
 ## 
@@ -452,7 +469,6 @@ Image created by Bing
 ![](Materials/Logos/neotoma_2.svg){.absolute top=600 right=0 width="100" height="100"}
 
 <br>
-<br>
 
 :::: {.columns}
 
@@ -477,7 +493,7 @@ fossil pollen timeseries (records)
 ::::
 
 ::: {.footer}
-Fossil pollen datasets accessed from Neotoma on 2025-12-09
+Fossil pollen datasets accessed from [Neotoma](https://www.neotomadb.org/) on 2025-12-09
 :::
 
 
@@ -509,6 +525,10 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 
 ::::
 
+::: {.footer}
+Adjusted from Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## {.bg-black .text-color-white}
 
 :::: {.columns}
@@ -531,7 +551,31 @@ The workflow to process [global]{.text-highlight-blue .text-shadow-dark} palaeoe
 
 ::::
 
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## [FOSSILPOL workflow]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+
+```{r}
+#| label: QR code https://bit.ly/FOSSILPOL coral
+qr_fossilpol <-
+  qrcode::qr_code(
+    "https://bit.ly/FOSSILPOL",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_fossilpol,
+  filename = here::here("Presentation/Materials/QR/qr_fossilpol_coral.svg"),
+  foreground = colours[["white"]],
+  background = colours[["coral"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_fossilpol_coral.svg){.absolute top=0 right=0 width="100" height="100"}
 
 <br>
 
@@ -542,13 +586,18 @@ The workflow to process [global]{.text-highlight-blue .text-shadow-dark} palaeoe
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
 
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## Documentation (website)
 
+<br>
 <br>
 
 :::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 
 ```{r}
 #| label: website_preview
@@ -557,13 +606,7 @@ include_local_figure("Printscreens/website_preview.png")
 
 
 ```{r}
-#| label: QR code https://bit.ly/FOSSILPOL 
-qr_fossilpol <-
-  qrcode::qr_code(
-    "https://bit.ly/FOSSILPOL",
-    ecl = "H"
-  )
-
+#| label: QR code https://bit.ly/FOSSILPOL bw
 qrcode::generate_svg(
   qrcode = qr_fossilpol,
   filename = here::here("Presentation/Materials/QR/qr_fossilpol.svg"),
@@ -571,9 +614,9 @@ qrcode::generate_svg(
   background = colours[["white"]],
   show = FALSE
 )
-
-include_local_figure("QR/qr_fossilpol.svg")
 ```
+
+![](Materials/QR/qr_fossilpol.svg){.absolute top=0 right=0 width="120" height="120"}
 
 :::
 
@@ -581,70 +624,84 @@ include_local_figure("QR/qr_fossilpol.svg")
 :::
 
 ::: {.column width="60%" .text-center}
-
-<br>
 
 ```{r}
 #| label: website_doc_preview
 include_local_figure("Printscreens/website_doc_preview.png")
 ```
 
-Now bilingual! ([English]{.text-highlight-purple .text-shadow-dark}/[Spanish]{.text-highlight-pink .text-shadow-dark})
-
-[Check it out!]{.text-highlight-orange .text-bold .text-shadow-light} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
-
 :::
 
 ::::
 
+:::{.text-center}
+Now bilingual! ([English]{.text-highlight-purple .text-shadow-dark}/[Spanish]{.text-highlight-pink .text-shadow-dark})
+
+[Check it out!]{.text-highlight-orange .text-bold .text-shadow-light} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
+:::
+
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## FOSSILPOL
 
-![](Materials/Logos/FOSSILPOL_logo_600ppi.png){.absolute top=20 right=70 width="100" height="115"}
+![](Materials/QR/qr_fossilpol.svg){.absolute top=0 right=0 width="120" height="120"}
 
 :::: {.columns}
 
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 <br>
 
-- Open-source and fully [reproducible workflow]{.text-highlight-blue .text-shadow-dark} written in [R]{.text-highlight-purple .text-shadow-dark}
+- Open-source and [reproducible workflow]{.text-highlight-blue .text-shadow-dark} written in [R]{.text-highlight-purple .text-shadow-dark}
 - Handles all the steps and [flags places]{.text-highlight-pink .text-shadow-dark}, where the user needs to [specify their choices]{.text-highlight-coral .text-shadow-dark}
 - Modular structure to allow [flexibility]{.text-highlight-orange .text-shadow-light} and [customisation]{.text-highlight-green .text-shadow-dark} for different projects
 
 :::
 
-::: {.column width="25%"}
+::: {.column width="20%"}
 
 <br> 
 
 ```{r}
-#| label: fossilpol_qr_2
-include_local_figure("QR/qr_fossilpol.svg")
+#| label: fossilpol_logo_3
+include_local_figure("Logos/FOSSILPOL_logo_600ppi.png")
 ```
 
 :::
 
 ::::
 
-:::: {.columns .fragment}
+<br>
 
-::: {.column width="60%" .text-center}
-*A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen* (GEB 2023)
+:::: {.columns}
 
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%" }
+
+```{r}
+#| label: flantua_2023_printscreen
+include_local_figure("Printscreens/Flantua_2023.png")
+```
 [![](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="35%"}
+::: {.column width="35%" .fragment}
 
 ```{r}
 #| label: gep_certificate
 include_local_figure("Printscreens/GEB_certifiate.png")
 ```
 
+:::
 
+::: {.column width="5%"}
 :::
 
 ::::
@@ -668,7 +725,7 @@ Inovations
 :::
 
 ::: {.footer}
-[Image by Johannes Plenio from Pexels]{.text-background-white}
+Image by Johannes Plenio from Pexels
 :::
 
 
