@@ -3,7 +3,7 @@ format:
   revealjs:
     slide-number: true
     theme: [default, custom_theme.scss]
-    preview-links: auto
+    preview-links: false
     output-file: "index"
     output-ext: "html"
     output-dir: "../docs"
@@ -263,10 +263,10 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 :::
 
 ::: {.footer}
-[Image by Justus Menke from Pexels]{.text-background-white}
+[Image by Justus Menke from Pexels]{.text-color-black}
 :::
 
-## 
+## What if ... {.text-center}
 
 :::: {.columns}
 
@@ -279,10 +279,9 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 
 <br>
 <br>
-<br>
 
 
-What if we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global]{.text-highlight-purple .text-shadow-dark}, [long-term]{.text-highlight-pink .text-shadow-dark} synthesis on ecosystem [dynamics]{.text-highlight-coral .text-shadow-dark} using [Big Data]{.text-highlight-orange .text-shadow-light}?
+... we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global, long-term]{.text-highlight-purple .text-shadow-dark} synthesis on [ecosystem dynamics]{.text-highlight-pink .text-shadow-dark} using [paleoecological]{.text-highlight-coral .text-shadow-dark} [Big Data]{.text-highlight-orange .text-shadow-light}?
 :::
 
 ::::
@@ -309,13 +308,15 @@ include_local_figure("About/head_photo.png")
 
 ::: {.column width="64%" .text-center}
 
-<br>
-
 Assistant Professor at 🏛️[Charles University](https://cuni.cz/UK-1.html), Prague, 🇨🇿
 
-Head of the 🧑‍💻[Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html)
+<br>
 
 Interested in [macroecology]{.text-highlight-purple .text-shadow-dark}, [palaeoecology]{.text-highlight-pink .text-shadow-dark}, [biodiversity]{.text-highlight-coral .text-shadow-dark}, and [data science]{.text-highlight-orange .text-shadow-light}
+
+<br>
+
+Head of the 🧑‍💻[Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html)
 
 :::
 
@@ -328,14 +329,19 @@ Interested in [macroecology]{.text-highlight-purple .text-shadow-dark}, [palaeoe
 
 ::: {.column width="45%" .text-smaller}
 
-* 📧 ondrej.mottl(at)gmail.com
+* 📧 ondrej.mottl(at)natur.cuni.cz
 * 🦋 [ondrejmottl.bsky.social](https://bsky.app/profile/ondrejmottl.bsky.social)
 * 🐱 [Github](https://github.com/OndrejMottl)
 * 🆔 [ORCID](https://orcid.org/0000-0002-9796-5081)
 * 🌐 [Personal webpage](https://ondrejmottl.github.io/)
 :::
 
+::: {.column width="9%"}
+:::
+
+
 ::: {.column width="20%"}
+
 ```{r}
 #| label: loqe-logo-about_me
 include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
@@ -343,10 +349,10 @@ include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="21%"}
 :::
 
-::: {.column width="20%"}
+::::
 
 ```{r}
 #| label: QR code https://bit.ly/ondrej_mottl 
@@ -363,16 +369,9 @@ qrcode::generate_svg(
   background = colours[["white"]],
   show = FALSE
 )
-
-include_local_figure("QR/qr_personal_web.svg")
 ```
 
-:::
-
-::: {.column width="5%"}
-:::
-
-::::
+![](Materials/QR/qr_personal_web.svg){.absolute top=0 right=0 width="120" height="120"}
 
 # Palaeoecology
 
@@ -380,10 +379,8 @@ include_local_figure("QR/qr_personal_web.svg")
 
 :::: {.columns}
 
-::: {.column width="5%"}
-:::
 
-::: {.column width="40%"}
+::: {.column width="39%"}
 
 ```{r}
 #| label: fordham_2020_a
@@ -392,28 +389,47 @@ include_local_figure("Fordham/369_abc5654_fa.jpeg")
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="1%"}
 :::
 
 
-::: {.column width="50%"}
-
-<br>
+::: {.column width="60%"}
 
 ```{r}
-#| label: fordham_2020_b
-include_local_figure("Fordham/369_abc5654_f4.jpeg")
+#| label: rordham_2020_printscreen
+include_local_figure("Printscreens/fordham_2020.png")
 ```
+
+::: {.blockquote .text-smaller}
+Because [warning signals]{.text-highlight-blue .text-shadow-dark} … are commonly identified by using time-series … data, [paleo-archives]{.text-highlight-pink .text-shadow-dark} provide opportunities to [test conservation criteria]{.text-highlight-coral .text-shadow-dark} …
+:::
+
 :::
 
 ::::
 
-::: {.text-center .text-size-heading3 .text-font-heading}
-Using [paleo-archives]{.text-highlight-blue .text-shadow-dark} to [safeguard]{.text-highlight-pink .text-shadow-dark} biodiversity 
-:::
+```{r}
+#| label: QR code fordham 2020 
+qr_fordham <-
+  qrcode::qr_code(
+    "https://doi.org/10.1126/science.abc5654",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_fordham,
+  filename = here::here("Presentation/Materials/QR/qr_fordham.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_fordham.svg){.absolute top=0 right=0 width="120" height="120"}
+
 
 ::: {.footer}
-Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654))
+Fordham et al. ([2020](https://doi.org/10.1126/science.abc5654)) _Science_
 :::
 
 ## 
@@ -453,7 +469,6 @@ Image created by Bing
 ![](Materials/Logos/neotoma_2.svg){.absolute top=600 right=0 width="100" height="100"}
 
 <br>
-<br>
 
 :::: {.columns}
 
@@ -478,7 +493,7 @@ fossil pollen timeseries (records)
 ::::
 
 ::: {.footer}
-Fossil pollen datasets accessed from Neotoma on 2025-12-09
+Fossil pollen datasets accessed from [Neotoma](https://www.neotomadb.org/) on 2025-12-09
 :::
 
 
@@ -510,6 +525,10 @@ include_local_figure("FOSSILPOL/Visualisation-compilation/compilation_full.png")
 
 ::::
 
+::: {.footer}
+Adjusted from Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## {.bg-black .text-color-white}
 
 :::: {.columns}
@@ -532,7 +551,31 @@ The workflow to process [global]{.text-highlight-blue .text-shadow-dark} palaeoe
 
 ::::
 
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## [FOSSILPOL workflow]{.text-color-white .text-shadow-dark} {background-image="../Presentation/Materials/FOSSILPOL/Banners/Banner_5.png" background-size="100% 20%" background-position="top left" background-repeat="no-repeat"}
+
+
+```{r}
+#| label: QR code https://bit.ly/FOSSILPOL coral
+qr_fossilpol <-
+  qrcode::qr_code(
+    "https://bit.ly/FOSSILPOL",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_fossilpol,
+  filename = here::here("Presentation/Materials/QR/qr_fossilpol_coral.svg"),
+  foreground = colours[["white"]],
+  background = colours[["coral"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_fossilpol_coral.svg){.absolute top=0 right=0 width="100" height="100"}
 
 <br>
 
@@ -543,13 +586,18 @@ The workflow to process [global]{.text-highlight-blue .text-shadow-dark} palaeoe
 include_local_figure("FOSSILPOL/Visualisation-workflow/workflow_full.png")
 ```
 
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## Documentation (website)
 
+<br>
 <br>
 
 :::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 
 ```{r}
 #| label: website_preview
@@ -558,13 +606,7 @@ include_local_figure("Printscreens/website_preview.png")
 
 
 ```{r}
-#| label: QR code https://bit.ly/FOSSILPOL 
-qr_fossilpol <-
-  qrcode::qr_code(
-    "https://bit.ly/FOSSILPOL",
-    ecl = "H"
-  )
-
+#| label: QR code https://bit.ly/FOSSILPOL bw
 qrcode::generate_svg(
   qrcode = qr_fossilpol,
   filename = here::here("Presentation/Materials/QR/qr_fossilpol.svg"),
@@ -572,9 +614,9 @@ qrcode::generate_svg(
   background = colours[["white"]],
   show = FALSE
 )
-
-include_local_figure("QR/qr_fossilpol.svg")
 ```
+
+![](Materials/QR/qr_fossilpol.svg){.absolute top=0 right=0 width="120" height="120"}
 
 :::
 
@@ -582,70 +624,84 @@ include_local_figure("QR/qr_fossilpol.svg")
 :::
 
 ::: {.column width="60%" .text-center}
-
-<br>
 
 ```{r}
 #| label: website_doc_preview
 include_local_figure("Printscreens/website_doc_preview.png")
 ```
 
-Now bilingual! ([English]{.text-highlight-purple .text-shadow-dark}/[Spanish]{.text-highlight-pink .text-shadow-dark})
-
-[Check it out!]{.text-highlight-orange .text-bold .text-shadow-light} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
-
 :::
 
 ::::
 
+:::{.text-center}
+Now bilingual! ([English]{.text-highlight-purple .text-shadow-dark}/[Spanish]{.text-highlight-pink .text-shadow-dark})
+
+[Check it out!]{.text-highlight-orange .text-bold .text-shadow-light} - [bit.ly/FOSSILPOL](https://bit.ly/FOSSILPOL)
+:::
+
+::: {.footer}
+Flantua & Mottl et al. ([2023](https://doi.org/10.1111/geb.13693)) _Global Ecology and Biogeography_
+:::
+
 ## FOSSILPOL
 
-![](Materials/Logos/FOSSILPOL_logo_600ppi.png){.absolute top=20 right=70 width="100" height="115"}
+![](Materials/QR/qr_fossilpol.svg){.absolute top=0 right=0 width="120" height="120"}
 
 :::: {.columns}
 
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 <br>
 
-- Open-source and fully [reproducible workflow]{.text-highlight-blue .text-shadow-dark} written in [R]{.text-highlight-purple .text-shadow-dark}
+- Open-source and [reproducible workflow]{.text-highlight-blue .text-shadow-dark} written in [R]{.text-highlight-purple .text-shadow-dark}
 - Handles all the steps and [flags places]{.text-highlight-pink .text-shadow-dark}, where the user needs to [specify their choices]{.text-highlight-coral .text-shadow-dark}
 - Modular structure to allow [flexibility]{.text-highlight-orange .text-shadow-light} and [customisation]{.text-highlight-green .text-shadow-dark} for different projects
 
 :::
 
-::: {.column width="25%"}
+::: {.column width="20%"}
 
 <br> 
 
 ```{r}
-#| label: fossilpol_qr_2
-include_local_figure("QR/qr_fossilpol.svg")
+#| label: fossilpol_logo_3
+include_local_figure("Logos/FOSSILPOL_logo_600ppi.png")
 ```
 
 :::
 
 ::::
 
-:::: {.columns .fragment}
+<br>
 
-::: {.column width="60%" .text-center}
-*A guide to the processing and standardisation of global palaeoecological data for large-scale syntheses using fossil pollen* (GEB 2023)
+:::: {.columns}
 
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%" }
+
+```{r}
+#| label: flantua_2023_printscreen
+include_local_figure("Printscreens/Flantua_2023.png")
+```
 [![](https://img.shields.io/badge/DOI-10.1111%2Fgeb.13693-yellow)](https://doi.org/10.1111/geb.13693)
 :::
 
 ::: {.column width="5%"}
 :::
 
-::: {.column width="35%"}
+::: {.column width="35%" .fragment}
 
 ```{r}
 #| label: gep_certificate
 include_local_figure("Printscreens/GEB_certifiate.png")
 ```
 
+:::
 
+::: {.column width="5%"}
 :::
 
 ::::
@@ -669,7 +725,7 @@ Inovations
 :::
 
 ::: {.footer}
-[Image by Johannes Plenio from Pexels]{.text-background-white}
+Image by Johannes Plenio from Pexels
 :::
 
 
@@ -692,41 +748,55 @@ The data obtained from [wikipedia/Instructions_per_second](https://en.wikipedia.
 
 :::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="5%"}
+:::
 
-### Challenges
+::: {.column width="55%"}
 
 ```{r}
-#| label: Dillon
-include_local_figure("Dillon/urn_cambridge.org_id_binary_20230829075443580-0059_S0094837323000039_S0094837323000039_fig1.png")
+#| label: Dillon_2023_prin
+include_local_figure("Printscreens/Dillon_2023.png")
 ```
 
 :::
 
-::: {.column width="3%"}
-
-:::
-
-::: {.column width="57%" .fragment}
-
-### Advancements
-
-::: {.text-smaller}
-
-Best practices and [reproducible workflows]{.text-highlight-blue .text-shadow-dark} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple .text-shadow-dark}, Incentive structures that reward [software development]{.text-highlight-pink .text-shadow-dark}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral .text-shadow-dark} in quantitative methods and [Data Science]{.text-highlight-orange .text-shadow-light}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green .text-shadow-dark} communication, collaboration, and funding
-:::
-
-<br>
-<br>
-
-[Erin Dillon]{.text-highlight-black} has talk direcly after me!
-
+::: {.column width="40%"}
 :::
 
 ::::
 
+### Advancements
+
+:::{.text-smaller}
+Best practices and [reproducible workflows]{.text-highlight-blue .text-shadow-dark} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple .text-shadow-dark}, Incentive structures that reward [software development]{.text-highlight-pink .text-shadow-dark}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral .text-shadow-dark} in quantitative methods and [Data Science]{.text-highlight-orange .text-shadow-light}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green .text-shadow-dark} communication, collaboration, and funding
+:::
+
+<br>
+
+::: {.fragment .text-center}
+[Erin Dillon]{.text-highlight-black} has talk direcly after me!
+:::
+
+```{r}
+#| label: QR code Dillon 2023
+qr_dillon_2023 <-
+  qrcode::qr_code(
+    "https://doi.org/10.1017/pab.2023.3",
+    ecl = "H"
+  )
+qrcode::generate_svg(
+  qrcode = qr_dillon_2023,
+  filename = here::here("Presentation/Materials/QR/qr_dillon_2023.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_dillon_2023.svg){.absolute top=150 right=150 width="150" height="150"}
+
 ::: {.footer}
-Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
+Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3)) _Paleobiology_
 :::
 
 ## Statistical advancements
@@ -735,14 +805,14 @@ Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
 
 New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bias]{.text-highlight-purple .text-shadow-dark}, and [uncertainty]{.text-highlight-pink .text-shadow-dark}
 
+<br>
+
 :::: {.columns}
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="50%" .fragment}
-
-<br>
 
  - Hierarchical  regression models
  - Joined Species Distribution Models (jSDM)
@@ -752,10 +822,10 @@ New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bi
 
 :::
 
-::: {.column width="7%"}
+::: {.column width="5%"}
 :::
 
-::: {.column width="38%"}
+::: {.column width="28%"}
 
 ```{r}
 #| label: stats visualisation
@@ -763,12 +833,13 @@ include_local_figure("Pexels/pexels-olly-3758105.jpg")
 ```
 :::
 
+::: {.column width="17%"}
+:::
+
 ::::
 
 ::: {.fragment .text-center}
-
 More details in a moment in talk by [Gavin Simpson]{.text-highlight-black} in this Symposium!
-
 :::
 
 ::: {.footer}
@@ -802,9 +873,9 @@ Photo by [Andrea Piacquadio](https://www.pexels.com/photo/woman-draw-a-light-bul
 
 ::: {.column width="50%"}
 
-::: {.fragment fragment-index="1"}
+::: {.fragment fragment-index="1" .text-center}
 
-[example data]{.text-bold .text-larger}
+[example data]{.text-bold .text-larger }
 
 ```{r}
 #| label: roc_issues_a
@@ -879,30 +950,21 @@ An R package for estimating [rate of change]{.text-highlight-blue .text-shadow-d
 
 ::::
 
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
 
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_classical
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_classical
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_classical
@@ -913,30 +975,24 @@ include_local_figure("R_generated/RRatepol/simple_classical.png")
 
 ::::
 
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_rratepol
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_rratepol
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_rratepol
@@ -947,31 +1003,25 @@ include_local_figure("R_generated/RRatepol/simple_rratepol.png")
 
 ::::
 
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_rratepol_highlight
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_rratepol_highlight
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_rratepol_highlight
@@ -981,6 +1031,14 @@ include_local_figure("R_generated/RRatepol/simple_rratepol_highlight.png")
 :::
 
 ::::
+
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
 
 # Global rates of vegetation change over the past 18,000 years {.text-center}
 
@@ -1051,11 +1109,11 @@ include_local_figure("R_generated/Global_RoC/Data_distribution.png")
 ::: {.text-center}
 Over 1100 fossil pollen time series from all continents 
 
-(except Antarctica)
+[(except Antarctica)]{.text-smaller}
 :::
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1068,7 +1126,7 @@ include_local_figure("R_generated/Global_RoC/p0_empty_plot.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1081,7 +1139,7 @@ include_local_figure("R_generated/Global_RoC/p1_data_points.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1094,7 +1152,7 @@ include_local_figure("R_generated/Global_RoC/p2_gam_fit_with_ci.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1107,7 +1165,7 @@ include_local_figure("R_generated/Global_RoC/p3_significant_changes.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ##
@@ -1138,7 +1196,11 @@ qrcode::generate_svg(
 )
 ```
 
-![](Materials/QR/qr_global_roc.svg){.absolute bottom=0 right=0 width="150" height="150"}
+![](Materials/QR/qr_global_roc.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
+:::
 
 # Continental Patterns 
 
@@ -1172,20 +1234,32 @@ include_local_figure("R_generated/Asia/Asia_spatial_trends.png")
 ::::
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_1
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
 ::::
+
+```{r}
+#| label: Asia_temporal_trends_p1
+include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
+```
+
 
 ```{r}
 #| label: qr_asia_synthesis
@@ -1203,25 +1277,25 @@ qrcode::generate_svg(
 )
 ```
 
-
-```{r}
-#| label: Asia_temporal_trends_p1
-include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
-```
-
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_2
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
@@ -1235,16 +1309,22 @@ include_local_figure("R_generated/Asia/temporal_p2_climate_zone_level.png")
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_3
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
@@ -1258,10 +1338,26 @@ include_local_figure("R_generated/Asia/temporal_p3_continent_level.png")
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+##
+
+:::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2024_printscreen
+include_local_figure("Printscreens/Bhatta_2024.png")
+```
+
+:::
+
+::::
 
 ```{r}
 #| label: qr_asia_phylogenetic
@@ -1279,17 +1375,7 @@ qrcode::generate_svg(
 )
 ```
 
-![](Materials/QR/qr_asia_phylogenetic.svg){.absolute top=0 right=0 width="120" height="120"}
-
-:::: {.columns}
-
-::: {.column width="80%"}
-
-[Latitudinal gradients in the [phylogenetic]{.text-highlight-pink .text-shadow-dark} assembly of angiosperms in Asia  during the Holocene]{.text-italic}
-
-:::
-
-::::
+![](Materials/QR/qr_asia_phylogenetic.svg){.absolute top=0 right=0 width="150" height="150"}
 
 :::: {.columns}
 
@@ -1312,7 +1398,7 @@ include_local_figure("R_generated/Phylogenetic/Latitudinal_trends.png")
 ::::
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1))
+Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1)) _scientific reports_ 
 :::
 
 

@@ -52,10 +52,6 @@ data_example_age <-
 # 3. Visualisation -----
 #----------------------------------------------------------#
 
-#----------------------------------------------------#
-## 3.1. Detailed -----
-#----------------------------------------------------#
-
 vec_method_colors <-
   c(
     "1. levels" = colours[["green"]],
@@ -63,6 +59,13 @@ vec_method_colors <-
     "3. Moving Window (MW)" = colours[["pink"]],
     "4. MW + uncertainty" = colours[["orange"]]
   )
+
+vec_method_colors_simple <-
+  c(
+    "Classical" = colours[["green"]],
+    "RRatepol" = colours[["orange"]]
+  )
+
 
 p_0 <-
   tibble::tibble(
@@ -97,7 +100,12 @@ p_0 <-
     xlim = c(10e3, -500)
   ) +
   ggplot2::guides(
-    col = ggplot2::guide_legend(ncol = 1),
+    col = ggplot2::guide_legend(
+      ncol = 1,
+      override.aes = list(
+        linewidth = 1
+      )
+    ),
     fill = "none"
   ) +
   ggplot2::labs(
@@ -115,6 +123,11 @@ p_0 <-
       fill = "transparent",
       colour = "transparent"
     ),
+    legend.text = ggplot2::element_text(
+      family = presentation_base_font,
+      colour = colours["black"],
+      size = ggplot2::rel(2)
+    ),
     legend.box.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
     margins = ggplot2::margin(t = 0, r = 0, b = 0, l = 0),
     legend.spacing = ggplot2::unit(0.001, "cm"),
@@ -123,11 +136,15 @@ p_0 <-
     legend.box.spacing = ggplot2::unit(0.01, "cm")
   ) +
   ggview::canvas(
-    width = 12,
-    height = 9,
+    width = 12.8,
+    height = 8.5,
     dpi = 300,
     units = "cm"
   )
+
+#----------------------------------------------------#
+## 3.1. Detailed -----
+#----------------------------------------------------#
 
 p_levels <-
   p_0 +
@@ -262,11 +279,6 @@ p_uncertaint_legend_inset <-
 ## 3.2. Simple -----
 #----------------------------------------------------#
 
-vec_method_colors_simple <-
-  c(
-    "Classical" = colours[["green"]],
-    "RRatepol" = colours[["orange"]]
-  )
 
 p_clasical <-
   p_0 +
@@ -299,10 +311,12 @@ p_clasical_legend_inset <-
   ggplot2::annotation_custom(
     grob = cowplot::get_legend(p_clasical),
     xmin = I(0.2),
-    xmax = I(0.3),
+    xmax = I(0.65),
     ymin = I(0.6),
     ymax = I(0.7)
   )
+
+p_clasical_legend_inset
 
 p_rratepol <-
   p_clasical +
@@ -345,10 +359,10 @@ p_rratepol_highlight <-
       dplyr::filter(Peak),
     mapping = ggplot2::aes(
       x = Age,
-      y = ROC,
+      y = ROC
     ),
     linetype = "solid",
-    linewidth = 2,
+    linewidth = 4,
     col = colours[["purple"]]
   )
 
@@ -360,7 +374,7 @@ p_rratepol_legend_inset <-
   ggplot2::annotation_custom(
     grob = cowplot::get_legend(p_rratepol),
     xmin = I(0.2),
-    xmax = I(0.3),
+    xmax = I(0.65),
     ymin = I(0.6),
     ymax = I(0.7)
   )
@@ -374,7 +388,7 @@ p_rratepol_highlight_legend_inset <-
   ggplot2::annotation_custom(
     grob = cowplot::get_legend(p_rratepol),
     xmin = I(0.2),
-    xmax = I(0.3),
+    xmax = I(0.65),
     ymin = I(0.6),
     ymax = I(0.7)
   )
