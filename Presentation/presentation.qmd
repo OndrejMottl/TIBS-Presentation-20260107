@@ -266,7 +266,7 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 [Image by Justus Menke from Pexels]{.text-background-white}
 :::
 
-## 
+## What if ... {.text-center}
 
 :::: {.columns}
 
@@ -279,10 +279,9 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 
 <br>
 <br>
-<br>
 
 
-What if we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global]{.text-highlight-purple .text-shadow-dark}, [long-term]{.text-highlight-pink .text-shadow-dark} synthesis on ecosystem [dynamics]{.text-highlight-coral .text-shadow-dark} using [Big Data]{.text-highlight-orange .text-shadow-light}?
+... we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global, long-term]{.text-highlight-purple .text-shadow-dark} synthesis on [ecosystem dynamics]{.text-highlight-pink .text-shadow-dark} using [paleoecological]{.text-highlight-coral .text-shadow-dark} [Big Data]{.text-highlight-orange .text-shadow-light}?
 :::
 
 ::::
@@ -309,13 +308,15 @@ include_local_figure("About/head_photo.png")
 
 ::: {.column width="64%" .text-center}
 
-<br>
-
 Assistant Professor at 🏛️[Charles University](https://cuni.cz/UK-1.html), Prague, 🇨🇿
 
-Head of the 🧑‍💻[Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html)
+<br>
 
 Interested in [macroecology]{.text-highlight-purple .text-shadow-dark}, [palaeoecology]{.text-highlight-pink .text-shadow-dark}, [biodiversity]{.text-highlight-coral .text-shadow-dark}, and [data science]{.text-highlight-orange .text-shadow-light}
+
+<br>
+
+Head of the 🧑‍💻[Laboratory of Quantitative Ecology](https://ondrejmottl.github.io/lab/about_the_lab.html)
 
 :::
 
@@ -328,14 +329,19 @@ Interested in [macroecology]{.text-highlight-purple .text-shadow-dark}, [palaeoe
 
 ::: {.column width="45%" .text-smaller}
 
-* 📧 ondrej.mottl(at)gmail.com
+* 📧 ondrej.mottl(at)natur.cuni.cz
 * 🦋 [ondrejmottl.bsky.social](https://bsky.app/profile/ondrejmottl.bsky.social)
 * 🐱 [Github](https://github.com/OndrejMottl)
 * 🆔 [ORCID](https://orcid.org/0000-0002-9796-5081)
 * 🌐 [Personal webpage](https://ondrejmottl.github.io/)
 :::
 
+::: {.column width="9%"}
+:::
+
+
 ::: {.column width="20%"}
+
 ```{r}
 #| label: loqe-logo-about_me
 include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
@@ -343,10 +349,10 @@ include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
 
 :::
 
-::: {.column width="5%"}
+::: {.column width="21%"}
 :::
 
-::: {.column width="20%"}
+::::
 
 ```{r}
 #| label: QR code https://bit.ly/ondrej_mottl 
@@ -363,16 +369,9 @@ qrcode::generate_svg(
   background = colours[["white"]],
   show = FALSE
 )
-
-include_local_figure("QR/qr_personal_web.svg")
 ```
 
-:::
-
-::: {.column width="5%"}
-:::
-
-::::
+![](Materials/QR/qr_personal_web.svg){.absolute top=0 right=0 width="120" height="120"}
 
 # Palaeoecology
 
