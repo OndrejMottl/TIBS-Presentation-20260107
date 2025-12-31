@@ -748,41 +748,55 @@ The data obtained from [wikipedia/Instructions_per_second](https://en.wikipedia.
 
 :::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="5%"}
+:::
 
-### Challenges
+::: {.column width="55%"}
 
 ```{r}
-#| label: Dillon
-include_local_figure("Dillon/urn_cambridge.org_id_binary_20230829075443580-0059_S0094837323000039_S0094837323000039_fig1.png")
+#| label: Dillon_2023_prin
+include_local_figure("Printscreens/Dillon_2023.png")
 ```
 
 :::
 
-::: {.column width="3%"}
-
-:::
-
-::: {.column width="57%" .fragment}
-
-### Advancements
-
-::: {.text-smaller}
-
-Best practices and [reproducible workflows]{.text-highlight-blue .text-shadow-dark} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple .text-shadow-dark}, Incentive structures that reward [software development]{.text-highlight-pink .text-shadow-dark}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral .text-shadow-dark} in quantitative methods and [Data Science]{.text-highlight-orange .text-shadow-light}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green .text-shadow-dark} communication, collaboration, and funding
-:::
-
-<br>
-<br>
-
-[Erin Dillon]{.text-highlight-black} has talk direcly after me!
-
+::: {.column width="40%"}
 :::
 
 ::::
 
+### Advancements
+
+:::{.text-smaller}
+Best practices and [reproducible workflows]{.text-highlight-blue .text-shadow-dark} for data standardization, Analyses that can accomodate [heterogeneous datasets]{.text-highlight-purple .text-shadow-dark}, Incentive structures that reward [software development]{.text-highlight-pink .text-shadow-dark}, Awareness of sampling context and biases, Best practices and conceptual frameworks to guide data integration, Development of taxon-free metrics, [Training]{.text-highlight-coral .text-shadow-dark} in quantitative methods and [Data Science]{.text-highlight-orange .text-shadow-light}, Collaboration with data scientists, [Interdisciplinary]{.text-highlight-green .text-shadow-dark} communication, collaboration, and funding
+:::
+
+<br>
+
+::: {.fragment .text-center}
+[Erin Dillon]{.text-highlight-black} has talk direcly after me!
+:::
+
+```{r}
+#| label: QR code Dillon 2023
+qr_dillon_2023 <-
+  qrcode::qr_code(
+    "https://doi.org/10.1017/pab.2023.3",
+    ecl = "H"
+  )
+qrcode::generate_svg(
+  qrcode = qr_dillon_2023,
+  filename = here::here("Presentation/Materials/QR/qr_dillon_2023.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_dillon_2023.svg){.absolute top=150 right=150 width="150" height="150"}
+
 ::: {.footer}
-Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
+Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3)) _Paleobiology_
 :::
 
 ## Statistical advancements
@@ -791,14 +805,14 @@ Dillon et al. ([2023](https://doi.org/10.1017/pab.2023.3))
 
 New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bias]{.text-highlight-purple .text-shadow-dark}, and [uncertainty]{.text-highlight-pink .text-shadow-dark}
 
+<br>
+
 :::: {.columns}
 
 ::: {.column width="5%"}
 :::
 
 ::: {.column width="50%" .fragment}
-
-<br>
 
  - Hierarchical  regression models
  - Joined Species Distribution Models (jSDM)
@@ -808,10 +822,10 @@ New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bi
 
 :::
 
-::: {.column width="7%"}
+::: {.column width="5%"}
 :::
 
-::: {.column width="38%"}
+::: {.column width="28%"}
 
 ```{r}
 #| label: stats visualisation
@@ -819,12 +833,13 @@ include_local_figure("Pexels/pexels-olly-3758105.jpg")
 ```
 :::
 
+::: {.column width="17%"}
+:::
+
 ::::
 
 ::: {.fragment .text-center}
-
 More details in a moment in talk by [Gavin Simpson]{.text-highlight-black} in this Symposium!
-
 :::
 
 ::: {.footer}
@@ -858,9 +873,9 @@ Photo by [Andrea Piacquadio](https://www.pexels.com/photo/woman-draw-a-light-bul
 
 ::: {.column width="50%"}
 
-::: {.fragment fragment-index="1"}
+::: {.fragment fragment-index="1" .text-center}
 
-[example data]{.text-bold .text-larger}
+[example data]{.text-bold .text-larger }
 
 ```{r}
 #| label: roc_issues_a
@@ -935,30 +950,21 @@ An R package for estimating [rate of change]{.text-highlight-blue .text-shadow-d
 
 ::::
 
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
 
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_classical
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_classical
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_classical
@@ -969,30 +975,24 @@ include_local_figure("R_generated/RRatepol/simple_classical.png")
 
 ::::
 
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_rratepol
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_rratepol
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_rratepol
@@ -1003,31 +1003,25 @@ include_local_figure("R_generated/RRatepol/simple_rratepol.png")
 
 ::::
 
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
+
 
 ## {RRatepol}
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="20%"}
-
-<br>
-
-```{r}
-#| label: RRatepol_logo_simple_rratepol_highlight
-include_local_figure("Logos/RRatepol_logo.png")
-```
-
-```{r}
-#| label: RRatepol_github_simple_rratepol_highlight
-include_local_figure("QR/qr_rratepol.svg")
-```
-
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ```{r}
 #| label: rratepol_example_simple_rratepol_highlight
@@ -1037,6 +1031,14 @@ include_local_figure("R_generated/RRatepol/simple_rratepol_highlight.png")
 :::
 
 ::::
+
+![](Materials/Logos/RRatepol_logo.png){.absolute top=120 left=60 width="150" height="180"}
+
+![](Materials/QR/qr_rratepol.svg){.absolute bottom=0 left=60 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2021](https://doi.org/10.1016/j.revpalbo.2021.104483)) _Review of Palaeobotany and Palynology_
+:::
 
 # Global rates of vegetation change over the past 18,000 years {.text-center}
 
