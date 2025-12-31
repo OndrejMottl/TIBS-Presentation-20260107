@@ -1109,11 +1109,11 @@ include_local_figure("R_generated/Global_RoC/Data_distribution.png")
 ::: {.text-center}
 Over 1100 fossil pollen time series from all continents 
 
-(except Antarctica)
+[(except Antarctica)]{.text-smaller}
 :::
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1126,7 +1126,7 @@ include_local_figure("R_generated/Global_RoC/p0_empty_plot.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1139,7 +1139,7 @@ include_local_figure("R_generated/Global_RoC/p1_data_points.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1152,7 +1152,7 @@ include_local_figure("R_generated/Global_RoC/p2_gam_fit_with_ci.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ## Global rates of vegetation change
@@ -1165,7 +1165,7 @@ include_local_figure("R_generated/Global_RoC/p3_significant_changes.png")
 ```
 
 ::: {.footer}
-Adapted from Mottl et al. ([2021](https://doi.org/10.1126/science.abg1685))
+Adapted from Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
 :::
 
 ##
@@ -1196,7 +1196,11 @@ qrcode::generate_svg(
 )
 ```
 
-![](Materials/QR/qr_global_roc.svg){.absolute bottom=0 right=0 width="150" height="150"}
+![](Materials/QR/qr_global_roc.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl & Flantua et al. ([2021](https://doi.org/10.1126/science.abg1685)) _Science_
+:::
 
 # Continental Patterns 
 
