@@ -64,6 +64,8 @@ generate_custom_theme_scss <- function(
       "",
       generate_custom_theme_link_styles(),
       "",
+      generate_custom_theme_footer_styles(fonts),
+      "",
       generate_custom_theme_heading_styles(custom_theme),
       "",
       generate_custom_theme_list_styles(custom_theme),
