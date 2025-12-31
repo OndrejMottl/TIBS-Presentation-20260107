@@ -178,7 +178,7 @@ p0 <-
   ) +
   ggview::canvas(
     width = 16,
-    height = 8,
+    height = 7,
     units = "cm",
     dpi = 300
   )

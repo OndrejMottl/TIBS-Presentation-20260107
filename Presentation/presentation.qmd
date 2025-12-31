@@ -1234,20 +1234,32 @@ include_local_figure("R_generated/Asia/Asia_spatial_trends.png")
 ::::
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_1
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
 ::::
+
+```{r}
+#| label: Asia_temporal_trends_p1
+include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
+```
+
 
 ```{r}
 #| label: qr_asia_synthesis
@@ -1265,25 +1277,25 @@ qrcode::generate_svg(
 )
 ```
 
-
-```{r}
-#| label: Asia_temporal_trends_p1
-include_local_figure("R_generated/Asia/temporal_p1_site_level.png")
-```
-
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_2
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
@@ -1297,16 +1309,22 @@ include_local_figure("R_generated/Asia/temporal_p2_climate_zone_level.png")
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+## 
 
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="5%"}
+:::
 
-[Exploring spatio-temporal patterns of palynological changes in Asia during the Holocene]{.text-italic}
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2023_printscreen_3
+include_local_figure("Printscreens/Bhatta_2023.png")
+```
 
 :::
 
@@ -1320,10 +1338,26 @@ include_local_figure("R_generated/Asia/temporal_p3_continent_level.png")
 ![](Materials/QR/qr_asia_synthesis.svg){.absolute top=0 right=0 width="150" height="150"}
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784))
+Adapted from Bhatta et al. ([2023](https://doi.org/10.3389/fevo.2023.1115784)) _Frontiers in Ecology and Evolution_
 :::
 
-## Continental Patterns
+##
+
+:::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: bhatta_2024_printscreen
+include_local_figure("Printscreens/Bhatta_2024.png")
+```
+
+:::
+
+::::
 
 ```{r}
 #| label: qr_asia_phylogenetic
@@ -1341,17 +1375,7 @@ qrcode::generate_svg(
 )
 ```
 
-![](Materials/QR/qr_asia_phylogenetic.svg){.absolute top=0 right=0 width="120" height="120"}
-
-:::: {.columns}
-
-::: {.column width="80%"}
-
-[Latitudinal gradients in the [phylogenetic]{.text-highlight-pink .text-shadow-dark} assembly of angiosperms in Asia  during the Holocene]{.text-italic}
-
-:::
-
-::::
+![](Materials/QR/qr_asia_phylogenetic.svg){.absolute top=0 right=0 width="150" height="150"}
 
 :::: {.columns}
 
@@ -1374,7 +1398,7 @@ include_local_figure("R_generated/Phylogenetic/Latitudinal_trends.png")
 ::::
 
 ::: {.footer}
-Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1))
+Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1)) _scientific reports_ 
 :::
 
 
