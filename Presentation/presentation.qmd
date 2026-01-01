@@ -2153,10 +2153,10 @@ Paleoecological data is ready to inform  biodiversity-conservation and rewilding
 ::::
 
 ::: {.footer}
-Photo by [Tudor Sorin](https://www.pexels.com/photo/majestic-european-bison-in-romanian-wilderness-29004768/) from Pexels
+[Photo by [Tudor Sorin](https://www.pexels.com/photo/majestic-european-bison-in-romanian-wilderness-29004768/) from Pexels]{.text-color-black}
 :::
 
-# [This presentation]{.text-shadow-dark} {.bg-black .text-center .text-color-white}
+# [This presentation]{.text-shadow-dark} {.bg-grey .text-center .text-color-black}
 
 <br>
 
@@ -2177,8 +2177,16 @@ Photo by [Tudor Sorin](https://www.pexels.com/photo/majestic-european-bison-in-r
 
 ::: {.column width="30%"}
 ```{r}
-#| label: presentation_qr_2
-include_local_figure("QR/qr_presentation.svg")
+#| label: presentation_qr_grey
+qrcode::generate_svg(
+  qrcode = qr_presentation,
+  filename = here::here("Presentation/Materials/QR/qr_presentation_grey.svg"),
+  foreground = colours[["black"]],
+  background = colours[["grey"]],
+  show = FALSE
+)
+
+include_local_figure("QR/qr_presentation_grey.svg")
 ```
 
 :::
@@ -2188,4 +2196,126 @@ include_local_figure("QR/qr_presentation.svg")
 
 ::::
 
-# last slide
+# {.bg-black}
+
+<br>
+
+::: {.text-color-white .text-font-heading .text-larger .text-bold .text-center}
+Estimating [Vegetation Change]{.text-highlight-blue .text-shadow-dark} from [Fossil Pollen]{.text-highlight-pink .text-shadow-dark} to [Planetary Boundaries]{.text-highlight-orange .text-shadow-light}
+:::
+
+::: {.text-color-white .text-font-heading .text-center .text-smaller}
+A Global, Long-Term Synthesis Using Big Data
+:::
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+```{r}
+#| label: Ondra
+include_local_figure("About/head_photo.png")
+```
+
+:::
+
+::: {.column width="45%" .text-smaller}
+
+<br>
+
+* 📧 ondrej.mottl(at)natur.cuni.cz
+* 🦋 [ondrejmottl.bsky.social](https://bsky.app/profile/ondrejmottl.bsky.social)
+* 🐱 [Github](https://github.com/OndrejMottl)
+* 🆔 [ORCID](https://orcid.org/0000-0002-9796-5081)
+* 🌐 [Personal webpage](https://ondrejmottl.github.io/)
+
+:::
+
+::: {.column width="16%"}
+:::
+
+::: {.column width="13%"}
+
+<br>
+<br>
+
+```{r}
+#| label: QR code personal site 
+qrcode::generate_svg(
+  qrcode = qr_personal_web,
+  filename = here::here("Presentation/Materials/QR/qr_personal_web_inverted.svg"),
+  background = colours[["black"]],
+  foreground = colours[["white"]],
+  show = FALSE
+)
+
+include_local_figure("QR/qr_personal_web_inverted.svg")
+```
+
+:::
+
+::::
+
+:::: {.r-hstack}
+::: {data-id="box1" style="background: `r colours['blue']`; width: 135px; height: 15px; margin: 0px;"}
+:::
+
+::: {data-id="box2" style="background: `r colours['white']`; width: 405px; height: 15px; margin: 0px;"}
+:::
+
+::: {data-id="box3" style="background: `r colours['pink']`; width: 135px; height: 15px; margin: 0px;"}
+:::
+
+::: {data-id="box4" style="background: `r colours['coral']`; width: 225px; height: 15px; margin: 0px;"}
+:::
+
+::: {data-id="box5" style="background: `r colours['orange']`; width: 135px; height: 15px; margin: 0px;"}
+:::
+
+::::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="25%" .text-size-body .text-color-grey .text-center}
+[👤](https://ondrejmottl.github.io/)Ondřej Mottl
+
+[TIBS 2026]{.text-color-grey}
+:::
+
+::: {.column width="44%"}
+:::
+
+::: {.column width="10%"}
+
+```{r}
+#| label: loqe-logo-outro
+include_local_figure("Logos/LoQE_logo_with_text_white_bg.png")
+```
+
+:::
+
+::: {.column width="10%"}
+
+```{r}
+#| label: NATUC-logo-outro
+include_local_figure("Logos/PrFUK_strom_digital_bila.png")
+```
+
+:::
+
+::: {.column width="10%"}
+
+```{r}
+#| label: UK-logo-outro
+include_local_figure("Logos/PR-56-version1-uk_slavnostni_eng_bila_hd.png")
+```
+
+:::
+
+::::
+
+::: {.footer}
+My trip has been funded by Czech Science Foundation PIF grant (GN23-06386I)
+:::
