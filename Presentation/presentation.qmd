@@ -222,7 +222,7 @@ include_local_figure("AI_generated/Earth.jpeg")
 6/9 [global]{.text-highlight-purple .text-shadow-dark} Earth [Planetary Boundaries]{.text-highlight-pink .text-shadow-dark} are already [exceeded]{.text-highlight-orange .text-shadow-light} 
 
 ::: {.text-smaller .text-color-grey}
-(Richardson et al. [2023](https://doi.org/10.1126/sciadv.adh2458))
+(Richardson et al. [2023](https://doi.org/10.1126/sciadv.adh2458)) _Science Advances_
 :::
 
 :::
@@ -266,7 +266,7 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 [Image by Justus Menke from Pexels]{.text-color-black}
 :::
 
-## What if ... {.text-center}
+## What if … {.text-center}
 
 :::: {.columns}
 
@@ -281,7 +281,7 @@ Species to be exposed to [dangerous temperature]{.text-bold} condition (with glo
 <br>
 
 
-... we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global, long-term]{.text-highlight-purple .text-shadow-dark} synthesis on [ecosystem dynamics]{.text-highlight-pink .text-shadow-dark} using [paleoecological]{.text-highlight-coral .text-shadow-dark} [Big Data]{.text-highlight-orange .text-shadow-light}?
+… we inform the [conservation]{.text-highlight-blue .text-shadow-dark} policies by incorporating a [global, long-term]{.text-highlight-purple .text-shadow-dark} synthesis on [ecosystem dynamics]{.text-highlight-pink .text-shadow-dark} using [paleoecological]{.text-highlight-coral .text-shadow-dark} [Big Data]{.text-highlight-orange .text-shadow-light}?
 :::
 
 ::::
@@ -818,7 +818,7 @@ New methods accounting for [effort]{.text-highlight-blue .text-shadow-dark}, [bi
  - Joined Species Distribution Models (jSDM)
  - Model-based ordinations
  - Copula methods
- - ...
+ - …
 
 :::
 
@@ -1954,493 +1954,238 @@ include_local_figure("R_generated/VegVault/plot_traits.png")
 Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
 :::
 
-# Outro
 
-<!-- Slide 0 -->
+# {background-image="../Presentation/Materials/Pexels/pexels-markusspiske-2990650.jpg" background-opacity="0.8" .text-center}
 
-## 🔓The Shortcut { auto-animate=true} 
-
-
-::::: {.fragment}
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
+::: {.r-fit-text .text-center .text-font-heading .text-shadow-dark .text-color-pink .text-bold}
+Planetary Boundaries
 :::
 
-::: {.column width="10%" }
-
-```{r}
-#| label: vegvault_logo_mini_0
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
+::: {.footer}
+[Photo by [Markus Spiske](https://www.pexels.com/photo/climate-road-landscape-people-2990650/) from Pexels]{.text-color-black}
 :::
 
-::: {.column width="50%" .text-center}
 
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black} 
+## Planetary Boundaries
 
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_0
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
-
-:::::
-
-::::: {.fragment}
-
-:::: {.columns}
-
-::: {.column width="50%" }
-:::
-
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
-```{r}
-#| label: vegvault_example_0
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "1"
-data_denmark
-```  
-
-:::
-
-::::
-
-:::::
-
-<!-- Slide 1 -->
-
-## 🔓The Shortcut { auto-animate=true} 
-
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
-:::
-
-::: {.column width="10%" }
-
-```{r}
-#| label: vegvault_logo_mini_1
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
-:::
-
-::: {.column width="50%" .text-center}
-
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_1
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
-
-:::: {.columns}
-
-::: {.column width="50%"} 
-With few lines of code, you can:
-
-  - Connect to the [VegVault]{.bold .text-highlight-white .text-shadow-dark} database  
-:::
-
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
-```{r}
-#| label: vegvault_example_1
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "2-4"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  )
-```  
-
-:::
-
-::::
-
-<!-- Slide 2 -->
-
-## 🔓The Shortcut { auto-animate=true} 
-
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
-:::
-
-::: {.column width="10%" }
-
-```{r}
-#| label: vegvault_logo_mini_2
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
-:::
-
-::: {.column width="50%" .text-center}
-
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_2
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
-
-:::: {.columns}
-
-::: {.column width="50%" }
-With few lines of code, you can:
-
-  - [Connect to the [VegVault]{.bold .text-shadow-dark} database]{.text-color-grey}
-  - Access vegetation, trait, and climate data simultaneously 
-:::
-
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
-```{r}
-#| label: vegvault_example_2
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "5-9"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  ) |>
-  vaultkeepr::get_datasets() |>
-  vaultkeepr::get_samples() |>
-  vaultkeepr::get_taxa() |>
-  vaultkeepr::get_abiotic_data() |>
-  vaultkeepr::get_traits()
-```  
-
-:::
-
-::::
-
-<!-- Slide 3 -->
-
-## 🔓The Shortcut { auto-animate=true} 
-
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
-:::
-
-::: {.column width="10%" }
-
-```{r}
-#| label: vegvault_logo_mini_3
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
-:::
-
-::: {.column width="50%" .text-center}
-
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_3
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
+<br>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-With few lines of code, you can:
 
-  - [Connect to the [VegVault]{.bold .text-shadow-dark} database]{.text-color-grey}
-  - [Access vegetation, trait, and climate data simultaneously]{.text-color-grey}
-  - Filter by spatial-temporal boundaries
-:::
-
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
 ```{r}
-#| label: vegvault_example_3
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "6-9,11-13"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  ) |>
-  vaultkeepr::get_datasets() |>
-  vaultkeepr::select_dataset_by_geo(
-    lat_lim = c(54.5, 58.0),
-    long_lim = c(8.0, 13.0)
-  ) |>
-  vaultkeepr::get_samples() |>
-  vaultkeepr::select_samples_by_age(
-    age_lim = c(0, 20000) # 20,000 BP
-  ) |>
-  vaultkeepr::get_taxa() |>
-  vaultkeepr::get_abiotic_data() |>
-  vaultkeepr::get_traits()
-```  
+#| label: planetary_boundaries_figure
+include_local_figure("Planetary_Boundaries/sciadv.adh2458-f1.jpg")
+```
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+<br>
+
+```{r}
+#| label: richardson_2023_printscreen
+include_local_figure("Printscreens/Richardson_2023.png")
+```
 
 :::
 
 ::::
 
-<!-- Slide 4 -->
-
-## 🔓The Shortcut { auto-animate=true} 
-
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
-:::
-
-::: {.column width="10%" }
-
 ```{r}
-#| label: vegvault_logo_mini_4
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
+#| label: richardson_2023_qr
+qr_richardson <-
+  qrcode::qr_code(
+    "https://doi.org/10.1126/sciadv.adh2458",
+    ecl = "H"
+  )
+qrcode::generate_svg(
+  qrcode = qr_richardson,
+  filename = here::here("Presentation/Materials/QR/qr_richardson_2023.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
 
+![](Materials/QR/qr_richardson_2023.svg){.absolute top=0 right=0 width="120" height="120"}
+
+
+::: {.footer}
+Richardson et al. ([2023](https://doi.org/10.1126/sciadv.adh2458)) _Science Advances_
 :::
 
-::: {.column width="50%" .text-center}
+## From Paleo to Policy
 
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_4
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
+<br>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-With few lines of code, you can:
 
-  - [Connect to the [VegVault]{.bold .text-shadow-dark} database]{.text-color-grey}
-  - [Access vegetation, trait, and climate data simultaneously]{.text-color-grey}
-  - [Filter by spatial-temporal boundaries]{.text-color-grey}
-  - Harmonise taxonomy
-:::
+<br>
+<br>
+<br>
 
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
 ```{r}
-#| label: vegvault_example_4
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "14-16,18-20"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  ) |>
-  vaultkeepr::get_datasets() |>
-  vaultkeepr::select_dataset_by_geo(
-    lat_lim = c(54.5, 58.0),
-    long_lim = c(8.0, 13.0)
-  ) |>
-  vaultkeepr::get_samples() |>
-  vaultkeepr::select_samples_by_age(
-    age_lim = c(0, 20000) # 20,000 BP
-  ) |>
-  vaultkeepr::get_taxa(
-    classify_to = "genus"
-  ) |>
-  vaultkeepr::get_abiotic_data() |>
-  vaultkeepr::get_traits(
-    classify_to = "genus"
+#| label: gillson_2025_printscreen
+include_local_figure("Printscreens/Gillson_2025.png")
+```
+
+:::
+
+::: {.column width="50%"}
+- Paleoecology offers [long-term baselines]{.text-highlight-purple .text-shadow-dark} for historical [ranges of variability]{.text-highlight-purple .text-shadow-dark}
+- [RAD]{.text-highlight-pink .text-shadow-dark} [(resist/accept/direct)]{.text-smaller} framework for integrating [paleoecological data]{.text-highlight-coral .text-shadow-dark} into [policy and decision-making]{.text-highlight-pink .text-shadow-dark}
+- Even if the past is an [imperfect analogue]{.text-highlight-orange .text-shadow-light}, it is still essential for bounding [plausible variability]{.text-highlight-green .text-shadow-dark} and [diagnosing novelty]{.text-highlight-green .text-shadow-dark}.
+:::
+
+::::
+
+```{r}
+#| label: gillson_2025_qr
+qr_gillson <-
+  qrcode::qr_code(
+    "https://doi.org/10.1111/gcb.70017",
+    ecl = "H"
   )
-```  
 
+qrcode::generate_svg(
+  qrcode = qr_gillson,
+  filename = here::here("Presentation/Materials/QR/qr_gillson_2025.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]],
+  show = FALSE
+)
+```
+
+![](Materials/QR/qr_gillson_2025.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Gillson et al. ([2025](https://doi.org/10.1111/gcb.70017)) _Global Change Biology_
 :::
 
-::::
 
-<!-- Slide 5 -->
+## From Paleo to Policy
 
-## 🔓The Shortcut { auto-animate=true} 
+<br>
 
+```{r}
+#| label: planetary_boundaries_diagram_1
+include_local_figure("R_generated/Planetary_Boundaries/planetary_boundaries_diagram_1.png")
+```
+
+![](Materials/QR/qr_gillson_2025.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Gillson et al. ([2025](https://doi.org/10.1111/gcb.70017)) _Global Change Biology_
+:::
+
+## From Paleo to Policy
+
+<br>
+
+```{r}
+#| label: planetary_boundaries_diagram_2
+include_local_figure("R_generated/Planetary_Boundaries/planetary_boundaries_diagram_2.png")
+```
+
+![](Materials/QR/qr_gillson_2025.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Gillson et al. ([2025](https://doi.org/10.1111/gcb.70017)) _Global Change Biology_
+:::
+
+## [The time is ripe … 👍]{.text-shadow-dark} {.bg-black .text-color-white}
+
+<br>
 
 :::: {.columns}
 
-::: {.column width="15%" }
+::: {.column width="70%" .incremental}
+
+- [Global]{.text-highlight-blue .text-shadow-dark} (integrated) ecological [databases]{.text-highlight-blue .text-shadow-dark} spanning large spatio-temporal scales
+- [Reproducible workflows]{.text-highlight-purple .text-shadow-dark} for data access 
+- Ways to study various [facets of biodiversity]{.text-highlight-pink .text-shadow-dark} [(taxonomic, functional, phylogenetic)]{.text-smaller}
+- Statistical [methods]{.text-highlight-coral .text-shadow-dark} to handle [complex hierarchical data]{.text-highlight-coral .text-shadow-dark} structures
+- Computational [power]{.text-highlight-orange .text-shadow-light} and Open Source [tools]{.text-highlight-orange .text-shadow-light} for [uncertainty-incorporating]{.text-highlight-orange .text-shadow-light} analysis
 
 :::
 
-::: {.column width="10%" }
+::: {.column width="30%"}
 
 ```{r}
-#| label: vegvault_logo_mini_5
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
-:::
-
-::: {.column width="50%" .text-center}
-
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_5
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
+#| label: pexels_clock
+include_local_figure("Pexels/pexels-felix-mittermeier-355915.jpg")
+```
 
 :::
 
 ::::
+
+::: {.footer}
+Photo by [Felix Mittermeier](https://www.pexels.com/photo/round-black-wooden-analog-table-clock-on-black-surface-355915/) from Pexels
+:::
+
+## {background-image="../Presentation/Materials/Pexels/pexels-tudor-sorin-2003800090-29004768.jpg" background-opacity="0.7" .text-center}
 
 :::: {.columns}
 
-::: {.column width="50%" }
-With few lines of code, you can:
-
-  - [Connect to the [VegVault]{.bold .text-shadow-dark} database]{.text-color-grey}
-  - [Access vegetation, trait, and climate data simultaneously]{.text-color-grey}
-  - [Filter by spatial-temporal boundaries]{.text-color-grey}
-  - [Harmonise taxonomy]{.text-color-grey}
-  - Get data in tidy format
+::: {.column width="10%"}
 :::
 
-::: {.column width="1%" }
+::: {.column width="80%"}
+
+::: {.blockquote .text-center .text-bold .text-larger}
+
+Paleoecological data is ready to inform  biodiversity-conservation and rewilding actions!
 :::
 
-::: {.column width="49%"}
-```{r}
-#| label: vegvault_example_5
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "21"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  ) |>
-  vaultkeepr::get_datasets() |>
-  vaultkeepr::select_dataset_by_geo(
-    lat_lim = c(54.5, 58.0),
-    long_lim = c(8.0, 13.0)
-  ) |>
-  vaultkeepr::get_samples() |>
-  vaultkeepr::select_samples_by_age(
-    age_lim = c(0, 20000) # 20,000 BP
-  ) |>
-  vaultkeepr::get_taxa(
-    classify_to = "genus"
-  ) |>
-  vaultkeepr::get_abiotic_data() |>
-  vaultkeepr::get_traits(
-    classify_to = "genus"
-  ) |>
-  vaultkeepr::extract_data()
-  
-```  
+:::
 
+::: {.column width="10%"}
 :::
 
 ::::
+
+::: {.footer}
+Photo by [Tudor Sorin](https://www.pexels.com/photo/majestic-european-bison-in-romanian-wilderness-29004768/) from Pexels
+:::
+
+# [This presentation]{.text-shadow-dark} {.bg-black .text-center .text-color-white}
+
+<br>
+
+[is publically available!]{.text-size-heading3}
+
+<br>
+
+:::{.text-larger}
+🐱[Code](`r github_url`) | 🖼️[Slides](`r slides_url`)
+:::
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="35%"}
+:::
+
+::: {.column width="30%"}
+```{r}
+#| label: presentation_qr_2
+include_local_figure("QR/qr_presentation.svg")
+```
+
+:::
+
+::: {.column width="35%"}
+:::
+
+::::
+
+# last slide
