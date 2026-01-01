@@ -7,7 +7,7 @@ generate_custom_theme_footer_styles <- function(fonts) {
     ".reveal .footer {",
     paste0("  font-size: ", footer_font_size, " !important;"),
     "  text-align: center;",
-    "  padding: 0.5em;",
+    "  padding: 0.1em;",
     "}"
   )
 }
