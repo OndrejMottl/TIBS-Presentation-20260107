@@ -1876,12 +1876,77 @@ Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Da
 
 ## [VegVault]{.bold .text-highlight-black .text-shadow-light} database
 
+:::::: {.columns}
+
+::::: {.column width="50%"}
+
+<br>
+
 #### 💎Key Innovations 
 
 - Integration of [interdisciplinary vegetation data]{.text-highlight-purple .text-shadow-dark} into a single database
 - Linking vegetation data with [functional traits]{.text-highlight-orange .text-shadow-light} and [abiotic variables]{.text-highlight-green .text-shadow-dark}
 - User-friendly R package [{vaultkeepr}]{.text-highlight-black .text-shadow-light} for data access and extraction
 - Open Source & [Reproducible]{.text-highlight-pink .text-shadow-dark} workflows for vegetation research
+
+:::::
+
+::::: {.column width="50%" .fragment}
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+```{r}
+#| label: vegvault_denmark_spatial
+include_local_figure("R_generated/VegVault/plot_spatial.png")
+```
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="45%"}
+```{r}
+#| label: vegvault_denmark_temporal
+include_local_figure("R_generated/VegVault/plot_temporal.png")
+```
+
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+```{r}
+#| label: vegvault_denmark_mat_time
+include_local_figure("R_generated/VegVault/plot_mat_time.png")
+```
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="20%"}
+
+```{r}
+#| label: vegvault_denmark_traits
+include_local_figure("R_generated/VegVault/plot_traits.png")
+```
+
+:::
+
+::::
+
+:::::
+
+::::::
+
+
 
 ![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
 

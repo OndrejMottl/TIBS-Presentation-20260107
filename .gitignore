@@ -55,3 +55,6 @@ rsconnect/
 
 # Sensitive data
 .secrets/*
+
+# VegVault Terrain Rasters
+Presentation/Materials/VegVault/Terrain/Terrain_rasters/
