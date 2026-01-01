@@ -45,6 +45,7 @@ system2(
   command = "decktape.cmd",
   args = c(
     "reveal", "--fragments=true",
+    "--size 1050x700",
     here::here("Presentation/index.html"),
     here::here("Presentation/presentation.pdf")
   )
