@@ -1593,23 +1593,20 @@ Figure 4 from Veeken et al. ([2022](https://doi.org/10.1111/ele.14063)) _Ecology
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 
-::: {.text-size-heading1 .text-center .text-font-heading .text-shadow-dark .text-color-blue}
+::: {.r-fit-text .text-center .text-font-heading .text-shadow-light .text-color-black .text-bold}
 Data Integration
 :::
 
 ::: {.footer}
-[Photo by [panumas nikhomkhai](https://www.pexels.com/photo/modern-building-in-austria-19166565/) from Pexels]{.text-background-white}
+[Photo by [panumas nikhomkhai](https://www.pexels.com/photo/modern-building-in-austria-19166565/) from Pexels]{.text-color-black .text-background-grey}
 :::
 
 ## Denmark example  
 
 <br>
 
-::: {.blockquote .text-center .text-italic .text-color-white}
+::: {.blockquote .text-center .text-italic .text-color-black}
 
 How has vegetation in **Denmark** remain **functionally stable** under **climate** change from the **LGM to the present**
 
@@ -1619,17 +1616,17 @@ How has vegetation in **Denmark** remain **functionally stable** under **climate
 
 :::: {.columns}
 
-::: {.column width="50%" .fragment .incremental}
+::: {.column width="50%" .fragment}
 
 ### 🎯Data Needs
 
-  - [Fossil pollen]{.text-highlight-blue} and [contemporary vegetation]{.text-highlight-coral} plots  
-  - Functional [traits]{.text-highlight-orange} (e.g. height, SLA, seed mass)  
-  - [Climate]{.text-highlight-green} data (past and contemporary)
+  - [Fossil pollen]{.text-highlight-blue} and [contemporary vegetation]{.text-highlight-coral .text-shadow-dark} plots  
+  - Functional [traits]{.text-highlight-orange .text-shadow-light} (e.g. height, SLA, seed mass)  
+  - [Climate]{.text-highlight-green .text-shadow-dark} data (past and contemporary)
 
 :::
 
-::: {.column width="50%" .fragment .incremental}
+::: {.column width="50%" .fragment}
 
 ### 🚧Obstacles
 
@@ -1639,6 +1636,260 @@ How has vegetation in **Denmark** remain **functionally stable** under **climate
 
 :::
 ::::
+
+
+## [VegVault]{.bold .text-highlight-black .text-shadow-light} + [{vaultkeepr}]{.text-highlight-black .text-shadow-light}  
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%" }
+
+::: {.blockquote .text-center .text-italic .text-color-black}
+
+How has vegetation in **Denmark** remain **functionally stable** under **climate** change from the **LGM to the present**?
+
+:::
+
+<br>
+
+With few lines of code, you can get the data you need to answer that!
+
+:::
+
+::: {.column width="1%" }
+:::
+
+::: {.column width="49%"}
+```{r}
+#| label: vegvault_example_6
+#| eval: false
+#| echo: true
+#| include: true
+#| code-line-numbers: "1-21"
+data_denmark <-
+  vaultkeepr::open_vault(
+    path = "<path_to_VegVault>"
+  ) |>
+  vaultkeepr::get_datasets() |>
+  vaultkeepr::select_dataset_by_geo(
+    lat_lim = c(54.5, 58.0),
+    long_lim = c(8.0, 13.0)
+  ) |>
+  vaultkeepr::get_samples() |>
+  vaultkeepr::select_samples_by_age(
+    age_lim = c(0, 20000) # 20,000 BP
+  ) |>
+  vaultkeepr::get_taxa(
+    classify_to = "genus"
+  ) |>
+  vaultkeepr::get_abiotic_data() |>
+  vaultkeepr::get_traits(
+    classify_to = "genus"
+  ) |>
+  vaultkeepr::extract_data()
+  
+```  
+
+:::
+
+::::
+
+![](Materials/Logos/VegVault_logo.png){.absolute bottom=20 left=80 width="170" height="170"}
+
+![](Materials/Logos/vaultkeepr_logo.png){.absolute bottom=40 left=280 width="100" height="120"}
+
+```{r}
+#| label: vegvault_qr_code
+qr_vegvault <-
+  qrcode::qr_code(
+    "https://bit.ly/VegVault",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_vegvault,
+  file = here::here("Presentation/Materials/QR/qr_vegvault.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]]
+)
+```
+
+![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
+:::
+
+## [VegVault]{.bold .text-highlight-black .text-shadow-light} database
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r}
+#| label: mottl_2025_printscreen
+include_local_figure("Printscreens/mottl_2025.png")
+```
+
+![](Materials/Logos/VegVault_logo.png){.absolute top=90 left=80 width="350" height="350"}
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+
+* A global SQLite database linking [interdisciplinary plot-based]{.text-highlight-purple .text-shadow-dark} vegetation data! 
+* Links to functional [traits]{.text-highlight-orange .text-shadow-light}, [climate]{.text-highlight-green .text-shadow-dark} variables, and soil properties 
+* Built for exploring **biodiversity** dynamics across [time & space]{.text-bold}
+* Open Source & [Reproducible]{.text-highlight-pink .text-shadow-dark} 
+* 🔗Learn more: [bit.ly/VegVault](https://bit.ly/VegVault)
+
+:::
+
+::::
+
+![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
+
+
+::: {.footer}
+Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
+:::
+
+## [VegVault]{.bold .text-highlight-black .text-shadow-light} database
+
+:::: {.columns}
+
+::: {.column width="90%"}
+~110 GB | 32 tables & 87 variables | 480,000+ Datasets | 13M+ Samples  | 110,000+ Taxa | 11M+ Trait values | 8 Abiotic variables
+
+:::
+
+::: {.column width="10%"}
+:::
+
+::::
+
+:::: {.columns .fragment}
+
+::: {.column width="45%"}
+
+#### Data sources 
+
+- 🌿 [Paleoecological records]{.text-highlight-blue .text-shadow-dark} ([Neotoma]{.text-italic}, [FOSSILPOL]{.text-italic})
+- 🌱 [Contemporary vegetation]{.text-highlight-coral .text-shadow-dark} ([sPlotOpen]{.text-italic}, [BIEN]{.text-italic})
+- 🌾 [Functional traits]{.text-highlight-orange .text-shadow-light} ([BIEN]{.text-italic}, [TRY]{.text-italic})
+- 🌍 [Climate & soil data]{.text-highlight-green .text-shadow-dark} ([CHELSA]{.text-italic}, [WoSIS]{.text-italic})  
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| label: Scheme
+include_local_figure("VegVault/assembly_viz_04_colour_edit.svg")
+```
+:::
+
+::::
+
+![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
+:::
+
+## [{vaultkeepr}]{.text-highlight-black .text-shadow-light} package
+
+<br>
+
+An Open Source R package📦 - Your key🔑 to [VegVault]{.bold .text-font-heading .text-highlight-black .text-shadow-light}
+
+:::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+
+```{r}
+#| label: vaultkeepr logo
+include_local_figure("Logos/vaultkeepr_logo.png")
+```
+ 
+[![R-CMD-check](https://github.com/OndrejMottl/vaultkeepr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/OndrejMottl/vaultkeepr/actions/workflows/R-CMD-check.yaml) 
+[![Codecov-test-coverage](https://codecov.io/gh/OndrejMottl/vaultkeepr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/OndrejMottl/vaultkeepr?branch=main)
+[![CRAN-status](https://www.r-pkg.org/badges/version/vaultkeepr.png)](https://CRAN.R-project.org/package=vaultkeepr)
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+
+<br>
+
+- ✅ No SQL required - just load & go!
+- ✅ Filter by taxa, traits, time & space
+- ✅ Tidyverse-compatible interface  
+- ✅ Directly usable in R for analysis
+- 🔗 Learn more: [bit.ly/vaultkeepr](https://bit.ly/vaultkeepr)
+
+:::
+
+::::
+
+```{r}
+#| label: vaultkeepr_qr_code
+qr_vaultkeepr <-
+  qrcode::qr_code(
+    "https://bit.ly/vaultkeepr",
+    ecl = "H"
+  )
+
+qrcode::generate_svg(
+  qrcode = qr_vaultkeepr,
+  file = here::here("Presentation/Materials/QR/qr_vaultkeepr.svg"),
+  foreground = colours[["black"]],
+  background = colours[["white"]]
+)
+```
+
+![](Materials/QR/qr_vaultkeepr.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
+:::
+
+## [VegVault]{.bold .text-highlight-black .text-shadow-light} database
+
+#### 💎Key Innovations 
+
+- Integration of [interdisciplinary vegetation data]{.text-highlight-purple .text-shadow-dark} into a single database
+- Linking vegetation data with [functional traits]{.text-highlight-orange .text-shadow-light} and [abiotic variables]{.text-highlight-green .text-shadow-dark}
+- User-friendly R package [{vaultkeepr}]{.text-highlight-black .text-shadow-light} for data access and extraction
+- Open Source & [Reproducible]{.text-highlight-pink .text-shadow-dark} workflows for vegetation research
+
+![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
+
+::: {.footer}
+Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
+:::
+
+# Outro
 
 <!-- Slide 0 -->
 
@@ -2128,250 +2379,3 @@ data_denmark <-
 :::
 
 ::::
-
-
-<!-- Slide 6 -->
-
-## 🔓The Shortcut { auto-animate=true} 
-
-
-:::: {.columns}
-
-::: {.column width="15%" }
-
-:::
-
-::: {.column width="10%" }
-
-```{r}
-#| label: vegvault_logo_mini_6
-#| out-width: 30px
-include_local_figure("Logos/VegVault_logo.png")
-``` 
-
-:::
-
-::: {.column width="50%" .text-center}
-
-[VegVault]{.bold .text-highlight-white .text-shadow-dark} + [{vaultkeepr}]{.text-highlight-black}  
-
-::: 
-
-::: {.column width="8%" }
-
-```{r}
-#| label: vaultkeepr_logo_mini_6
-#| out-width: 30px
-include_local_figure("Logos/vaultkeepr_logo.png")
-``` 
-
-:::
-
-::: {.column width="17%" }
-
-:::
-
-::::
-
-:::: {.columns}
-
-::: {.column width="50%" }
-
-::: {.blockquote .text-center .text-italic .text-color-white}
-
-How has vegetation in **Denmark** remain **functionally stable** under **climate** change from the **LGM to the present**?
-
-:::
-
-<br>
-
-With few lines of code, you can get the data you need to answer that!
-
-:::
-
-::: {.column width="1%" }
-:::
-
-::: {.column width="49%"}
-```{r}
-#| label: vegvault_example_6
-#| eval: false
-#| echo: true
-#| include: true
-#| code-line-numbers: "1-21"
-data_denmark <-
-  vaultkeepr::open_vault(
-    path = "<path_to_VegVault>"
-  ) |>
-  vaultkeepr::get_datasets() |>
-  vaultkeepr::select_dataset_by_geo(
-    lat_lim = c(54.5, 58.0),
-    long_lim = c(8.0, 13.0)
-  ) |>
-  vaultkeepr::get_samples() |>
-  vaultkeepr::select_samples_by_age(
-    age_lim = c(0, 20000) # 20,000 BP
-  ) |>
-  vaultkeepr::get_taxa(
-    classify_to = "genus"
-  ) |>
-  vaultkeepr::get_abiotic_data() |>
-  vaultkeepr::get_traits(
-    classify_to = "genus"
-  ) |>
-  vaultkeepr::extract_data()
-  
-```  
-
-:::
-
-::::
-
-
-## The database
-
-:::::: {.columns}
-
-::::: {.column width="50%"}
-
-```{r}
-#| label: VegVault logo
-include_local_figure("Logos/VegVault_logo.png")
-```
-
-:::::
-
-::::: {.column width="50%" .incremental}
-
-* A global SQLite database linking [interdisciplinary]{.text-bold} **plot-based** vegetation data! 
-* Links to functional [traits]{.text-highlight-orange}, [climate]{.text-highlight-green} variables, and soil properties 
-* Built for exploring **biodiversity** dynamics across [time & space]{.text-bold}
-* Open Source & [Reproducible]{.text-bold}
-* 🔗Learn more: [bit.ly/VegVault](https://bit.ly/VegVault)
-
-:::: {.columns}
-
-::: {.column width="30%"}
-:::
-
-::: {.column width="40%"}
-
-```{r}
-#| label: vegvault_qr_code
-qr_vegvault <-
-  qrcode::qr_code(
-    "https://bit.ly/VegVault",
-    ecl = "H"
-  )
-
-qrcode::generate_svg(
-  qrcode = qr_vegvault,
-  file = here::here("Presentation/Materials/QR/qr_vegvault.svg"),
-  foreground = colours[["black"]],
-  background = colours[["white"]]
-)
-
-include_local_figure("QR/qr_vegvault.svg")
-```
-
-:::
-
-::: {.column width="30%"}
-:::
-
-::::
-
-:::::
-
-::::::
-
-
-## VegVault database
-
-~110 GB | 32 tables & 87 variables | 480,000+ Datasets | 13M+ Samples  | 110,000+ Taxa | 11M+ Trait values | 8 Abiotic variables
-
-:::: {.columns .fragment}
-
-#### Data sources 
-
-::: {.column width="40%" .incremental}
-
-- 🌿 [Paleoecological records]{.text-highlight-blue} ([Neotoma]{.text-italic}, [FOSSILPOL]{.text-italic})
-- 🌱 [Contemporary vegetation]{.text-highlight-coral} ([sPlotOpen]{.text-italic}, [BIEN]{.text-italic})
-- 🌾 [Functional traits]{.text-highlight-orange} ([BIEN]{.text-italic}, [TRY]{.text-italic})
-- 🌍 [Climate & soil data]{.text-highlight-green} ([CHELSA]{.text-italic}, [WoSIS]{.text-italic})  
-:::
-
-::: {.column width="60%"}
-
-```{r}
-#| label: Scheme
-include_local_figure("VegVault/assembly_viz_04.png")
-```
-:::
-
-::::
-
-## {vaultkeepr} package
-
-An Open Source R package📦 - Your key🔑 to [VegVault]{.bold .text-highlight-white .text-shadow-dark}
-
-:::::: {.columns}
-
-::::: {.column width="40%"}
-
-```{r}
-#| label: vaultkeepr logo
-include_local_figure("Logos/vaultkeepr_logo.png")
-```
-
-[![CRAN-status](https://www.r-pkg.org/badges/version/vaultkeepr.png)](https://CRAN.R-project.org/package=vaultkeepr) [![R-CMD-check](https://github.com/OndrejMottl/vaultkeepr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/OndrejMottl/vaultkeepr/actions/workflows/R-CMD-check.yaml) [![Codecov-test-coverage](https://codecov.io/gh/OndrejMottl/vaultkeepr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/OndrejMottl/vaultkeepr?branch=main)
-
-:::::
-
-::::: {.column width="5%"}
-:::::
-
-::::: {.column width="55%" .incremental}
-
-<br>
-
-- ✅ No SQL required - just load & go!
-- ✅ Filter by taxa, traits, time & space
-- ✅ Tidyverse-compatible interface  
-- ✅ Directly usable in R for analysis
-- 🔗 Learn more: [bit.ly/vaultkeepr](https://bit.ly/vaultkeepr)
-
-:::: {.columns}
-
-::: {.column width="30%"}
-:::
-
-::: {.column width="40%"}
-```{r}
-#| label: vaultkeepr_qr_code
-qr_vaultkeepr <-
-  qrcode::qr_code(
-    "https://bit.ly/vaultkeepr",
-    ecl = "H"
-  )
-
-qrcode::generate_svg(
-  qrcode = qr_vaultkeepr,
-  file = here::here("Presentation/Materials/QR/qr_vaultkeepr.svg"),
-  foreground = colours[["black"]],
-  background = colours[["white"]]
-)
-
-include_local_figure("QR/qr_vaultkeepr.svg")
-```
-:::
-
-::: {.column width="30%"}
-:::
-
-::::
-
-:::::
-
-::::::
