@@ -104,7 +104,7 @@ p1 <-
   ) +
   ggplot2::labs(
     x = "Age (ka BP)",
-    subtitle = "Phylogenetic diversity in time"
+    subtitle = "Phylogenetic diversity over time"
   )
 
 

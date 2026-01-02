@@ -201,7 +201,7 @@ p1 <-
     axis.line = ggplot2::element_blank(),
     panel.border = ggplot2::element_blank(),
     panel.grid = ggplot2::element_blank(),
-    legend.position = "note",
+    legend.position = "none",
     text = ggplot2::element_blank(),
     line = ggplot2::element_line(linewidth = line_size),
     plot.margin = ggplot2::margin(0, 0, 0, 0)

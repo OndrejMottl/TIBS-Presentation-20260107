@@ -594,7 +594,7 @@ p4 <-
     width = 0.1,
   ) +
   ggplot2::labs(
-    y = "Average plant height of genus (cm)",
+    y = "Average plant height per genus (cm)",
   ) +
   ggplot2::scale_y_continuous(
     breaks = scales::breaks_pretty(n = 5)
