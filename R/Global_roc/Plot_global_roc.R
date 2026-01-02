@@ -126,7 +126,7 @@ data_mod_predictions <-
       )
     )
   ) |>
-  tidyr::unnest_wider(data_pred, names_repair = "unique⁠") |>
+  tidyr::unnest_wider(data_pred, names_repair = "unique") |>
   rlang::set_names(
     nm = c(
       "region",
@@ -243,7 +243,7 @@ data_to_plot <-
     ) +
     ggplot2::labs(
       x = "Age (ka BP)",
-      y = "Rate of vegetation change "
+      y = "Rate of vegetation change"
     ) +
     ggplot2::coord_cartesian(
       xlim = c(age_treshold, 0),

@@ -49,7 +49,7 @@ data_to_plot <-
   dplyr::mutate(
     var_name = dplyr::case_when(
       var_name == "N0" ~ "Pollen richness",
-      var_name == "DCCA1" ~ "Tunnover",
+      var_name == "DCCA1" ~ "Turnover",
       var_name == "N2 divided by N1" ~ "Evenness",
       TRUE ~ var_name
     ),
@@ -85,7 +85,7 @@ data_to_plot <-
     ),
     var_name = factor(
       var_name,
-      levels = c("Pollen richness", "Evenness", "Tunnover")
+      levels = c("Pollen richness", "Evenness", "Turnover")
     ),
     dplyr::across(
       where(is.character),

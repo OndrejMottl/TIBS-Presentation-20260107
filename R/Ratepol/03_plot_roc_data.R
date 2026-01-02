@@ -137,7 +137,7 @@ p_0 <-
   ) +
   ggview::canvas(
     width = 12.8,
-    height = 8.5,
+    height = 8,
     dpi = 300,
     units = "cm"
   )
@@ -450,7 +450,7 @@ ggview::save_ggplot(
     "Materials",
     "R_generated",
     "RRatepol",
-    "moving_window_with_uncerntainty.png"
+    "moving_window_with_uncertainty.png"
   )
 )
 

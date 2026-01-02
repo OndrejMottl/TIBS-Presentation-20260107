@@ -79,7 +79,7 @@ presentation_heading_font <- "internal_heading"
 presentation_mono_font <- "internal_mono"
 
 # Define text sizes (following brand hierarchy from fonts.json)
-# Convert px to pt: 1px ˜ 0.75pt (at 96 DPI)
+# Convert px to pt: 1px ≈ 0.75pt (at 96 DPI)
 text_size_main_px <- 30
 text_size_main_pt <- text_size_main_px * 0.75  # Convert px to pt
 text_size_small <- text_size_main_pt * 0.8
