@@ -1937,7 +1937,6 @@ Richardson et al. ([2023](https://doi.org/10.1126/sciadv.adh2458)) _Science Adva
 
 <br>
 <br>
-<br>
 
 ```{r}
 #| label: gillson_2025_printscreen
@@ -1948,9 +1947,10 @@ include_local_figure("Printscreens/Gillson_2025.png")
 
 ::: {.column width="50%" .incremental}
 
-- Paleoecology offers [long-term baselines]{.text-highlight-purple .text-shadow-dark} for historical [ranges of variability]{.text-highlight-purple .text-shadow-dark}
-- [RAD]{.text-highlight-pink .text-shadow-dark} [(resist/accept/direct)]{.text-smaller} framework for integrating [paleoecological data]{.text-highlight-coral .text-shadow-dark} into [policy and decision-making]{.text-highlight-pink .text-shadow-dark}
-- Even if the past is an [imperfect analogue]{.text-highlight-orange .text-shadow-light}, it is still essential for bounding [plausible variability]{.text-highlight-green .text-shadow-dark} and [diagnosing novelty]{.text-highlight-green .text-shadow-dark}.
+- Paleo offers [long-term baselines]{.text-highlight-purple .text-shadow-dark} for historical [ranges of variability]{.text-highlight-purple .text-shadow-dark}.
+- [Past is essential]{.text-highlight-pink .text-shadow-dark} for bounding [plausible variability]{.text-highlight-pink .text-shadow-dark} and [diagnosing novelty]{.text-highlight-pink .text-shadow-dark} [(even if imperfect analogue)]{.text-smaller}.
+- [Operational playbook]{.text-highlight-coral .text-shadow-dark}: "[safe operating space]{.text-italic}" -> something we can [monitor]{.text-highlight-coral .text-shadow-dark} and [test]{.text-highlight-coral .text-shadow-dark}.
+- [Back-to-the-Holocene]{.text-highlight-orange .text-shadow-light} might not be [the only option]{.text-highlight-orange .text-shadow-light}.
 :::
 
 ::::
