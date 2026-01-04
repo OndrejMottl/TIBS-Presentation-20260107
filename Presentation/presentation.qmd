@@ -1339,18 +1339,33 @@ Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1)) 
 
 ## [Student intermezzo]{.text-color-white .text-shadow-dark} {.bg-coral .text-center .text-color-white}
 
-<br>
-
 :::: {.columns}
 
 ::: {.column width="58%"}
 
 <br>
-<br>
 
-[Poster No. [2006]{.text-highlight-black}]{.text-size-heading3}
+:::: {.columns}
 
-[A Comparative Analysis of Methodological Frameworks for Reconstructing Continental Diversity Trends of Vegetation]{.text-italic .text-larger .text-bold .text-shadow-dark}
+::: {.column width="23%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: bryan_photo
+include_local_figure("About/Bryan.jpg")
+```
+:::
+
+::: {.column width="25%"}
+:::
+
+::::
+
+[Bryan Novio]{.text-size-heading3 .text-bold .text-shadow-dark .text-underline}
+
+[HDT: A Comparative Analysis of Methodological Frameworks for Reconstructing Continental Diversity Trends of Vegetation]{.text-italic .text-heading4 .text-shadow-dark}
 
 :::
 
@@ -1358,6 +1373,8 @@ Adapted from Bhatta et al. ([2024](https://doi.org/10.1038/s41598-024-67650-1)) 
 :::
 
 ::: {.column width="40%"}
+
+[Poster No. [2006]{.text-highlight-black}]{.text-size-heading3}
 
 ```{r}
 #| label: poster_bryan
@@ -1429,18 +1446,33 @@ Figure 1 from Brown et al. ([2023](https://doi.org/10.1111/1365-2435.14415)) _Fu
 
 ## [Student intermezzo]{.text-color-white .text-shadow-dark} {.bg-coral .text-center .text-color-white}
 
-<br>
-
 :::: {.columns}
 
 ::: {.column width="58%"}
 
 <br>
-<br>
 
-[Poster No. [2005]{.text-highlight-black}]{.text-size-heading3}
+:::: {.columns}
 
-[Functional Vegetation Paleoecology: Mitigate the impact of climate change with data-driven insight from past vegetation]{.text-italic .text-larger .text-bold .text-shadow-dark}
+::: {.column width="23%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: naty_photo
+include_local_figure("About/Naty.png")
+```
+:::
+
+::: {.column width="25%"}
+:::
+
+::::
+
+[Natálie Námešná]{.text-size-heading3 .text-bold .text-shadow-dark .text-underline}
+
+[FVP: Mitigate the impact of climate change with data-driven insight from past vegetation]{.text-italic .text-size-heading4 .text-bold .text-shadow-dark}
 
 :::
 
@@ -1448,6 +1480,8 @@ Figure 1 from Brown et al. ([2023](https://doi.org/10.1111/1365-2435.14415)) _Fu
 :::
 
 ::: {.column width="38%"}
+
+[Poster No. [2005]{.text-highlight-black}]{.text-size-heading3}
 
 ```{r}
 #| label: poster_naty
@@ -1937,7 +1971,6 @@ Richardson et al. ([2023](https://doi.org/10.1126/sciadv.adh2458)) _Science Adva
 
 <br>
 <br>
-<br>
 
 ```{r}
 #| label: gillson_2025_printscreen
@@ -1948,9 +1981,10 @@ include_local_figure("Printscreens/Gillson_2025.png")
 
 ::: {.column width="50%" .incremental}
 
-- Paleoecology offers [long-term baselines]{.text-highlight-purple .text-shadow-dark} for historical [ranges of variability]{.text-highlight-purple .text-shadow-dark}
-- [RAD]{.text-highlight-pink .text-shadow-dark} [(resist/accept/direct)]{.text-smaller} framework for integrating [paleoecological data]{.text-highlight-coral .text-shadow-dark} into [policy and decision-making]{.text-highlight-pink .text-shadow-dark}
-- Even if the past is an [imperfect analogue]{.text-highlight-orange .text-shadow-light}, it is still essential for bounding [plausible variability]{.text-highlight-green .text-shadow-dark} and [diagnosing novelty]{.text-highlight-green .text-shadow-dark}.
+- Paleo offers [long-term baselines]{.text-highlight-purple .text-shadow-dark} for historical [ranges of variability]{.text-highlight-purple .text-shadow-dark}.
+- [Past is essential]{.text-highlight-pink .text-shadow-dark} for bounding [plausible variability]{.text-highlight-pink .text-shadow-dark} and [diagnosing novelty]{.text-highlight-pink .text-shadow-dark} [(even if imperfect analogue)]{.text-smaller}.
+- [Operational playbook]{.text-highlight-coral .text-shadow-dark}: "[safe operating space]{.text-italic}" -> something we can [monitor]{.text-highlight-coral .text-shadow-dark} and [test]{.text-highlight-coral .text-shadow-dark}.
+- [Back-to-the-Holocene]{.text-highlight-orange .text-shadow-light} might not be [the only option]{.text-highlight-orange .text-shadow-light}.
 :::
 
 ::::
