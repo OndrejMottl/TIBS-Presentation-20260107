@@ -198,7 +198,7 @@ include_local_figure("AI_generated/Earth.jpeg")
 
 ::: {.column width="50%" .text-center .center-vertical}
 
-6/9 [global]{.text-highlight-purple .text-shadow-dark} Earth [Planetary Boundaries]{.text-highlight-pink .text-shadow-dark} are already [exceeded]{.text-highlight-orange .text-shadow-light} 
+[6/9]{.text-highlight-purple .text-shadow-dark} global Earth [Planetary Boundaries]{.text-highlight-pink .text-shadow-dark} are already [exceeded]{.text-highlight-orange .text-shadow-light} 
 
 ::: {.text-smaller .text-color-grey}
 (Richardson et al. [2023](https://doi.org/10.1126/sciadv.adh2458)) _Science Advances_
@@ -1491,55 +1491,6 @@ include_local_figure("Posters/poster_FVP_Aarhus.png")
 
 ::::
 
-## Traits in time
-
-<br>
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-```{r}
-#| label: fnc_traits_veeken_figure4_a
-include_local_figure("Functional_traits/ele14063-fig-0004-m_crop_a.jpg")
-```
-:::
-
-::: {.column width="50%"}
-
-<br>
-<br>
-
-```{r}
-#| label: veeken_2022_printscreen
-include_local_figure("Printscreens/veeken_2022.png")
-```
-
-:::
-
-::::
-
-```{r}
-#| label: veeken_2022_qr
-generate_qr_code(
-  url = "https://doi.org/10.1111/ele.14063",
-  name = "veeken_2022",
-  foreground_color = "black",
-  background_color = "white",
-  plot = FALSE
-)
-```
-
-::: {.text-center}
-Example for subcontinental scale [integration of functional traits]{.text-highlight-blue .text-shadow-dark} with [fossil pollen]{.text-highlight-coral .text-shadow-dark} data
-:::
-
-![](Materials/QR/qr_veeken_2022.svg){.absolute top=0 right=0 width="120" height="120"}
-
-::: {.footer}
-Figure 4 from Veeken et al. ([2022](https://doi.org/10.1111/ele.14063)) _Ecology Letters_
-:::
-
 # {background-image="../Presentation/Materials/Pexels/pexels-cookiecutter-19166565.jpg" background-opacity="0.6" .text-center}
 
 <br>
@@ -1821,40 +1772,30 @@ generate_qr_code(
 Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_
 :::
 
-## [VegVault]{.bold .text-highlight-black .text-shadow-light} database
-
-:::::: {.columns}
-
-::::: {.column width="50%"}
-
-<br>
-
-#### 💎Key Innovations 
-
-- Integration of [interdisciplinary vegetation data]{.text-highlight-purple .text-shadow-dark} into a single database
-- Linking vegetation data with [functional traits]{.text-highlight-orange .text-shadow-light} and [abiotic variables]{.text-highlight-green .text-shadow-dark}
-- User-friendly R package [{vaultkeepr}]{.text-highlight-black .text-shadow-light} for data access and extraction
-- Open Source & [Reproducible]{.text-highlight-pink .text-shadow-dark} workflows for vegetation research
-
-:::::
-
-::::: {.column width="50%" .fragment}
+## Denmark example
 
 :::: {.columns}
 
-::: {.column width="45%"}
+::: {.column width="50%"}
 
 ```{r}
 #| label: vegvault_denmark_spatial
 include_local_figure("R_generated/VegVault/plot_spatial.png")
 ```
 
+
 :::
 
-::: {.column width="1%"}
-:::
+::: {.column width="49%"}
 
-::: {.column width="45%"}
+```{r}
+#| label: vegvault_denmark_mat_time
+include_local_figure("R_generated/VegVault/plot_mat_time.png")
+```
+
+:::: {.columns}
+
+::: {.column width="64%"}
 ```{r}
 #| label: vegvault_denmark_temporal
 include_local_figure("R_generated/VegVault/plot_temporal.png")
@@ -1862,24 +1803,7 @@ include_local_figure("R_generated/VegVault/plot_temporal.png")
 
 :::
 
-::::
-
-:::: {.columns}
-
-::: {.column width="75%"}
-
-```{r}
-#| label: vegvault_denmark_mat_time
-include_local_figure("R_generated/VegVault/plot_mat_time.png")
-```
-
-:::
-
-::: {.column width="1%"}
-:::
-
-::: {.column width="20%"}
-
+::: {.column width="34%"}
 ```{r}
 #| label: vegvault_denmark_traits
 include_local_figure("R_generated/VegVault/plot_traits.png")
@@ -1889,13 +1813,10 @@ include_local_figure("R_generated/VegVault/plot_traits.png")
 
 ::::
 
-:::::
 
-::::::
+:::
 
-
-
-![](Materials/QR/qr_vegvault.svg){.absolute top=0 right=0 width="120" height="120"}
+::::
 
 ::: {.footer}
 Mottl et al. ([2025](https://doi.org/10.1038/s41597-025-06176-1)) _Scientific Data_

@@ -39,10 +39,6 @@ image_height_full <- 9
 
 image_width_half <- image_width_full / 2
 
-p1_width <- image_width_half * 0.5
-p3_width <- image_width_half * 0.3
-p4_width <- image_width_half * 0.2
-
 #----------------------------------------------------------#
 # 1. Load data -----
 #----------------------------------------------------------#
@@ -75,24 +71,13 @@ data_altitude_raw <-
 data_p1 <-
   data_denmark |>
   dplyr::filter(
-    dataset_type_id %in% c(1, 2) & age <= 200
+    dataset_type_id %in% c(1, 2)
   ) |>
   dplyr::distinct(dataset_id, sample_id, .keep_all = TRUE) |>
   dplyr::select(
     dataset_type_id,
     sample_id,
     coord_long, coord_lat
-  ) |>
-  dplyr::left_join(
-    data_denmark |>
-      dplyr::filter(
-        dataset_type_id == 4 & age <= 200
-      ) |>
-      dplyr::distinct(
-        sample_id_link,
-        abiotic_value
-      ),
-    by = c("sample_id" = "sample_id_link")
   ) |>
   dplyr::mutate(
     dataset_type_id_name = dplyr::case_when(
@@ -121,12 +106,12 @@ p1_with_with_legend <-
     ggplot2::aes(
       x = coord_long,
       y = coord_lat,
-      fill = abiotic_value,
       col = dataset_type_id_name,
       shape = dataset_type_id_name,
       size = dataset_type_id_name
     ),
-    alpha = 0.9
+    alpha = 0.9,
+    fill = colours[["white"]]
   ) +
   ggplot2::geom_point(
     data = data_p1 |>
@@ -138,6 +123,21 @@ p1_with_with_legend <-
     size = 0.1,
     col = colours["black"],
     alpha = 0.9
+  ) +
+  # coordinates of Aarhus
+  ggplot2::geom_point(
+    data = tibble::tibble(
+      coord_lat = 56.17275,
+      coord_long = 10.20115
+    ),
+    map = ggplot2::aes(
+      x = coord_long,
+      y = coord_lat
+    ),
+    size = 5,
+    shape = 13,
+    col = colours["black"],
+    alpha = 1
   ) +
   ggplot2::coord_quickmap(
     xlim = x_lim,
@@ -209,8 +209,8 @@ p1_with_with_legend <-
     panel.grid.minor = ggplot2::element_blank()
   ) +
   ggview::canvas(
-    width = 4,
-    height = 5,
+    width = 8,
+    height = 9,
     units = "cm",
     dpi = 300
   )
@@ -254,6 +254,7 @@ data_p2 <-
       )
     )
   )
+
 
 p2_with_legend <-
   data_p2 |>
@@ -309,8 +310,8 @@ p2_with_legend <-
     panel.grid.minor = ggplot2::element_blank()
   ) +
   ggview::canvas(
-    width = 4,
-    height = 5,
+    width = 5,
+    height = 4,
     units = "cm",
     dpi = 300
   )
@@ -326,7 +327,6 @@ p2_without_legend <-
     legend.position = "none"
   )
 
-p2_without_legend
 
 #----------------------------------------------------------#
 # 4. MAT per time -----
@@ -335,9 +335,12 @@ p2_without_legend
 data_p3 <-
   data_denmark |>
   dplyr::filter(
-    dataset_type_id == 4,
+    dataset_type_id == 4
   ) |>
-  dplyr::distinct(dataset_id, sample_id, sample_id_link, .keep_all = TRUE) |>
+  dplyr::distinct(
+    dataset_id, sample_id, sample_id_link,
+    .keep_all = TRUE
+  ) |>
   tidyr::drop_na(age, abiotic_value) |>
   dplyr::select(
     dataset_id,
@@ -469,8 +472,8 @@ p3_with_legend <-
     panel.grid.minor = ggplot2::element_blank()
   ) +
   ggview::canvas(
-    width = 6,
-    height = 4,
+    width = 8,
+    height = 5,
     units = "cm",
     dpi = 300
   )
@@ -535,6 +538,8 @@ data_class_table <-
   dplyr::collect()
 
 
+DBI::dbDisconnect(con)
+
 data_to_plot_traits <-
   data_denmark |>
   dplyr::filter(
@@ -594,7 +599,7 @@ p4 <-
     width = 0.1,
   ) +
   ggplot2::labs(
-    y = "Average plant height per genus (cm)",
+    y = "Average plant height\nper genus (cm)",
   ) +
   ggplot2::scale_y_continuous(
     breaks = scales::breaks_pretty(n = 5)
@@ -609,7 +614,7 @@ p4 <-
     plot.margin = ggplot2::margin(0, 0, 0, 0)
   ) +
   ggview::canvas(
-    width = 2,
+    width = 3,
     height = 4,
     units = "cm",
     dpi = 300
